@@ -2,6 +2,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{iii}{section*.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{iv}{chapter*.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Options}{1}{section.1.1}
