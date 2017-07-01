@@ -1,0 +1,131 @@
+\chapter{Proof of the lemmas pertaining to compound options}
+\chaptermark{Useful lemmas -- compund options}
+
+\section{Proof of Lemma~\ref{lem:B1}}
+From~\eqref{eqn:N2}, we have
+			\begin{align*}
+				\fr{\pr}{\pr x}\fr{\pr}{\pr y} N_2(x,y;\rho) &= \fr{\pr}{\pr x}\fr{\pr}{\pr y}\left[ \fr{1}{2\pi\sqrt{1-\rho^2}} \int_{-\infty}^x\int_{-\infty}^y e^{-(u^2-2\rho uv + v^2)/(2(1-\rho^2))} \, \d v \, \d u \right] \\
+				&= \fr{1}{2\pi\sqrt{1-\rho^2}}e^{-(x^2-2\rho xy + y^2)/(2(1-\rho^2))}.		\end{align*}
+		Completing the square inside the exponential gives
+			\begin{equation*}
+				x^2 - 2\rho xy + y^2 = x^2 - 2\rho xy + y^2 + \rho^2 x^2 - \rho^2 x^2 = x^2(1-\rho^2) + (y-\rho x)^2,
+			\end{equation*}
+		and therefore
+			\begin{align*}
+				\fr{\pr}{\pr x}\fr{\pr}{\pr y} N_2(x,y;\rho) &= \fr{1}{2\pi\sqrt{1-\rho^2}} e^{-x^2/2}e^{-\left((y-\rho x)/\sqrt{1-\rho^2}\right)^2/2}\\
+				&= \fr{1}{\sqrt{1-\rho^2}}N'(x)N'\left( \fr{y-\rho x}{\sqrt{1-\rho^2}} \right),
+			\end{align*}
+		using~\eqref{eqn:Nprime}.
+
+\section{Proof of Lemma~\ref{lem:B2}}
+For the left-hand side of~\eqref{eqn:KK}, we use the~\eqref{eqn:BSkernel} for both $\K$ terms to get
+			\begin{align*}
+				\fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\fr{1}{z}\K\left(\fr{y}{z},t_2,t_3\right) &= \fr{e^{-\int_{t_1}^{t_3} r(\tau) \, \d\tau}N'\left(z_2\left( x/y,t_1,t_2 \right) \right)N'\left(z_2\left( y/z,t_2,t_3 \right) \right)}{yz\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[ \int_{t_2}^{t_3} \sigma(\tau)^2 \, \d\tau\right]^{1/2}}.
+			\end{align*}
+		Now for the right-hand side of~\eqref{eqn:KK}, using Lemma~\ref{lem:B1} and the chain rule gives
+			\begin{align*}
+				&\fr{\pr}{\pr y}\fr{\pr}{\pr z}\left[ e^{-\int_{t_1}^{t_3} r(\tau) \,\d\tau} N_2\left(z_2\left( \fr{x}{y},t_1,t_2 \right), z_2\left( \fr{x}{z},t_1,t_3 \right); \rho \right) \right] = \\
+				&\quad\fr{e^{-\int_{t_1}^{t_3} r(\tau) \, \d\tau}N'\left( z_2\left(x/y, t_1, t_2\right)\right)}{yz\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[ \int_{t_1}^{t_3} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\sqrt{1-\rho^2}}N'\left( \fr{z_2\left( x/z, t_1, t_3\right) - \rho z_2\left( x/y, t_1, t_2 \right)}{\sqrt{1-\rho^2}} \right).
+			\end{align*}
+		Choosing the correlation coefficient $\rho$ to be the same as in~\eqref{eqn:rho} yields
+		\begin{equation*}
+			\fr{1}{\sqrt{1-\rho^2}} = \left[ \fr{\int_{t_1}^{t_3} \sigma(\tau)^2 \, \d\tau}{\int_{t_2}^{t_3} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}, \qquad \fr{\rho}{\sqrt{1-\rho^2}} = \left[ \fr{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau}{\int_{t_2}^{t_3} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}.
+		\end{equation*}
+		Using these results, we obtain
+			\begin{align*}
+				&\fr{\pr}{\pr y}\fr{\pr}{\pr z}\left[ e^{-\int_{t_1}^{t_3} r(\tau) \,\d\tau} N_2\left(z_2\left( \fr{x}{y},t_1,t_2 \right), z_2\left( \fr{x}{z},t_1,t_3 \right); \rho \right) \right] = \\
+				&\quad \fr{e^{-\int_{t_1}^{t_3} r(\tau) \, \d\tau}N'\left(z_2\left( x/y,t_1,t_2 \right) \right)N'\left(z_2\left( y/z,t_2,t_3 \right) \right)}{yz\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[ \int_{t_2}^{t_3} \sigma(\tau)^2 \, \d\tau\right]^{1/2}},
+			\end{align*}
+		which equals the left-hand side of~\eqref{eqn:KK}. Thus we have proved equality for~\eqref{eqn:KK}.
+		
+		For \eqref{eqn:KK2}, the proof will be omitted as the procedure is identical to the derivation for \eqref{eqn:KK}. However, you would use \eqref{eqn:BSkernel2} for the $\K$ terms and \eqref{eqn:z1} for $z_1$ to show equality.
+		
+		\section{Proof of Corollary~\ref{cor:1}}
+		To prove equality in~\eqref{eqn:inta}, we use~\eqref{eqn:K2} and apply the fundamental theorem of calculus to give
+		\begin{align*}
+			\int_{a_1}^{b_1} \fr{1}{y}\K\left( \fr{x}{y},t,T_1 \right) \, \d y &= \int_{a_1}^{b_1}\fr{\pr}{\pr y}\left[ -e^{-\int_t^{T_1} r(\tau) \, \d\tau} N\left(z_2\left(\fr{x}{y}, t, T_1\right)\right)  \right] \, \d y \\
+			&= -e^{-\int_t^{T_1} r(\tau) \, \d\tau}\left[  N\left(z_2\left(\fr{x}{b_1}, t, T_1\right)\right) -N\left(z_2\left(\fr{x}{a_1}, t, T_1\right)\right) \right],
+		\end{align*}
+For~\eqref{eqn:int1}, we substitute~\eqref{eqn:KK} for the integrand and once again apply the fundamental theorem of calculus to get
+	\begin{align*}
+		&\int_{a_1}^{b_1} \fr{1}{y}\K\left( \fr{x}{y}, t, T_1 \right)\int_{a_2}^{b_2} \fr{1}{z}\K\left( \fr{y}{z}, T_1, T_2 \right) \, \d z \, \d y \\
+		&\quad = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \fr{\pr }{\pr y} \fr{\pr}{\pr z} \left[ e^{-\int_t^{T_2} r(\tau) \,\d\tau} N_2\left( z_2\left( \fr{x}{y}, t, T_1 \right), z_2\left( \fr{x}{z}, t, T_2 \right); \rho  \right)  \right] \, \d z \, \d y \\
+		&\quad = e^{-\int_t^{T_2} r(\tau) \, \d\tau}\bigg[ N_2\left( z_2\left( \fr{x}{b_1}, t, T_1 \right), z_2\left( \fr{x}{b_2}, t, T_2 \right); \rho  \right) - \\
+		&\qquad N_2\left( z_2\left( \fr{x}{b_1}, t, T_1 \right), z_2\left( \fr{x}{a_2}, t, T_2 \right); \rho  \right) - N_2\left( z_2\left( \fr{x}{a_1}, t, T_1 \right), z_2\left( \fr{x}{b_2}, t, T_2 \right); \rho  \right) + \\
+		&\qquad N_2\left( z_2\left( \fr{x}{a_1}, t, T_1 \right), z_2\left( \fr{x}{a_2}, t, T_2 \right); \rho  \right)  \bigg].
+	\end{align*}
+Similarly for~\eqref{eqn:int2}, we replace the integrand with~\eqref{eqn:KK2} and thus		\begin{align*}
+		&\int_{a_1}^{b_1} \fr{1}{y}\K\left( \fr{x}{y}, t, T_1 \right)\int_{a_2}^{b_2} \K\left( \fr{y}{z}, T_1, T_2 \right) \, \d z \, \d y \\
+		&\quad = \int_{a_1}^{b_1} \int_{a_2}^{b_2} \fr{\pr }{\pr y} \fr{\pr}{\pr z} \left[ xe^{-\int_t^{T_2} q(\tau) \,\d\tau} N_2\left( z_1\left( \fr{x}{y}, t, T_1 \right), z_1\left( \fr{x}{z}, t, T_2 \right); \rho  \right)  \right] \, \d z \, \d y \\
+		&\quad = xe^{-\int_t^{T_2} q(\tau) \, \d\tau}\bigg[ N_2\left( z_1\left( \fr{x}{b_1}, t, T_1 \right), z_1\left( \fr{x}{b_2}, t, T_2 \right); \rho  \right) - \\
+		&\qquad N_2\left( z_1\left( \fr{x}{b_1}, t, T_1 \right), z_1\left( \fr{x}{a_2}, t, T_2 \right); \rho  \right) - N_2\left( z_1\left( \fr{x}{a_1}, t, T_1 \right), z_1\left( \fr{x}{b_2}, t, T_2 \right); \rho  \right) + \\
+		&\qquad N_2\left( z_1\left( \fr{x}{a_1}, t, T_1 \right), z_1\left( \fr{x}{a_2}, t, T_2 \right); \rho  \right)  \bigg].
+	\end{align*}
+
+\section{Proof of lemma~\ref{lem:kd}}
+We commence with proving the equality \eqref{eqn:intlem1} using~\eqref{eqn:BSkernel} for both $\K$ terms. This gives
+	\begin{align*}
+		&\int_0^\infty \fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\K\left( \fr{cy}{z},t_3,t_4 \right) \, \d y \, \d z = \\
+		&\quad \fr{e^{-\int_{t_1}^{t_2} r(\tau) \,\d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}}{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau\int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}}\int_0^\infty \fr{1}{y} N'\left( z_2\left( \fr{x}{y}, t_1, t_2 \right) \right)N'\left( z_2\left( \fr{cy}{z}, t_3, t_4 \right) \right) \, \d y.
+	\end{align*}
+Now using $z_2$ from~\eqref{eqn:z2}, we simplify the integral using Lemma~\ref{lem:1} and choosing
+	\begin{align*}
+		&a_1 = \fr{1}{\left[ \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}}, \enskip b_1 = \fr{\int_{t_3}^{t_4} [r(\tau)-q(\tau)-\sigma(\tau)^2/2] \,\d\tau }{\left[ \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}}, \\
+		&a_2 = \fr{1}{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau \right]^{1/2}}, \enskip b_2 = \fr{\int_{t_1}^{t_2} [r(\tau)-q(\tau)-\sigma(\tau)^2/2] \,\d\tau }{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau \right]^{1/2}},
+	\end{align*}
+the integral becomes
+	\begin{align*}
+		&\int_0^\infty \fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\K\left( \fr{cy}{z},t_3,t_4 \right) \, \d y \, \d z = \fr{e^{-\int_{t_1}^{t_2} r(\tau) \,\d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}}{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}} \ \times \ \\
+		& \qquad N'\left(  \fr{\log((cx)/z) + \int_{t_1}^{t_2} [r(\tau) - q(\tau) - \sigma(\tau)^2/2] \, \d\tau + \int_{t_3}^{t_4} [r(\tau) - q(\tau) - \sigma(\tau)^2/2] \, \d\tau}{\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}} \right).
+	\end{align*}
+Then using the definition for $y_2$ in~\eqref{eqn:y2}, our final result is
+	\begin{align*}
+		\int_0^\infty \fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\K\left( \fr{cy}{z},t_3,t_4 \right) \, \d y \, \d z &=  \fr{e^{-\int_{t_1}^{t_2} r(\tau) \,\d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}}{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}} \ \times \ \\
+		&\qquad N'\left( y_2\left( \fr{cx}{z}, t_1, t_2, t_3, t_4 \right)\right) \\
+		&= \K_d\left(  \fr{cx}{z}, t_1, t_2, t_3, t_4 \right),
+	\end{align*}
+corresponding to the first expression for $\K_d$ in~\eqref{eqn:Kd}.
+
+Alternatively, if we had selected~\eqref{eqn:BSkernel2} for both $\K$ terms and repeated the process, we would obtain
+	\begin{align*}
+		\int_0^\infty \fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\K\left( \fr{cy}{z},t_3,t_4 \right) \, \d y \, \d z &=  \fr{cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau - \int_{t_3}^{t_4} q(\tau) \,\d\tau}}{z\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}} \ \times \ \\
+		&\qquad N'\left( y_1\left(\fr{cx}{z}, t_1, t_2, t_3, t_4 \right)\right) \\
+		&= \K_d\left(  \fr{cx}{z}, t_1, t_2, t_3, t_4 \right),
+	\end{align*}
+which aligns with the second expresion in~\eqref{eqn:Kd} for $\K_d$. This completes the derivation.
+
+\section{Proof of Lemma~\ref{lem:B5}}
+We will prove equality for~\eqref{eqn:KK4}. For the left-hand side, we use $\K$ and $\K_d$ from~\eqref{eqn:BSkernel2} and the second identity in~\eqref{eqn:Kd}, respectively. This gives
+	\begin{align*}
+		&\fr{1}{z}\K_d\left( \fr{cx}{z}, t_1,t_2,t_3,t_4 \right)\K\left( \fr{z}{w}, t_4, t_5 \right) = \\
+		&\qquad \fr{cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau - \int_{t_3}^{t_5} q(\tau) \, \d\tau}N'(y_1((cx)/z,t_1,t_2,t_3,t_4))N'\left( z_1\left(  z/w, t_4, t_5 \right) \right)}{zw\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[\int_{t_4}^{t_5} \sigma(\tau)^2 \,\d\tau\right]^{1/2}}.
+	\end{align*}
+For the right-hand side, we apply Lemma~\ref{lem:B1} and get
+	\begin{align*}
+		&\fr{\pr}{\pr z}\fr{\pr}{\pr w}\left[ cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau-\int_{t_3}^{t_5} q(\tau) \, \d\tau}  N_2\left( y_1\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right), y_1\left( \fr{cx}{w}, t_1, t_2, t_3, t_5 \right); \rho_d \right)\right] = \\
+		& \enskip \fr{cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau - \int_{t_3}^{t_5} q(\tau) \, \d\tau}}{zw\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_5} \sigma(\tau)^2 \,\d\tau \right]^{1/2}\sqrt{1-\rho_d^2}} \enskip \times \\
+		& \enskip N'(y_1((cx)/z,t_1,t_2,t_3,t_4))N'\left( \fr{y_1\left(  (cx)/w, t_1, t_2, t_3, t_5 \right) - \rho_d y_1( (cx)/z, t_1, t_2, t_3, t_4 )}{\sqrt{1-\rho_d^2}} \right).
+	\end{align*}
+Now using $\rho_d$ from~\eqref{eqn:rhod}, this implies
+	\begin{align*}
+		\fr{1}{\sqrt{1-\rho_d^2}} = \left[ \fr{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_5} \sigma(\tau)^2 \, \d\tau}{\int_{t_4}^{t_5} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}, \quad \fr{\rho_d}{\sqrt{1-\rho_d^2}} =  \left[ \fr{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau}{\int_{t_4}^{t_5} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}.
+	\end{align*}
+Substituting these into the right-hand side of~\eqref{eqn:KK4} and recognising the form of $z_1$ from~\eqref{eqn:z1}, this simplifies to
+	\begin{align*}
+		&\fr{\pr}{\pr z}\fr{\pr}{\pr w}\left[ cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau-\int_{t_3}^{t_5} q(\tau) \, \d\tau}  N_2\left( y_1\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right), y_1\left( \fr{cx}{w}, t_1, t_2, t_3, t_5 \right); \rho_d \right)\right] = \\
+		&\qquad \fr{cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau - \int_{t_3}^{t_5} q(\tau) \, \d\tau}N'(y_1((cx)/z,t_1,t_2,t_3,t_4))N'\left( z_1\left(  z/w, t_4, t_5 \right) \right)}{zw\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}\left[\int_{t_4}^{t_5} \sigma(\tau)^2 \,\d\tau\right]^{1/2}}.
+	\end{align*}
+Thus completing the proof. The exact same steps can be applied to proving equality for~\eqref{eqn:KK3} but using~\eqref{eqn:BSkernel} for $\K$ and the first identity for $\K_d$ in~\eqref{eqn:Kd}.
+
+\section{Proof of Corollary~\ref{cor:2}}
+We will prove~\eqref{eqn:cor2a}, but will only sketch the proof for the other two results as their derivation is identical to Corollary 1. We begin by denoting the left-hand side of~\eqref{eqn:cor2a} by $I$. Then using the first expression for $\K_d$ from~\eqref{eqn:Kd} gives
+	\begin{align*}
+		I &= \fr{e^{-\int_{t_1}^{t_2} r(\tau) \, \d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}}{\left[ \int_{t_1}^{t_2} \sigma(\tau)^2 \,\d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \,\d\tau \right]^{1/2}}\int_{a_1}^{b_1} N'\left( y_2\left( \fr{cx}{z}, t_1, t_2, t_3, t_4 \right) \right) \, \d z.
+	\end{align*}
+From~\eqref{eqn:y2}, we know the form of the argument for the $N'$ term. Thus, we do the substitution $v = y_2((cx)/z,t_1,t_2,t_3,t_4)$ and this yields
+	\begin{align*}
+		I &= e^{-\int_{t_1}^{t_2} r(\tau) \, \d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}\int_{y_2\left((cx)/b_1,t_1,t_2,t_3,t_4\right)}^{y_2\left((cx)/a_1,t_1,t_2,t_3,t_4\right)} N'(v) \, \d v \\
+		&= e^{-\int_{t_1}^{t_2} r(\tau) \, \d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau}\bigg[ N(v) \bigg]_{y_2\left((cx)/b_1,t_1,t_2,t_3,t_4\right)}^{y_2\left((cx)/a_1,t_1,t_2,t_3,t_4\right)} \\
+		&= e^{-\int_{t_1}^{t_2} r(\tau) \, \d\tau - \int_{t_3}^{t_4} r(\tau) \,\d\tau} \bigg[ N\left(y_2\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right) \right) - N\left(y_2\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right) \right) \bigg],
+	\end{align*}
+which equals the right-hand side of~\eqref{eqn:cor2a}. For~\eqref{eqn:cor2b} and~\eqref{eqn:cor2c}, we replace the integrand in each expression with~\eqref{eqn:KK3} and~\eqref{eqn:KK4} respectively. Then we apply the fundamental theorem of calculus to obtain the desired result and equality. This approach is similar to that for Corollary 1.

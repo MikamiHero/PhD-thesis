@@ -1,0 +1,312 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{none/global/}
+    \entry{pericles}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6e5f4d5a5bcdeb28f74af33ed2582869}{%
+           family={Shakespeare},
+           familyi={S\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e5f4d5a5bcdeb28f74af33ed2582869}
+      \strng{fullhash}{6e5f4d5a5bcdeb28f74af33ed2582869}
+      \strng{authornamehash}{6e5f4d5a5bcdeb28f74af33ed2582869}
+      \strng{authorfullhash}{6e5f4d5a5bcdeb28f74af33ed2582869}
+      \field{sortinit}{1}
+      \field{sortinithash}{27a2bc5dfb9ed0a0422134d636544b5d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Pericles, Prince of Tyre}}
+    \endentry
+    \entry{thekingsenglish}{book}{}
+      \name{author}{2}{}{%
+        {{hash=abaddf3446050f400c062d827927fc3e}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={H.\bibnamedelimi W.},
+           giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=d6cb6b31c21be522e47098af1e92b3bb}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={F.\bibnamedelimi G.},
+           giveni={F\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{423972df67c28d2dda8c2de4fa394fbf}
+      \strng{fullhash}{423972df67c28d2dda8c2de4fa394fbf}
+      \strng{authornamehash}{423972df67c28d2dda8c2de4fa394fbf}
+      \strng{authorfullhash}{423972df67c28d2dda8c2de4fa394fbf}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{{The King's English}}
+      \field{year}{1958}
+    \endentry
+    \entry{bioluminescence:ch1}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=a226276b017b4fcb5c6f3a28430a62c7}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \name{bookauthor}{1}{}{%
+        {{hash=a226276b017b4fcb5c6f3a28430a62c7}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authornamehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authorfullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{bookauthornamehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{bookauthorfullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \field{sortinit}{3}
+      \field{sortinithash}{197da6d6c34c6b20ce45c4d4baace5a4}
+      \field{labelnamesource}{author}
+      \field{booksubtitle}{{Chemical Principles and Methods}}
+      \field{booktitle}{{Bioluminescence}}
+      \field{chapter}{1, Fireflies and Luminous Insects}
+      \strng{crossref}{bioluminescence}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 29}
+      \range{pages}{29}
+    \endentry
+    \entry{atkins_inorgchem}{book}{}
+      \name{author}{5}{}{%
+        {{hash=768c9606afd59ac272ce600d425a08c7}{%
+           family={Atkins},
+           familyi={A\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=505dea70b92e6cd16b6157ec671e0128}{%
+           family={Overton},
+           familyi={O\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5dd41e98006849212453120919e456df}{%
+           family={Rourke},
+           familyi={R\bibinitperiod},
+           given={Jonothan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=038eae52a3a48ddb7e179d8834d689e4}{%
+           family={Weller},
+           familyi={W\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=07c128aa869370c0ce1ee6291afcf310}{%
+           family={Armstrong},
+           familyi={A\bibinitperiod},
+           given={Fraser},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{3ef9478b898dfd55a9801306905a2fd9}
+      \strng{fullhash}{bd8b881ecc94b9ebca44bd0496dc27dc}
+      \strng{authornamehash}{3ef9478b898dfd55a9801306905a2fd9}
+      \strng{authorfullhash}{bd8b881ecc94b9ebca44bd0496dc27dc}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4th}
+      \field{title}{{Inorganic Chemistry}}
+      \field{year}{2006}
+    \endentry
+    \entry{atkins_physchem}{book}{}
+      \name{author}{2}{}{%
+        {{hash=768c9606afd59ac272ce600d425a08c7}{%
+           family={Atkins},
+           familyi={A\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=747b033459f2c6a0bdc6f5c43178336d}{%
+           family={De\bibnamedelima Paula},
+           familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={Julio},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
+      \strng{fullhash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
+      \strng{authornamehash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
+      \strng{authorfullhash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
+      \field{sortinit}{4}
+      \field{sortinithash}{d221becdd544034cf9082056cd6e6d2d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8th}
+      \field{title}{{Atkins' Physical Chemistry}}
+      \field{year}{2006}
+    \endentry
+    \entry{bioluminescence:apA}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=a226276b017b4fcb5c6f3a28430a62c7}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \name{bookauthor}{1}{}{%
+        {{hash=a226276b017b4fcb5c6f3a28430a62c7}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authornamehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authorfullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{bookauthornamehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{bookauthorfullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{booksubtitle}{{Chemical Principles and Methods}}
+      \field{booktitle}{{Bioluminescence}}
+      \field{chapter}{Taxonomic Classification of Selected Luminous Organisms}
+      \strng{crossref}{bioluminescence}
+      \field{year}{2008}
+      \field{pages}{333\bibrangedash 339}
+      \range{pages}{7}
+    \endentry
+    \entry{hori1973}{article}{}
+      \name{author}{3}{}{%
+        {{hash=33e6d192398c1320e972d03c3c198289}{%
+           family={Hori},
+           familyi={H\bibinitperiod},
+           given={Kazuo},
+           giveni={K\bibinitperiod}}}%
+        {{hash=44b7318deaa20219a0705b38998f7cdd}{%
+           family={Wampler},
+           familyi={W\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f6570034a53a1a398a2cc634af0798a5}{%
+           family={Cormier},
+           familyi={C\bibinitperiod},
+           given={Milton\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Royal Society of Chemistry}%
+      }
+      \strng{namehash}{0545e17b18d6946fbb6f745bbddf87c3}
+      \strng{fullhash}{472e23690205a8ad30b122e868b8ca13}
+      \strng{authornamehash}{0545e17b18d6946fbb6f745bbddf87c3}
+      \strng{authorfullhash}{472e23690205a8ad30b122e868b8ca13}
+      \field{sortinit}{5}
+      \field{sortinithash}{c9df3c9fb8f555dd9201cedc5e343021}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{(sea pansy) luciferin and certain of its synthetic analogues produce a brilliant blue chemiluminescence when dissolved in organic solvents such as dimethylformamide; we have examined the chemistry of this reaction and have identified the product excited state responsible for the luminescence.}
+      \field{issue}{14}
+      \field{journaltitle}{J. Chem. Soc.{,} Chem. Commun.}
+      \field{title}{{Chemiluminescence of Renilla (sea pansy) Luciferin and its Analogues}}
+      \field{year}{1973}
+      \field{pages}{492\bibrangedash 493}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1039/C39730000492
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1039/C39730000492
+      \endverb
+    \endentry
+    \entry{bioluminescence}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a226276b017b4fcb5c6f3a28430a62c7}{%
+           family={Shimomura},
+           familyi={S\bibinitperiod},
+           given={Osamu},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authornamehash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \strng{authorfullhash}{a226276b017b4fcb5c6f3a28430a62c7}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{Chemical Principles and Methods}}
+      \field{title}{{Bioluminescence}}
+      \field{year}{2008}
+    \endentry
+    \entry{clayden_orgchem}{book}{}
+      \name{author}{4}{}{%
+        {{hash=a17e660d5309236d0db9f4478e1a6a41}{%
+           family={Clayden},
+           familyi={C\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3060f9159435ca70a6c66681750de195}{%
+           family={Greeves},
+           familyi={G\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=43eb3fb0e623eaa6bd1373551fdcf960}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5b041bb1af02e51264d1f17d088167bf}{%
+           family={Wothers},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{1ac918b570bfc56ff407c91131cea330}
+      \strng{fullhash}{41b78ff2900476cd06e751dd5b453bab}
+      \strng{authornamehash}{1ac918b570bfc56ff407c91131cea330}
+      \strng{authorfullhash}{41b78ff2900476cd06e751dd5b453bab}
+      \field{sortinit}{6}
+      \field{sortinithash}{02bbed3ed82f61ae046619460488516d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Organic Chemistry}}
+      \field{year}{2006}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

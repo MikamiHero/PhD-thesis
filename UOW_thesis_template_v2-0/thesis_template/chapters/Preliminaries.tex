@@ -1,0 +1,485 @@
+\chapter{Preliminaries}
+
+\section{Black-Scholes framework}
+We commence the preliminary knowledge by introducing the most fundamental framework used in the theory of options pricing, known as the Black-Scholes framework~\cite{Black1973}. To begin, we assume that the option price depends on the asset price under any risk-neutral probability measure given by the following SDE
+	\begin{equation}
+	\label{eqn:stock}
+		\d S_t = (r(t)-q(t))S_t \, \d t + \sigma(t)S_t  \, \d W_t,
+	\end{equation}
+where $S = \{ S_t \, : \, t \in [0,T] \}$ is the asset price process, $\{ W_t \, : \, t \in [0,T] \}$ is a Wiener process or Brownian motion with respect to the risk-neutral measure, $T > 0$ is the expiry, $r(t) > 0$ is the risk-free interest rate, $q(t) \geq 0$ is the dividend yield, and $\sigma(t) > 0$ is the volatility.
+Here we assume that the parameters $r$, $q$, and $\sigma$ are continuous functions of time. Eq.~\eqref{eqn:stock} indicates that the stochastic process $S_t$ follows a
+\emph{geometric Brownian motion}, implying that $S_t$ is lognormally distributed (i.e., $S_t$ ascribes to a lognormal probability density function). The term $r(t)-q(t)$ is known as the drift coefficient that represents the average growth rate of the asset which is a deterministic value. Thus, $(r(t)-q(t))dt$ will yield the average growth of the asset.
+The value $\sigma(t)$ is often coined the diffusion coefficient and this is meant to replicate the uncertainty or erraticism in the asset price as it responds to external factors. $\sigma \d W_t$ then emulates the probabilistic component in the SDE.
+
+A financial interpretation of this SDE is for each infinitesimal time increment, $dt$, the associated return on the asset price is an expression defined by the \emph{relative} change in the asset price $\d S_t/S_t$.
+This relative change is comprised of a systematic term $(r(t)-q(t))dt$ which can be calculated deterministically, and a statistical component $\sigma \d W_t$ that introduces random noise into the model~\cite{Wilmott1995}. As geometric Brownian motion can be viewed as exponentiated Brownian motion~\cite{Glasserman2013}, it is a more favourable formulation for the asset price process
+because geometric Brownian motion is always positive (as opposed to standard Brownian motion which can take negative values).
+
+It is well known that the option value is given by $V_t = v(S_t,t)$, where $v = v(x,t)$ is a function that satisfies the following terminal value problem
+	\begin{equation}
+		\label{eqn:blackscholes}
+		\L v(x,t) := \fr{\pr v}{\pr t}(x,t) + \fr{1}{2}\sigma(t)^2x^2\fr{\pr^2 v}{\pr x^2}(x,t) + (r(t)-q(t))x\fr{\pr v}{\pr x}(x,t) - r(t)v(x,t) = 0,
+	\end{equation}
+	\begin{equation}
+		\label{eqn:payoff}
+		v(x,T) = \phi(x).
+	\end{equation}
+Eq. (\ref{eqn:blackscholes}) is commonly known as the Black-Scholes PDE and Eq. (\ref{eqn:payoff}) is the payoff (i.e., loss or profit at expiry), where $\phi : [0,\infty) \rightarrow [0, \infty)$. For the European call and put options, $\phi(x) = \max(x-K,0)$ and $\phi(x) = \max(K-x,0)$, respectively, where $K$ is the strike price. Note that at expiry, $v(S_T,T) = \phi(S_T)$.
+
+To solve the system~\eqref{eqn:blackscholes},~\eqref{eqn:payoff}, the most common approach is to implement a change of variables that transforms~\eqref{eqn:blackscholes} into the standard one-dimensional heat equation and shifts~\eqref{eqn:payoff} from a final value problem to an initial value problem (see~\cite{cannon1984one} for the form of the heat equation).
+The details of solving this transformed system are given in~\cite{Wilmott1995}. Thus the value of the European call option is given by
+	\begin{equation}
+		\label{eqn:EUcall}
+			v_{\text{e}}^{\text{call}}(x,t) = xe^{-\int_t^T q(\tau) \, \d\tau} N\left(z_1\left( \fr{x}{K}, t, T \right)\right) - K e^{-\int_t^T r(\tau) \, \d\tau} N\left(z_2\left( \fr{x}{K}, t, T \right)\right)
+		\end{equation}
+and the European put option value is
+	\begin{equation}
+		\label{eqn:EUput}
+		v_{\text{e}}^{\text{put}} = K e^{-\int_t^T r(\tau) \, \d\tau) } N\left(-z_2\left( \fr{x}{K}, t, T \right)\right) - xe^{-\int_t^T q(\tau) \, \d\tau} N\left(-z_1\left( \fr{x}{K}, t, T \right)\right),
+	\end{equation}
+where we have defined the auxiliary functions $z_1$ and $z_2$ to be
+	\begin{align}
+		z_1(x,t,u) & = \frac{\log x + \int_t^u (r(\tau) - q(\tau) + \sigma(\tau)^2/2) \, \d\tau}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}}, \label{eqn:z1}\\
+		z_2(x,t,u) & = \frac{\log x + \int_t^u (r(\tau) - q(\tau) - \sigma(\tau)^2/2) \, \d\tau}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}} \label{eqn:z2},
+	\end{align}
+and $N$ is the CDF of a standard normal random variable. Another important result is one that relates the European call to the European put option and is known as the \emph{put-call parity}:
+	\begin{equation}
+		\label{eqn:pcp}
+		v_\text{e}^{\text{put}}(x,t) = v_\text{e}^{\text{call}}(x,t) + Ke^{-\int_t^T r(\tau) \, \d\tau} - xe^{-\int_t^T q(\tau) \, \d\tau}.
+	\end{equation}
+
+We will now construct the foundation needed to tackle the American option pricing problems in this thesis.
+As aforementioned in the introduction, there are a multitude of ways to formulate the American option pricing problem.
+The structure we will present provides a clear interpretation of all the possible scenarios that can occur with American options.
+
+Due to the liberty of being able to exercise the option early, the American option valuation problem involves two unknown functions: the option value itself $V_t$ and
+the function $S^*$ which is commonly denoted as the \emph{optimal exercise boundary}~\cite{Kwok2008}. For an American put option, the goal is to ascertain
+$v_\text{a}^{\text{put}} =v_\text{a}^{\text{put}}(x,t)$ and $S^* = S^*(t)$ such that
+	\begin{enumerate}
+			\item $\mathscr{L}v_\text{a}^{\text{put}}(x,t) = 0, \quad x > S^*(t)$,
+			\item $v_\text{a}^{\text{put}}(x,t) = K - x, \quad 0 \leq x < S^*(t)$,
+	\end{enumerate}
+	with a payoff $v_\text{a}^{\text{put}}(x,T) = \max(K-x,0)$. For $x = S^*(t)$, we will introduce continuity conditions which in the literature are regularly referred to as \emph{smooth pasting conditions}. For the American put, these are
+		\begin{equation*}
+			v_\text{a}^{\text{put}}(S^*(t),t) = K - S^*(t), \quad \fr{\pr v_\text{a}^{\text{put}}}{\pr x}(S^*(t),t) = -1.
+		\end{equation*}
+	From this formulation, we can view the smooth pasting conditions as reflecting the interests of option holders to maximize their profit. The value of the asset will dictate what choice the holders should make due to the additional unknown $S^*(t)$ as seen above in the problem formulation . For an American put, the interval $0 \leq x < S^*(t)$ is known as the \emph{exercise region} as it is the most optimal time to exercise the option irrespective of time to expiry since the value of the American put is equal to its payoff. In contrast, $x > S^*(t)$ represents the \emph{continuation region} where the American put is worth more than its payoff and thus is more valuable to continue to hold the option. As we have mentioned in the introduction, the position of $S^*(t)$ (which divides the $x$ domain into the exercise and continuation regions) is unknown \emph{a priori} which adds another layer of difficulty to the option pricing problem.
+	
+	On the other hand, an American call option is constructed in the following manner. Similar to the American put, we seek for functions $v_\text{a}^{\text{call}} = v_\text{a}^{\text{call}}(x,t)$ and $S^* = S^*(t)$ such that
+	\begin{enumerate}
+			\item $\mathscr{L}v_\text{a}^{\text{call}}(x,t) = 0, \quad 0 \leq x < S^*(t)$,
+			\item $v_\text{a}^{\text{call}}(x,t) = x - K, \quad x > S^*(t)$,
+	\end{enumerate}
+	with a payoff $v_\text{a}^{\text{call}}(x,T) = \max(x-K,0)$. The equivalent smooth pasting conditions at $x = S^*(t)$ are
+		\begin{equation*}
+			v_\text{a}^{\text{call}}(S^*(t),t) = S^*(t) - K, \quad \fr{\pr v_\text{a}^{\text{call}}}{\pr x}(S^*(t),t) = 1.
+		\end{equation*}
+	For the American call option, the continuation and exercise region are opposite to the American put. That is, the continuation region is $0 \leq x < S^*(t)$ and the exercise region is $x > S^*(t)$. The problem can be restated such that the continuation and exercise regions are accounted for in a single expression. For an American put, we have the following PDE system
+    \begin{align}
+            \label{eqn:amerput}
+            \mathscr{L}v_\text{a}^{\text{put}}(x,t) &= (-rK + qx)H(S^*(t)-x), \enskip x \geq 0, \enskip x \neq S^*(t), \enskip 0 \leq t < T,\\
+            \label{eqn:amerputTerminal}
+            &v_\text{a}^{\text{put}}(x,T) = \max(K-x,0), \enskip x \geq 0, \enskip 0 \leq t < T,\\
+            \label{eqn:amerputpasting}
+           v_\text{a}^{\text{put}}(S^*( & t),t) = K - S^*(t), \enskip \fr{\pr v_\text{a}^{\text{put}}}{\pr t}(S^*(t),t) = -1, \enskip 0 \leq t < T,
+    \end{align}
+    where $H$ is the standard Heaviside function
+      \begin{equation}
+      		\label{eqn:heaviside}
+          H(x) =
+          \begin{cases}
+            1 \quad \text{if } x \geq 0, \\
+            0 \quad \text{if } x < 0.
+        \end{cases}
+      \end{equation}
+Similarly, the American call option pricing problem is
+	 \begin{align}
+            \label{eqn:amercall}
+            \mathscr{L}v_\text{a}^{\text{call}}&= (rK - qx)H(x-S^*(t)), \enskip x \geq 0, \enskip x \neq S^*(t), \enskip 0 \leq t < T,\\
+            \label{eqn:amercallTerminal}
+            &v_\text{a}^{\text{call}}(x,T) = \max(x-K,0), \enskip x \geq 0, \enskip 0 \leq t < T,\\
+            \label{eqn:amercallpasting}
+           v_\text{a}^{\text{call}}(S^*( & t),t) = S^*(t) - K, \enskip \fr{\pr v_\text{a}^{\text{call}}}{\pr t}(S^*(t),t) = 1, \enskip 0 \leq t < T.
+    \end{align}
+Both PDE systems~\eqref{eqn:amerput}--\eqref{eqn:amerputpasting} and~\eqref{eqn:amercall}--\eqref{eqn:amercallpasting}  follow the representation introduced by Jamshidian~\cite{Jamshidian1992} for a pure-diffusion case. Solving the American put option valuation problem~\eqref{eqn:amerput}--\eqref{eqn:amerputpasting} gives (see~\cite{Rodrigo2013} for a Mellin transform approach)
+	\begin{equation}
+		\label{eqn:americanput}
+		\begin{split}
+			v_\text{a}^{\text{put}}(x,t) &= v_\text{e}^{\text{put}}(x,t) + rK\int_t^T e^{-r(u-t)}N\left( -z_2\left( \fr{x}{S^*(u)},t,u \right) \right) \, \d u \\
+			& \qquad - qx\int_t^T e^{-q(u-t)}N\left( -z_1\left( \fr{x}{S^*(u)},t,u \right) \right) \, \d u,
+		\end{split}
+	\end{equation}
+where $v_\text{e}^{\text{put}}(x,t)$ is defined in~\eqref{eqn:EUput}. Similarly, the American call value is
+	\begin{equation}
+		\label{eqn:americancall}
+		\begin{split}
+			v_\text{a}^{\text{call}}(x,t) &= v_\text{e}^{\text{call}}(x,t) - rK\int_t^T e^{-r(u-t)}N\left( z_2\left( \fr{x}{S^*(u)},t,u \right) \right) \, \d u \\
+			& \qquad + qx\int_t^T e^{-q(u-t)}N\left( z_1\left( \fr{x}{S^*(u)},t,u \right) \right) \, \d u,
+		\end{split}
+	\end{equation}
+where $v_\text{e}^{\text{call}}(x,t)$ is given by~\eqref{eqn:EUcall}.
+
+\section{Jump-diffusion framework}
+In contrast to the archetypal Black-Scholes framework, we now introduce the relevant changes required for Merton's~\cite{Merton1976} jump-diffusion model. The Black-Scholes model introduced earlier in this chapter is sometimes labeled the standard diffusion or \emph{pure diffusion} scenario due to the nature of the SDE~\eqref{eqn:stock} being a continuous-time diffusion process with a continuous sample path. When accounting for the possibility of instantaneous jumps in the asset price, the underlying SDE needs to be adjusted to accommodate for this. Under the assumption that the discontinuous jumps arrive as a Poisson process, the risk-neutral asset price dynamics are given by
+	\begin{equation}
+		\label{eqn:assetPriceDynamics}
+		\fr{\d S_t}{S_t} = (r(t) - q(t) - \kappa\lambda)\d t + \sigma(t) \, \d W_t + (Y - 1) \, \d N_t,
+	\end{equation}
+where $\{W_t \, : \, t \in [0,T]\}$ is the standard Wiener process as in~\eqref{eqn:stock}, $Y$ is a nonnegative random variable with $Y-1$ denoting the impulse change in the asset price from $S_t$ to $YS_t$ as a consequence of the jump, $\kappa = \E[Y-1]$ with $\E[\cdot]$ as the expectation operator, $\{N_t \, : \, t \in [0,T]\}$ is the aforementioned Poisson process with intensity $\lambda$, and
+	\begin{equation}
+		\label{eqn:dNProb}
+		\d N_t = \begin{cases}
+			1 &\mbox{with probability } \lambda \, \d t, \\
+			0 &\mbox{with probability } (1 - \lambda \, \d t).
+		\end{cases}
+	\end{equation}
+Additionally, $W_t$, $N_t$, and samples $\{Y_1,Y_2,\hdots\}$ from $Y$ are assumed to be independent. Merton then extended (\ref{eqn:blackscholes}) to ensure the behaviour of the jumps is properly encapsulated. The result is a PIDE system:
+	\begin{align}
+		\label{eqn:PIDE}
+		\begin{split}
+			&\fr{\pr v}{\pr t}(x,t) + (r(t) - q(t) - \kappa\lambda)x\fr{\pr v}{\pr x}(x,t) - r(t)v(x,t) + \fr{1}{2}\sigma(t)^2x^2\fr{\pr^2 v}{\pr x^2}(x,t) \\
+			& \qquad + \lambda \int_0^\infty (v(xy,t) - v(x,t))f(y) \, \d y = 0,
+		\end{split}
+	\end{align}
+	\begin{equation}
+		\label{eqn:PIDEcondition}
+		v(x,T) = \phi(x),
+	\end{equation}
+where $f$ is the probability density function~(PDF) of $Y$ such that $\int_0^\infty f(y) \, \d y = 1$. A special case of Merton's infinite series solution (mentioned in the introduction) is when $Y$ is lognormally distributed (i.e., $Y \sim \text{LN}(\mu_Y,\sigma_Y^2)$). The European option pricing formula was shown to be
+	\begin{equation}
+		\label{eqn:mertonSoln}
+		v_{\text{M}}(x,t) = \ds\sum\limits_{n=0}^\infty \fr{(\lambda(1+\kappa)(T-t))^n}{n!}e^{-\lambda(1+\kappa)(T-t)}v_n(x,t),
+	\end{equation}
+where
+	\begin{equation*}
+		v_n(x,t) = \left. v(x,t; r,q,\sigma) \right\vert_{r = r_n(t), q = q, \sigma = \sigma_n(t)},
+	\end{equation*}
+with
+	\begin{equation}
+		\label{eqn:rs}
+		r_n(t) = r - \kappa\lambda + \fr{n\log(1+\kappa)}{T-t}, \quad \sigma_n(t)^{2} = \sigma^2 + \fr{n\sigma_Y^2}{T-t}.
+	\end{equation}
+That is, $v$ is the European option price due to the Black-Scholes formula with constant coefficients, and $v_n$ is the result of directly substituting $r_n(t)$ and $\sigma_n(t)$ for $r$ and $\sigma$, respectively, into $v$.
+
+\subsection{The Black-Scholes kernel and its properties}
+We will also require the Black-Scholes kernel first introduced by Rodrigo and Mamon in \cite{Rodrigo2006} and then extended upon in \cite{Rodrigo2013}. This is defined by
+	\begin{equation}
+		\label{eqn:BSkernel}
+		\K(x,t,u) = \fr{e^{-\int_t^u r(\tau)\,\d\tau}}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}}N'(z_2(x,t,u)),
+	\end{equation}
+and an alternative form given as
+	\begin{equation}
+		\label{eqn:BSkernel2}
+		\K(x,t,u) = \fr{xe^{-\int_t^u q(\tau) \, \d\tau}}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}}N'(z_1(x,t,u)),
+	\end{equation}
+where $z_1$ and $z_2$ are given in~\eqref{eqn:z1} and~\eqref{eqn:z2} respectively. Rodrigo and Mamon demonstrated that for an arbitrary payoff function~$\phi$, the European option price can be formulated as
+	\begin{equation}
+		\label{eqn:optionKernelSoln}
+		v(x,t) = \int_0^\infty \fr{1}{z}\K\left( \fr{x}{z}, t, T\right)\phi(z) \, \d z.
+	\end{equation}
+It can be seen that the option price \eqref{eqn:optionKernelSoln} is expressible as a convolution of the Black-Scholes kernel and the payoff (see the convolution definition in Section~\ref{subsec:mellin}). As an extension to~\eqref{eqn:BSkernel} and~\eqref{eqn:BSkernel2}, it was also shown in~\cite{Rodrigo2013} that
+	\begin{align}
+		\label{eqn:K1}
+		\K\left(\fr{x}{y},t,u\right) &= \fr{\pr}{\pr y}\left[ -xe^{-\int_t^u q(\tau) \,\d\tau} N\left(z_1\left( \fr{x}{y},t,u \right) \right)\right], \\
+		\label{eqn:K2}
+		\fr{1}{y}\K\left(\fr{x}{y},t,u\right) &= \fr{\pr}{\pr y}\left[ -e^{-\int_t^u r(\tau) \,\d\tau} N\left(z_2\left( \fr{x}{y},t,u \right) \right)\right].
+	\end{align}
+The expressions~\eqref{eqn:K1} and~\eqref{eqn:K2} will prove to be useful for pricing for compound options.
+
+
+\section{Mellin transform}
+\label{subsec:mellin}
+We now present the Mellin transform, which is going to be the mathematical technique that is a basis for all the work in this thesis. Suppose that $f : [0,\infty) \rightarrow \R$ is such that \textcolor{black}{$f = f(x)$}. The {\em Mellin transform}~$\hat f$ of $f$ at $\xi \in \R$ is defined as
+\begin{equation*}
+\hat f(\xi) =  \textcolor{black}{\M\left\{ f \right\}(\xi)} = \int_0^\infty x^{\xi - 1} f(x) \, \d x,
+\end{equation*}
+provided the integral converges at $\xi$. \textcolor{black}{Now for each $x \in [0,\infty)$, we will define the functions~$x f'$ and $x^2f''$ by
+\begin{equation*}
+(xf')(x) = x f'(x), \quad (x f'')(x) = x^2 f''(x),
+\end{equation*}
+respectively.} It can be shown that \cite[pp. 362--363]{Myint1987}
+\begin{equation}
+\label{eqn:mellinDiv}
+\M\{ xf'(x) \} = \widehat{x f'}(\xi) = -\xi \hat f(\xi), \quad \M\left\{ x^2f''(x) \right\} = \widehat{x^2 f''}(\xi) = \xi (\xi + 1) \hat f(\xi),
+\end{equation}
+assuming that $f$ satisfies
+\begin{equation*}
+\left. x^\xi f(x) \right\vert_0^\infty = 0, \quad \left. x^{\xi + 1} f'(x) \right\vert_0^\infty = 0.
+\end{equation*}
+Furthermore, we have
+	\begin{equation*}
+		\M\{ (f \ast g)(x) \} = (\widehat{f \ast g})(\xi) = \hat f(\xi) \hat g(\xi),
+	\end{equation*}
+where $f \ast g$ is the convolution of $f$ and $g$ defined to be
+	\begin{equation*}
+		(f \ast g)(x) = \int_0^\infty \fr{1}{y}f\left(\fr{x}{y}\right)g(y) \, \d y \quad \text{for all } x \geq 0.
+	\end{equation*}
+In addition to the Mellin transform and its properties, it was shown in~\cite{Rodrigo2006} that the Mellin transform of \eqref{eqn:optionKernelSoln} is
+\begin{align}
+		\label{eqn:mellinVkernel}
+		\begin{split}
+		\hat v(\xi,t) &= \hat \K(\xi,t,T) \hat \phi(\xi), \\
+		\end{split}
+	\end{align}
+where 
+\begin{equation}
+	\label{eqn:KhatA}
+ \hat\K(\xi,t,T) = e^{-\int_t^T p(\xi,\tau) \,  \d\tau},
+ \end{equation} 
+with
+	\begin{equation}
+		\label{eqn:Khat}
+		p(\xi,\tau) = r(\tau) + \left( r(\tau) - q(\tau) - \fr{1}{2}\sigma(\tau)^2 \right)\xi - \fr{1}{2}\sigma(\tau)^2\xi^2.
+	\end{equation}
+
+\section{Useful properties of the CDF of a standard normal variable}
+Several properties of the cumulative normal distribution $N$ and its derivative $N'$ will also be required~\cite[pp. 235--239]{Jeff1995}, namely
+	\begin{equation}
+		\begin{split}
+		N(x) = \fr{1}{\sqrt{2\pi}}\int_{-\infty}^x e^{-y^2/2} & \, \d y, \quad %= \fr{1}{2} + \fr{1}{2}\text{erf}\left(\fr{x}{\sqrt{2}}\right) \\
+		N(-x) = 1 - N(x), \quad
+		N'(x) = \fr{1}{\sqrt{2\pi}}e^{-x^2/2} \label{eqn:Nprime}, \\
+		&N(\infty) = 1, \quad N(-\infty) = 0.
+		\end{split}
+	\end{equation}
+We also require the bivariate (standard) normal CDF~\cite{Genz2004}
+	\begin{equation}
+		\label{eqn:N2}
+		N_2(x,y;\rho) = \fr{1}{2\pi\sqrt{1-\rho^2}}\int_{-\infty}^x\int_{-\infty}^y e^{-(u^2-2\rho uv + v^2)/(2(1-\rho^2))} \, \d v \, \d u,
+	\end{equation}
+where $\rho \in (-1,1)$ . It is not difficult to show that	
+	\begin{equation}
+		\label{eqn:Nspecial}
+		\begin{split}
+		&N_2(x,\infty;\rho) = N(x), \quad N_2(\infty,y;\rho) = N(y),\\
+		&N_2(x,-\infty;\rho) = N_2(-\infty,y;\rho) = 0, \\
+		&N_2(-\infty,\infty;\rho) = N_2(\infty,-\infty;\rho) = 0, \quad N_2(\infty,\infty;\rho) = 1.
+		\end{split}
+	\end{equation}
+\section{Lemmas and corollaries we will need}
+The following lemmas and corollaries will also be of great use throughout this thesis:
+\subsection{General lemmas}
+	\begin{lemma}
+		\label{lem:2}
+	For $a > 0$ and $b \in \mathbb{R}$, we have
+	\begin{equation*}
+		\M^{-1}\left\{ e^{-b\xi/a}e^{\xi^2/(2a^2)} \right\} = aN'(a\log x + b).
+	\end{equation*}
+	\end{lemma}
+\begin{proof}
+	See Appendix A.1.
+\end{proof}
+	\begin{lemma}
+		\label{lem:1}
+		For $a_1, \, a_2 > 0$ and $b_1, \, b_2 \in \mathbb{R}$, we have
+			\begin{align*}
+				&\int_0^\infty \fr{1}{z}N'(a_1\log z + b_1)N'\left(a_2\log\left( 1/z \right) + b_2 \right) \, \d z =  \fr{1}{\sqrt{a_1^2 + a_2^2}}N'\left( \fr{a_1b_2 + a_2b_1}{\sqrt{a_1^2+a_2^2}} \right).
+			\end{align*}
+	\end{lemma}
+	\begin{proof}
+		See Appendix A.2.
+	\end{proof}
+	\begin{lemma}
+		\label{lem:2b}
+		For $a_1, \, a_2 > 0$, $b_1, \, b_2 \in \mathbb{R}$, and $c > 0$, it follows from that
+		\begin{align*}
+			&\int_c^\infty \fr{1}{z}N'(a_1\log z + b_1)N'\left(a_2\log\left( 1/z \right) + b_2 \right) \, \d z =  \fr{1}{\sqrt{a_1^2 + a_2^2}}N'\left( \fr{a_1b_2 + a_2b_1}{\sqrt{a_1^2+a_2^2}} \right)N(d),
+		\end{align*}
+		where
+		$$
+			d = \sqrt{a_1^2+a_2^2}\left( \log(1/c) + \fr{b_2}{a_2} - \fr{a_1\gamma}{a_1^2+a_2^2} \right), \quad
+			\gamma = \fr{a_1b_2}{a_2} + b_1.
+		$$
+	\end{lemma}
+	\begin{proof}
+		See Appendix A.3.
+	\end{proof}
+	
+	\begin{lemma}
+		\label{lem:2bb}
+		Assuming that $a_1, \, a_2 > 0$, $b_1, \, b_2 \in \mathbb{R}$, and $c > 0$, we see that
+		\begin{align*}
+			&\int_0^c \fr{1}{z}N'(a_1\log z + b_1)N'\left(a_2\log\left( 1/z \right) + b_2 \right) \, \d z =  \fr{1}{\sqrt{a_1^2 + a_2^2}}N'\left( \fr{a_1b_2 + a_2b_1}{\sqrt{a_1^2+a_2^2}} \right)N(-d),
+		\end{align*}
+		where
+		$$
+			d = \sqrt{a_1^2+a_2^2}\left( \log(1/c) + \fr{b_2}{a_2} - \fr{a_1\gamma}{a_1^2+a_2^2} \right), \quad
+			\gamma = \fr{a_1b_2}{a_2} + b_1.
+		$$
+	\end{lemma}
+	\begin{proof}
+		See Appendix A.4.
+	\end{proof}
+
+	\begin{lemma}
+		\label{lem:2a}
+		Assume $a_1, \, a_2 > 0$ and $b_1, \, b_2, \, a, \, b \in \mathbb{R}$. Then
+			\begin{equation}
+				\nonumber
+				\begin{split}
+				\int_a^b \fr{1}{y} N'(a_1\log(1/y)+b_1) \, \d y &= \fr{1}{a_1}\left( N(a_1\log(1/a) + b_1) - N(a_1\log(1/b)+ b_1)  \right), \\
+				\int_a^b N'(a_1\log(1/y)+b_1) \, \d y &= \fr{e^{b_1/a_1+1/(2a_1^2)}}{a_1}\bigg( N(a_1\log(1/a) + b_1 + 1/a_1) \\
+				&{} \quad - N(a_1\log(1/b)+b_1+1/a_1) \bigg).
+				\end{split}
+			\end{equation}
+	\end{lemma}
+	\begin{proof}
+		See Appendix A.5.
+	\end{proof}
+
+\subsection{Lemmas and corollaries useful for the compound options framework}
+The following results will be useful in the study of standard European compound options:
+\begin{lemma}
+		\label{lem:B1}
+		For $x, y \in \mathbb{R}$ and $\rho \in (-1,1)$, we have
+			\begin{equation}
+				\label{eqn:N2pp}
+				\fr{\pr}{\pr x}\fr{\pr}{\pr y} N_2(x,y;\rho) = \fr{1}{\sqrt{1-\rho^2}}N'(x)N'\left( \fr{y-\rho x}{\sqrt{1-\rho^2}} \right).
+			\end{equation}
+	\end{lemma}
+	\begin{proof}
+		See the Appendix B.1.
+	\end{proof}
+	\begin{lemma}
+		\label{lem:B2}
+		For $0 \leq t_1 < t_2 < t_3$ and $x,y,z > 0$, we have
+			\begin{equation}
+				\label{eqn:KK}
+				\fr{1}{y}\K\left(\fr{x}{y},t_1,t_2\right)\fr{1}{z}\K\left(\fr{y}{z},t_2,t_3\right) = \fr{\pr}{\pr y}\fr{\pr}{\pr z}\left[ e^{-\int_{t_1}^{t_3} r(\tau) \,\d\tau} N_2\left(z_2\left( \fr{x}{y},t_1,t_2 \right), z_2\left( \fr{x}{z},t_1,t_3 \right); \rho \right) \right]
+				\end{equation}
+			and
+			\begin{equation}
+				\label{eqn:KK2}
+				\fr{1}{y}\K\left( \fr{x}{y}, t_1, t_2 \right)\K\left( \fr{y}{z}, t_2, t_3 \right) =
+			\fr{\pr}{\pr y}\fr{\pr}{\pr z}\left[ xe^{-\int_{t_1}^{t_3} r(\tau) \,\d\tau} N_2\left(z_1\left( \fr{x}{y},t_1,t_2 \right), z_1\left( \fr{x}{z},t_1,t_3 \right); \rho \right) \right],
+			\end{equation}
+			where
+			\begin{equation}
+				\label{eqn:rho}
+				\rho = \left[ \fr{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau}{\int_{t_1}^{t_3} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}.
+			\end{equation}
+	\end{lemma}
+	\begin{proof}
+		See the Appendix B.2.
+	\end{proof}
+	\begin{corollary}
+		\label{cor:1}
+		Assume $0 \leq t_1 < t_2 < t_3$. For $a_1, a_2, b_1, b_2, x,y,z > 0$, we have
+		\begin{equation}
+			\label{eqn:inta}
+			e^{\int_{t_1}^{t_2} r(\tau) \, \d\tau}\int_{a_1}^{b_1} \fr{1}{y} \K\left( \fr{x}{y}, t_1, t_2 \right) \, \d y \enskip = N\left( z_2\left( \fr{x}{a_1},t_1,t_2 \right) \right) - N\left( z_2\left( \fr{x}{b_1},t_1,t_2 \right) \right)
+		\end{equation}
+		\begin{equation}
+			\label{eqn:int1}
+			\begin{split}
+			&e^{\int_{t_1}^{t_3} r(\tau) \, \d\tau}\int_{a_1}^{b_1}\int_{a_2}^{b_2} \fr{1}{y}\K\left( \fr{x}{y}, t_1, t_2 \right) \fr{1}{z}\K\left( \fr{y}{z}, t_2, t_3 \right) \, \d z \, \d y \enskip = \\
+			& \qquad  N_2\left( z_2\left( \fr{x}{b_1}, t_1, t_2 \right), z_2\left( \fr{x}{b_2}, t_1, t_3 \right); \rho  \right) + N_2\left( z_2\left( \fr{x}{a_1}, t_1, t_2 \right), z_2\left( \fr{x}{a_2}, t_1, t_3 \right); \rho  \right) \\
+		&\qquad - N_2\left( z_2\left( \fr{x}{b_1}, t_1, t_2 \right), z_2\left( \fr{x}{a_2}, t_1, t_3 \right); \rho  \right) - N_2\left( z_2\left( \fr{x}{a_1}, t_1, t_2 \right), z_2\left( \fr{x}{b_2}, t_1, t_3 \right); \rho  \right)
+			\end{split}
+		\end{equation}
+		\begin{equation}
+			\label{eqn:int2}
+			\begin{split}
+			&\fr{1}{x}e^{\int_{t_1}^{t_3} q(\tau) \, \d\tau}\int_{a_1}^{b_1} \int_{a_2}^{b_2} \fr{1}{y}\K\left( \fr{x}{y}, t_1, t_2 \right) \K\left( \fr{y}{z}, t_2, t_3 \right) \, \d z \, \d y \enskip = \\
+			& \qquad N_2\left( z_1\left( \fr{x}{b_1}, t_1, t_2 \right), z_1\left( \fr{x}{b_2}, t_1, t_3 \right); \rho  \right) + N_2\left( z_1\left( \fr{x}{a_1}, t_1, t_2 \right), z_1\left( \fr{x}{a_2}, t_1, t_3 \right); \rho  \right) \\
+		&\qquad -N_2\left( z_1\left( \fr{x}{b_1}, t_1, t_2 \right), z_1\left( \fr{x}{a_2}, t_1, t_3 \right); \rho  \right) - N_2\left( z_1\left( \fr{x}{a_1}, t_1, t_2 \right), z_1\left( \fr{x}{b_2}, t_1, t_3 \right); \rho  \right)  ,
+			\end{split}
+		\end{equation}
+		where $\rho$ is defined in~\eqref{eqn:rho}.
+	\end{corollary}
+\begin{proof}
+	See the Appendix B.3.
+\end{proof}
+Corollary~\ref{cor:1} will be essential for pricing compound options when the underlying asset pays a discrete dividend.
+	\begin{lemma}
+		\label{lem:kd}
+		For $0 \leq t_1 < t_2 < t_3 < t_4$ and $c,x,y,z > 0$,
+		\begin{equation}
+			\label{eqn:intlem1}
+			\int_0^\infty \fr{1}{y}\K\left( \fr{x}{y}, t_1, t_2 \right)\K\left( \fr{cy}{z}, t_3, t_4 \right) \, \d y = \K_d\left( \fr{cx}{z}, t_1, t_2, t_3, t_4 \right),
+		\end{equation}
+where we define $\K_d$ to be the \emph{discretised Black-Scholes kernel} given by
+	\begin{equation}
+		\label{eqn:Kd}
+		\begin{split}
+		\K_d(x,t_1,t_2,t_3,t_4) &=  \fr{e^{-\int_{t_1}^{t_2} r(\tau) \, \d\tau - \int_{t_3}^{t_4} r(\tau) \, \d\tau}}{[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau]^{1/2}}N'(y_2(x,t_1,t_2,t_3,t_4))
+\\
+		& =  \fr{xe^{-\int_{t_1}^{t_2} q(\tau) \, \d\tau - \int_{t_3}^{t_4} q(\tau) \, \d\tau}}{[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau]^{1/2}}N'(y_1(x,t_1,t_2,t_3,t_4))
+		\end{split}
+	\end{equation}
+with
+	\begin{equation}
+		\label{eqn:y1}
+		y_1(x,t_1,t_2,t_3,t_4) = \fr{\log x + \int_{t_1}^{t_2} [r(\tau) - q(\tau) + \sigma(\tau)^2/2] \, \d\tau + \int_{t_3}^{t_4} [r(\tau) - q(\tau) + \sigma(\tau)^2/2] \, \d\tau}{\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}}
+	\end{equation}
+	\begin{equation}
+		\label{eqn:y2}
+		y_2(x,t_1,t_2,t_3,t_4) = \fr{\log x + \int_{t_1}^{t_2} [r(\tau) - q(\tau) - \sigma(\tau)^2/2] \, \d\tau + \int_{t_3}^{t_4} [r(\tau) - q(\tau) - \sigma(\tau)^2/2] \, \d\tau}{\left[\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau\right]^{1/2}}.
+	\end{equation}
+	\end{lemma}
+\begin{proof}
+	See the Appendix B.4.
+\end{proof}
+The reasoning for ``discretised'' is because~\eqref{eqn:Kd} will be primarily used for pricing compound options where an underlying pays one discrete dividend.
+	\begin{lemma}
+		\label{lem:B5}
+		Assuming that $0 \leq t_1 < t_2 < t_3 < t_4 < t_5$ and $c,x,w,z > 0$, then
+		\begin{equation}
+			\label{eqn:KK3}
+		\begin{split}
+			&\fr{1}{z}\K_d\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right)\fr{1}{w}\K\left( \fr{z}{w}, t_4, t_5 \right) =  \\
+			&\qquad \fr{\pr}{\pr z}\fr{\pr}{\pr w}\left[ e^{-\int_{t_1}^{t_2} r(\tau) \,\d\tau-\int_{t_3}^{t_5} r(\tau) \, \d\tau}  N_2\left( y_2\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right), y_2\left( \fr{cx}{w}, t_1, t_2, t_3, t_5 \right); \rho_d \right)\right],
+		\end{split}
+		\end{equation}
+		\begin{equation}
+			\label{eqn:KK4}
+		\begin{split}
+			&\fr{1}{z}\K_d\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right)\K\left( \fr{z}{w}, t_4, t_5 \right) =  \\
+			&\qquad \fr{\pr}{\pr z}\fr{\pr}{\pr w}\left[ cxe^{-\int_{t_1}^{t_2} q(\tau) \,\d\tau-\int_{t_3}^{t_5} q(\tau) \, \d\tau}  N_2\left( y_1\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right), y_1\left( \fr{cx}{w}, t_1, t_2, t_3, t_5 \right); \rho_d \right)\right],
+		\end{split}
+		\end{equation}
+		where $\rho_d$ is
+			\begin{equation}
+				\label{eqn:rhod}
+				\rho_d = \left[ \fr{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_4} \sigma(\tau)^2 \, \d\tau}{\int_{t_1}^{t_2} \sigma(\tau)^2 \, \d\tau + \int_{t_3}^{t_5} \sigma(\tau)^2 \, \d\tau} \right]^{1/2}.
+			\end{equation}
+	\end{lemma}
+	\begin{proof}
+		See the Appendix B.5.
+	\end{proof}
+\noindent The next corollary is analogous to Corollary~\ref{cor:1} but adjusted for discrete dividend assets:
+	\begin{corollary}
+		\label{cor:2}
+		Assume $0 \leq t_1 < t_2 < t_3 < t_4 < t_5$. For $a_1,a_2,b_1,b_2, x,z,w > 0$, we have
+		\begin{equation}
+			\label{eqn:cor2a}
+			\begin{split}
+			&e^{\int_{t_1}^{t_2} r(\tau) \, \d\tau + \int_{t_3}^{t_4} r(\tau) \,\d\tau}\int_{a_1}^{b_1} \fr{1}{z}\K_d\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right) \, \d z =  N\left(y_2\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right) \right) \\
+			&\qquad \ \ - N\left(y_2\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right) \right),
+			\end{split}
+		\end{equation}
+		\begin{equation}
+			\label{eqn:cor2b}
+		\begin{split}
+			&e^{\int_{t_1}^{t_2} r(\tau) \, \d\tau + \int_{t_3}^{t_5} r(\tau) \,\d\tau}\int_{a_1}^{b_1}\int_{a_2}^{b_2} \fr{1}{z}\K_d\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right)\fr{1}{w}\K\left( \fr{z}{w}, t_4, t_5 \right) \, \d w \, \d z \enskip = \\
+			& \qquad N_2\left( y_2\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right), y_2\left( \fr{cx}{b_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+			& \qquad + N_2\left( y_2\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right), y_2\left( \fr{cx}{a_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+		&\qquad - N_2\left( y_2\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right), y_2\left( \fr{cx}{a_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+		&\qquad - N_2\left( y_2\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right), y_2\left( \fr{cx}{b_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right),
+		\end{split}
+		\end{equation}
+				\begin{equation}
+			\label{eqn:cor2c}
+		\begin{split}
+			&\fr{1}{cx}e^{\int_{t_1}^{t_2} q(\tau) \, \d\tau + \int_{t_3}^{t_5} q(\tau) \,\d\tau}\int_{a_1}^{b_1}\int_{a_2}^{b_2} \fr{1}{z}\K_d\left(\fr{cx}{z}, t_1, t_2, t_3, t_4\right)\K\left( \fr{z}{w}, t_4, t_5 \right) \, \d w \, \d z \enskip = \\
+			& \qquad N_2\left( y_1\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right), y_1\left( \fr{cx}{b_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+			& \qquad + N_2\left( y_1\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right), y_1\left( \fr{cx}{a_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+		&\qquad - N_2\left( y_1\left( \fr{cx}{b_1}, t_1, t_2, t_3, t_4 \right), y_1\left( \fr{cx}{a_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right) \\
+		&\qquad - N_2\left( y_1\left( \fr{cx}{a_1}, t_1, t_2, t_3, t_4 \right), y_1\left( \fr{cx}{b_2}, t_1, t_2, t_3, t_5 \right); \rho_d  \right),
+		\end{split}
+		\end{equation}
+where $\rho_d$ is defined in~\eqref{eqn:rhod}
+	\end{corollary}
+\begin{proof}
+	See the Appendix B.6.
+\end{proof}
