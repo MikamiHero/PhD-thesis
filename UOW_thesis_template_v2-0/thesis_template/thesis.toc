@@ -1,0 +1,203 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{iii}{section*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Options}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Compound options}{5}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Jump-diffusion models}{7}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Implied volatility}{13}{section.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.5}The Mellin transform}{18}{section.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.6}Outline of the thesis}{20}{section.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Preliminaries}{22}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Black-Scholes framework}{22}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Jump-diffusion framework}{26}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}The Black-Scholes kernel and its properties}{28}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Mellin transform}{29}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Useful properties of the CDF of a standard normal variable}{30}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Lemmas and corollaries we will need}{31}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}General lemmas}{31}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Lemmas and corollaries useful for the compound options framework}{32}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Options pricing formula for European options in jump-diffusion dynamics}{36}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Alternative option pricing formula where the underlying asset is \\ subjected to jump-diffusion dynamics}{36}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\leavevmode {\color {black}The jump term $\mathscr J$}}{38}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Example: lognormally distributed jumps}{41}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}Result via the general recursion formula}{42}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Result using Mellin identities}{43}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}Verification of equality to Merton's solution}{43}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.4}Comparison of the jump-diffusion and Black-Scholes models}{47}{subsection.3.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Example: double exponentially distributed jumps}{48}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Example: gamma distributed jumps}{49}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Discussion and conclusion}{50}{section.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Implied volatility estimation for European options in jump-diffusion dynamics}{53}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}A PIDE analogue of Dupire's equation}{53}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Homogeneity of the solution}{53}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Derivation of a Dupire-like PIDE via Euler's theorem on homogeneous functions}{55}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Implied volatility formula}{56}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Numerical simulations}{57}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Theoretical data for option prices}{58}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Pseudo-market data for option prices}{58}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Algorithm}{61}{subsection.4.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.4}Results}{62}{subsection.4.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Theoretical data}{62}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Pseudo-market data}{65}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Comparison to other methods}{65}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Discussion and conclusion}{67}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Options pricing formula for American options in jump-diffusion dynamics and an approximate solution to the free boundary}{69}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}The PIDE system for American options and its solution}{69}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}American put option in jump-diffusion dynamics}{70}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Example: lognormally distributed jumps for an American put option}{74}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}American call option in jump-diffusion dynamics}{84}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.4}Example: lognormally distributed jumps for an American call option}{86}{subsection.5.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Integral equations for $S^*$ for both the American put and call options in a jump-diffusion model}{94}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Asymptotic behaviour of $S^*$ at terminal time}{95}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.3.1}Example: $S^*(T)$ for lognormally distributed jumps}{98}{subsection.5.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Approximate integro-differential equation to the free boundary for American options in jump-diffusion dynamics}{100}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Approximate IDE for an American put option}{100}{subsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}Example of an approximate IDE for an American put option and $S^*$: lognormally distributed jumps}{104}{subsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.3}Approximate IDE for an American call option}{105}{subsection.5.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.4}Example of an approximate IDE for an American call option and $S^*$: lognormally distributed jumps}{108}{subsection.5.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}An algorithm for numerically solving the approximate IDE for $S^*$ for an American put option}{109}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}A finite difference method for solving the PIDE}{112}{section.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Numerical simulations}{114}{section.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.1}The approximate free boundary for an American put option}{115}{subsection.5.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.2}Results}{115}{subsection.5.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.3}Conclusion}{118}{subsection.5.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Alternative method for computing European compound options}{119}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Outline}{119}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Generalised compound option pricing formulas}{119}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Call-on-a-call compound option}{120}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Put-on-a-put compound option}{122}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Call-on-a-put compound option}{123}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.4}Put-on-a-call compound option}{124}{subsection.6.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Generalised example: straddle-on-a-call compound option}{126}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Compound options with discrete dividends}{127}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.1}Case 1: $0 < t_d < T_1 < T_2$}{129}{subsection.6.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.2}Case 2: $0 < T_1 < t_d < T_2$}{130}{subsection.6.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.3}Case 3: $0 < t_d = T_1 < T_2$}{131}{subsection.6.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.4.4}Example: Call-on-a-call for $0 < t_d < T_1 < T_2$}{132}{subsection.6.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Conclusion}{134}{section.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{136}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Derivation of useful lemmas from the preliminaries}{146}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Proof of Lemma\nobreakspace {}\ref {lem:2}}{146}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Proof of Lemma\nobreakspace {}\ref {lem:1}}{147}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Proof of Lemma \ref {lem:2b}}{148}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Proof of Lemma \ref {lem:2bb}}{149}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Proof of Lemma \ref {lem:2a}}{149}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Proof of the lemmas pertaining to compound options}{151}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Proof of Lemma\nobreakspace {}\ref {lem:B1}}{151}{section.B.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Proof of Lemma\nobreakspace {}\ref {lem:B2}}{152}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Proof of Corollary\nobreakspace {}\ref {cor:1}}{153}{section.B.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.4}Proof of lemma\nobreakspace {}\ref {lem:kd}}{154}{section.B.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.5}Proof of Lemma\nobreakspace {}\ref {lem:B5}}{155}{section.B.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.6}Proof of Corollary\nobreakspace {}\ref {cor:2}}{156}{section.B.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}MATLAB code used throughout the thesis}{157}{appendix.C}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.1}Code to output Black-Scholes' standard diffusion and Merton's jump-diffusion option profiles}{157}{section.C.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.2}Code to compute the implied volatility in a jump-diffusion model}{159}{section.C.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.2.1}Implied volatility using theoretical data}{159}{subsection.C.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.2.2}Implied volatility estimation using pseudo-market data}{161}{subsection.C.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.2.3}Newton's method}{164}{subsection.C.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.2.4}Brenner-Subrahmanyam}{166}{subsection.C.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.2.5}Corrado-Miller}{166}{subsection.C.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.3}Code to aid in pricing an American put option subjected to jump-diffusion dynamics}{167}{section.C.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.3.1}FDM to solve Merton's PIDE}{167}{subsection.C.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {C.3.2}Code to solve for the American put option in jump-diffusion dynamics using $S^*$ from Appendix C.3.2.}{169}{subsection.C.3.2}
