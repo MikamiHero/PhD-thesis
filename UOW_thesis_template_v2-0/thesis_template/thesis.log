@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  1 JUL 2017 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  15 JUL 2017 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2502,9 +2502,15 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 7718580D22C7A2305E2927EC67C5052C;26025.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
@@ -2512,7 +2518,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  43977 strings out of 493013
  835811 string characters out of 6133344
- 1301250 words of memory out of 5000000
+ 1299791 words of memory out of 5000000
  45650 multiletter control sequences out of 15000+600000
  87566 words of font info for 205 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2532,7 +2538,7 @@ s/type1/urw/symbol/usyr.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 bi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (182 pages, 758251 bytes).
+Output written on thesis.pdf (182 pages, 758368 bytes).
 PDF statistics:
  3327 PDF objects out of 3580 (max. 8388607)
  3029 compressed objects within 31 object streams
