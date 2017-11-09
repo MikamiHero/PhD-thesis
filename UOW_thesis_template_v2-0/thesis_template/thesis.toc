@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Black-Scholes framework}{22}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Jump-diffusion framework}{26}{section.2.2}
+\contentsline {section}{\numberline {2.2}Jump-diffusion framework}{27}{section.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}The Black-Scholes kernel and its properties}{28}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 

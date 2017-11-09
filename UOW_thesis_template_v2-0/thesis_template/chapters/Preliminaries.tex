@@ -49,7 +49,7 @@ and $N$ is the CDF of a standard normal random variable. Another important resul
 	\end{equation}
 
 We will now construct the foundation needed to tackle the American option pricing problems in this thesis.
-As aforementioned in the introduction, there are a multitude of ways to formulate the American option pricing problem.
+As mentioned in the introduction, there are a multitude of ways to formulate the American option pricing problem.
 The structure we will present provides a clear interpretation of all the possible scenarios that can occur with American options.
 
 Due to the liberty of being able to exercise the option early, the American option valuation problem involves two unknown functions: the option value itself $V_t$ and
@@ -63,7 +63,11 @@ $v_\text{a}^{\text{put}} =v_\text{a}^{\text{put}}(x,t)$ and $S^* = S^*(t)$ such 
 		\begin{equation*}
 			v_\text{a}^{\text{put}}(S^*(t),t) = K - S^*(t), \quad \fr{\pr v_\text{a}^{\text{put}}}{\pr x}(S^*(t),t) = -1.
 		\end{equation*}
-	From this formulation, we can view the smooth pasting conditions as reflecting the interests of option holders to maximize their profit. The value of the asset will dictate what choice the holders should make due to the additional unknown $S^*(t)$ as seen above in the problem formulation . For an American put, the interval $0 \leq x < S^*(t)$ is known as the \emph{exercise region} as it is the most optimal time to exercise the option irrespective of time to expiry since the value of the American put is equal to its payoff. In contrast, $x > S^*(t)$ represents the \emph{continuation region} where the American put is worth more than its payoff and thus is more valuable to continue to hold the option. As we have mentioned in the introduction, the position of $S^*(t)$ (which divides the $x$ domain into the exercise and continuation regions) is unknown \emph{a priori} which adds another layer of difficulty to the option pricing problem.
+	From this formulation, we can view the smooth pasting conditions as reflecting the interests of option holders to maximize their profit. It is a crucial point to note that the delta condition for the American put
+	$$
+	\fr{\pr v_\text{a}^{\text{put}}}{\pr x}(S^*(t),t) = -1
+	$$
+is not a by-product of $v_\text{a}^{\text{put}}(S^*(t),t) = K - S^*(t)$. The smooth pasting conditions together are imposed on an American option to ensure the absence of arbitrage opportunities~\cite{Chiarella2014}. Although the delta condition is seldom used in deriving the pricing formulae for American options, it is a necessity when solving the above option pricing PDE numerically (e.g., using the method of lines)~\cite{Chiarella2010}. The value of the asset will dictate what choice the holders should make due to the additional unknown $S^*(t)$ as seen above in the problem formulation. For an American put, the interval $0 \leq x < S^*(t)$ is known as the \emph{exercise region} as it is the most optimal time to exercise the option irrespective of time to expiry since the value of the American put is equal to its payoff. In contrast, $x > S^*(t)$ represents the \emph{continuation region} where the American put is worth more than its payoff and thus is more valuable to continue to hold the option. As we have mentioned in the introduction, the position of $S^*(t)$ (which divides the $x$ domain into the exercise and continuation regions) is unknown \emph{a priori} which adds another layer of difficulty to the option pricing problem.
 	
 	On the other hand, an American call option is constructed in the following manner. Similar to the American put, we seek for functions $v_\text{a}^{\text{call}} = v_\text{a}^{\text{call}}(x,t)$ and $S^* = S^*(t)$ such that
 	\begin{enumerate}
@@ -281,7 +285,7 @@ The following lemmas and corollaries will also be of great use throughout this t
 	\end{proof}
 	\begin{lemma}
 		\label{lem:2b}
-		For $a_1, \, a_2 > 0$, $b_1, \, b_2 \in \mathbb{R}$, and $c > 0$, it follows from that
+		For $a_1, \, a_2 > 0$, $b_1, \, b_2 \in \mathbb{R}$, and $c > 0$, it follows that
 		\begin{align*}
 			&\int_c^\infty \fr{1}{z}N'(a_1\log z + b_1)N'\left(a_2\log\left( 1/z \right) + b_2 \right) \, \d z =  \fr{1}{\sqrt{a_1^2 + a_2^2}}N'\left( \fr{a_1b_2 + a_2b_1}{\sqrt{a_1^2+a_2^2}} \right)N(d),
 		\end{align*}
@@ -398,7 +402,7 @@ Corollary~\ref{cor:1} will be essential for pricing compound options when the un
 			\label{eqn:intlem1}
 			\int_0^\infty \fr{1}{y}\K\left( \fr{x}{y}, t_1, t_2 \right)\K\left( \fr{cy}{z}, t_3, t_4 \right) \, \d y = \K_d\left( \fr{cx}{z}, t_1, t_2, t_3, t_4 \right),
 		\end{equation}
-where we define $\K_d$ to be the \emph{discretised Black-Scholes kernel} given by
+where we define $\K_d$ to be the discretised Black-Scholes kernel given by
 	\begin{equation}
 		\label{eqn:Kd}
 		\begin{split}
@@ -420,8 +424,8 @@ with
 \begin{proof}
 	See the Appendix B.4.
 \end{proof}
-The reasoning for ``discretised'' is because~\eqref{eqn:Kd} will be primarily used for pricing compound options where an underlying pays one discrete dividend.
-	\begin{lemma}
+The expression~\eqref{eqn:Kd} will be very valuable in pricing compound options where the underlying asset pays a single dividend yield.
+\begin{lemma}
 		\label{lem:B5}
 		Assuming that $0 \leq t_1 < t_2 < t_3 < t_4 < t_5$ and $c,x,w,z > 0$, then
 		\begin{equation}

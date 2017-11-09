@@ -736,6 +736,37 @@
       \field{title}{The Numerical Solution of the American Option Pricing Problem: Finite Difference and Transform Approaches}
       \field{year}{2014}
     \endentry
+    \entry{Chiarella2010}{book}{}
+      \name{author}{2}{}{%
+        {{hash=03897271c214ab4e247059b289150b71}{%
+           family={Chiarella},
+           familyi={C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0871b11a6ed3d013cb4ce4664018ab42}{%
+           family={Novikov},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{21f1ece59371d1fd0d197d2477e32281}
+      \strng{fullhash}{21f1ece59371d1fd0d197d2477e32281}
+      \strng{authornamehash}{21f1ece59371d1fd0d197d2477e32281}
+      \strng{authorfullhash}{21f1ece59371d1fd0d197d2477e32281}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783642034794}
+      \field{title}{Contemporary Quantitative Finance: Essays in Honour of Eckhard Platen}
+      \field{year}{2010}
+      \verb{url}
+      \verb https://books.google.com.au/books?id=sQNHAAAAQBAJ
+      \endverb
+    \endentry
     \entry{Chiarella2006}{article}{}
       \name{author}{2}{}{%
         {{hash=03897271c214ab4e247059b289150b71}{%

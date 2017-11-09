@@ -113,7 +113,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
           &= \int_t^T (F(\cdot,u)\ast g_p(\cdot,u))(x) \, \d u \\
           &= \int_t^T \int_0^\infty \fr{1}{z}F\left(\fr{x}{z},u\right)g_p(z,u) \, \d z \, \d u,
         \end{align*}
-        where $F$ and $g$ are the inverse Mellin transforms of $\tilde F$ and $\tilde g$, respectively. We have purposefully expanded the convolution term to its integral form as this makes the next step much easier to see. The point of introducing $\tilde F$ is because upon inversion, this term itself is another convolution. That is,
+        where $F$ and $g$ are the inverse Mellin transforms of $\tilde F$ and $\tilde g$, respectively. We have purposefully expanded the convolution term to its integral form as this makes the next step much easier to see. The point of introducing $\tilde F$ is because, upon inversion, this term itself is another convolution. That is,
         \begin{align*}
         	F\left(\fr{x}{z},u\right) &= \M^{-1}\left\{\tilde{F}(\xi,u)\right\} = \M^{-1}\left\{e^{-\left(p_\lambda(\xi) -\lambda\E[Y^{-\xi}]\right)(u-t)}\right\} \\
         	&= (\K_\lambda(\cdot,t,u)\ast \J(\cdot,t,u))\left(\fr{x}{z}\right) = \int_0^\infty \fr{1}{w}\J(w,t,u)\K_\lambda\left( \fr{x}{zw},t,u \right) \, \d w,
@@ -194,7 +194,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
         			& {} \quad \quad \times N'\left( z_{2\lambda}\left( \fr{x}{zw}, t, u \right) \right) \, \d z \, \d w \, \d u \\
         			&= I_{2,a} + I_{2,b}.
         		\end{align*}
-		To calculate $I_{2,a}$, we swap the integrals with respect to $z$ and $w$ and instigating the properties of the Dirac delta function gives us
+		To calculate $I_{2,a}$, we swap the integrals with respect to $z$ and $w$ and using the properties of the Dirac delta function gives us
 			$$
 				I_{2,a} = qx\int_t^T \fr{e^{(q+\lambda+\kappa\lambda)(u-t)}}{\sigma\sqrt{u-t}}\int_0^{S^*(u)} N'\left( z_{1\lambda}\left( \fr{x}{z}, t, u \right) \right) \, \d z \, \d u.
 			$$
@@ -624,7 +624,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
         		K - S^*(t) = v_{\text{e}}^{\text{put}}(S^*(t),t) + \int_t^T \int_0^\infty \int_0^\infty \fr{1}{z}g_p\left(\fr{S^*(t)}{z},u\right) \fr{1}{w}\J(w,t,u)\K_\lambda\left( \fr{z}{w},t,u \right) \, \d w \, \d z \, \d u.
         		\end{split}
         	\end{equation}
-        	Eq.~\eqref{eqn:inteqn1} may initially appear to be a simple implicit equation for $S^*(t)$, but the hidden layer of complication lies in the function $g_p$ that contains the other unknown $v_{\text{a}}^{\text{put}}$. Thus if the American put option pricing problem for jump-diffusion processes were to be solved numerically, one would have to solve the~\eqref{eqn:amerJumpPut} and~\eqref{eqn:inteqn1} simultaneously. As we mentioned in the introduction, a scheme to solve this linked integral equation system was done in~\cite{Chiarella2006}. Alternatively, we may use the other value-matching condition of $\fr{\pr v_{\text{a}}^{\text{put}}}{\pr x}(S^*(t),t) = -1$ to provide us with another integral equation for $S^*(t)$. Taking the partial derivative of~\eqref{eqn:amerJumpPut} with respect to $x$, we get
+        	Eq.~\eqref{eqn:inteqn1} may initially appear to be a simple implicit equation for $S^*(t)$, but the hidden layer of complication lies in the function $g_p$ that contains the other unknown $v_{\text{a}}^{\text{put}}$. Thus if the American put option pricing problem for jump-diffusion processes were to be solved numerically, one would have to solve the~\eqref{eqn:amerJumpPut} and~\eqref{eqn:inteqn1} simultaneously. As we mentioned in the introduction, a scheme to solve this linked integral equation system was reported in~\cite{Chiarella2006}. Alternatively, we may use the other value-matching condition of $\fr{\pr v_{\text{a}}^{\text{put}}}{\pr x}(S^*(t),t) = -1$ to provide us with another integral equation for $S^*(t)$. Taking the partial derivative of~\eqref{eqn:amerJumpPut} with respect to $x$, we get
         	$$
         		\fr{\pr v_{\text{a}}^{\text{put}}}{\pr x}( x, t) = \fr{\pr v_{\text{e}}^{\text{put}}}{\pr x}\left(x,t\right) + \int_t^T \int_0^\infty \int_0^\infty \fr{1}{z}\fr{\pr g_p}{\pr x}\left(\fr{x}{z},u\right) \fr{1}{w}\J(w,t,u)\K_\lambda\left( \fr{z}{w},t,u \right) \, \d w \, \d z \, \d u.
         	$$
@@ -738,7 +738,7 @@ For comparison, $S^*(T)$ for an American call option with jumps that are lognorm
 	\end{equation}
         	
         	\section{Approximate integro-differential equation to the free boundary for American options in jump-diffusion dynamics}
-        	We could not solve the American option pricing problem along with its respective integral equations as demonstrated in the previous section due to the difficulty in determining $S^*$. Several numerical methods exist that have yielded quite favourable outcomes (e.g., see~\cite{Kallast2003} and~\cite{Chiarella2006}), but these often can be quite complex in implementation if minor details are omitted from the expositions. Thus in a similar manner to~\cite{Rodrigo2013} where an approximate ODE was found, we will derive an approximation for the free boundary $S^*$, except now we will be examining it in a jump-diffusion framework so the ODE will now be an integro-differential equation (IDE). The numerical results from~\cite{Rodrigo2013} for the standard diffusion dynamics in the asset price showed to be extremely credible when compared against renownedly and widely accepted techniques for computing the American option value (e.g., the binomal method).
+        	We could not solve the American option pricing problem along with its respective integral equations as demonstrated in the previous section due to the difficulty in determining $S^*$. Several numerical methods exist that have yielded quite favourable outcomes (e.g., see~\cite{Kallast2003} and~\cite{Chiarella2006}), but these often can be quite complex in implementation if minor details are omitted from the expositions. Thus in a similar manner to~\cite{Rodrigo2013} where an approximate ODE was found, we will derive an approximation for the free boundary $S^*$, except now we will be examining it in a jump-diffusion framework so the ODE will now be an integro-differential equation (IDE). The numerical results from~\cite{Rodrigo2013} for the standard diffusion dynamics in the asset price showed to be extremely credible when compared against renowned and widely accepted techniques for computing the American option value (e.g., the binomal method).
         	
         	\subsection{Approximate IDE for an American put option}
         	
