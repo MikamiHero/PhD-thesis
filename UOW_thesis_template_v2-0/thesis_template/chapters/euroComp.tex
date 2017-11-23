@@ -159,7 +159,7 @@ where $\1_I$ is the indicator function defined as
 			0, \quad x \notin I,
 		\end{cases}
 	\end{equation*}
-and where $I$ is an arbitrary interval with endpoints $a$ and $b$ with $a < b$. The interval can be open, half-closed, or closed. The two auxiliary functions in~\eqref{eqn:funcs} are the ``building blocks'' for all possible financial payoffs in options pricing. For example, a call option has a payoff $\max(x-K,0)$ which can be written as
+and where $I$ is an arbitrary interval with endpoints $a$ and $b$ with $a < b$. The interval can be open, half-closed, or closed. The two auxiliary functions in~\eqref{eqn:funcs} are the building blocks for many possible financial payoffs in options pricing. For example, a call option has a payoff $\max(x-K,0)$ which can be written as
 	\begin{equation*}
 		\max(x-K,0) = x\1_{[K,\infty)}(x) - K\1_{[K,\infty)}(x),
 	\end{equation*}
@@ -198,7 +198,7 @@ where $D(S_t,t)$ does not necessarily to have be linear in $S_t$. It follows tha
 	\end{equation*}
 This is a potential unified approach to pricing options regardless of whether the dividend yield is continuous or discrete. However, the Black-Scholes kernel identities in the preliminaries rely on the dividend term $D$ being linear in $x$ (i.e., $D(x,t) = q(t)x$). Therefore, in order to adapt the kernel identities, we have assumed a specific form for $D$ to be able to construct a pricing formula for discrete dividends.
 
-To proceed, we assume a dividend of value proportional to the asset price is paid out on a date $t = t_d$, where $t_d$ is before the expiry. Consequently, this means that the asset price $S_t$ will decrease by a proportion of its value as it passes $t_d$. We call the proportion factor $q_d \geq 0$. Using $t_d^-$ and $t_d^+$ to indicate an infinitesimal time before and after the dividend payment date, respectively, mathematically this implies the following jump condition
+To proceed, we assume a dividend of value proportional to the asset price is paid out on a date $t = t_d$, where $t_d$ is before the expiry. Consequently, this means that the asset price $S_t$ will decrease by a proportion of its value as it passes $t_d$. We call the proportion factor $q_d \in [0,1)$. Using $t_d^-$ and $t_d^+$ to indicate an infinitesimal time before and after the dividend payment date, respectively, mathematically this implies the following jump condition
 	\begin{equation}
 		\label{eqn:jumpcond}
 		S_{t_d^+} = S_{t_d^-} - q_dS_{t_d^-} = (1-q_d)S_{t_d^-}.

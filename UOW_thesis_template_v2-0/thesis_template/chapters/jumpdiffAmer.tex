@@ -23,7 +23,7 @@
             &\mathscr{L'}v_{\text{a}}^{\text{put}}(x,t) = 0, \quad 0 \leq t < T \enskip \text{and} \enskip x > S^*(t),
         \end{split}
     \end{equation}
-    and at $x = S^*(t)$, the following smooth pasting conditions are satisfied:
+    and at $x = S^*(t)$, the following smooth pasting conditions are assumed to be satisfied:
     	\begin{equation}
     		\label{eqn:amerputPIDEsmc}
     		v_{\text{a}}^{\text{put}}(S^*(t),t) = K - S^*(t), \quad \fr{\pr v_{\text{a}}^{\text{put}}}{\pr x}(S^*(t),t) = -1.
@@ -73,7 +73,7 @@ This PIDE system~\eqref{eqn:amerPIDE}--\eqref{eqn:amerPasting} is similar to~\eq
 To proceed with solving this system, we take the Mellin transform of \eqref{eqn:amerPIDE} with respect to $x$ and get
       \begin{equation}
       	  \label{eqn:PIDEODEamer}
-        \fr{\pr \tilde{ v}_{\text{a}}^{\text{put}}}{\pr t}(\xi,t) - \left(p_\lambda(\xi) - \lambda\E[Y^{-\xi}]\right)\tilde{ v}_{\text{a}}^{\text{put}}(\xi,t) = \tilde{g}(\xi,t).
+        \fr{\pr \tilde{ v}_{\text{a}}^{\text{put}}}{\pr t}(\xi,t) - \left(p_\lambda(\xi) - \lambda\E[Y^{-\xi}]\right)\tilde{ v}_{\text{a}}^{\text{put}}(\xi,t) = \tilde{g}(\xi,t),
       \end{equation}
     with
       \begin{equation*}
@@ -139,7 +139,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
         		&{} \quad \quad \times  \lambda \int_{S^*(u)/z}^\infty \left( v_{\text{a}}^{\text{put}}(zy,t) - (K-zy) \right)f(y) \, \d y \, \d z \, \d w \, \d u \\
         		& = I_1 + I_2 + I_3,
         	\end{align*}
-        	where we had to swap the integrals with respect to $w$ and $z$ in order to simplify the Heaviside function that appears in $g_p$. Each of these integrals will be investigated separately to see if they can be simplified. For $I_1$, we will make use of eq.~\eqref{eqn:jump11} for $\J$ and the first identity in~\eqref{eqn:shiftKernel} for $\K_\lambda$ (assuming time-constant functions for $r$, $q$, and $\sigma$) to get
+        	where we had to swap the integrals with respect to $w$ and $z$ in order to simplify the Heaviside function that appears in $g_p$. Each of these integrals will be investigated separately to see if they can be simplified. For $I_1$, we will make use of Eq.~\eqref{eqn:jump11} for $\J$ and the first identity in~\eqref{eqn:shiftKernel} for $\K_\lambda$ (assuming time-constant functions for $r$, $q$, and $\sigma$) to get
         		\begin{align*}
         			I_1 &= -rK\int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_0^\infty\int_0^{S^*(u)} \fr{1}{w} \delta(w-1) \fr{1}{z} N'\left( z_{2\lambda}\left( \fr{x}{zw}, t, u \right) \right) \, \d z \, \d w \, \d u \\
         			& {}\quad -rK\int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2}}\int_0^\infty \int_0^{S^*(u)} \fr{1}{zw}N'\left( \fr{\log w + n\mu_Y}{\sqrt{n\sigma_Y^2}} \right) \\
@@ -161,7 +161,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			\end{align*}
 			Unfortunately, the time integral cannot be solved analytically without prior knowledge of $S^*$ so it will be left unsimplified
 		
-        	For $I_{1,b}$, we once again swap the order of integration between $z$ and $w$. Then we make use of lemma~\ref{lem:1} because $z_{2\lambda}$ takes the form of a logarithmic function. In accordance to Lemma~\ref{lem:1}, we make the following declarations
+        	For $I_{1,b}$, we once again swap the order of integration between $z$ and $w$. Then we make use of Lemma~\ref{lem:1} because $z_{2\lambda}$ takes the form of a logarithmic function. In accordance to Lemma~\ref{lem:1}, we make the following declarations
         		$$
         			a_1 = \fr{1}{\sqrt{n\sigma_Y^2}}, \enskip b_1 = \fr{n\mu_Y}{\sqrt{n\sigma_Y^2}}, \enskip
         			a_2 = \fr{1}{\sigma\sqrt{u-t}}, \enskip b_2 = z_{2\lambda}\left( \fr{x}{z}, t, u\right),
@@ -170,7 +170,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			\begin{align*}
 				I_{1,b} &= -rK  \int_t^T  \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}  e^{(r+\lambda)(u-t)} \int_0^{S^*(u)} \fr{1}{z}  N\left(Z_n \left( \fr{x}{z},t,u  \right) \right) \,\d z \, \d u,
 			\end{align*}
-	where $Z_n$ is defined in~\eqref{eqn:zn}. To compute the integral with respect to $z$, we once again incorporate lemma~\ref{lem:2a} and set 
+	where $Z_n$ is defined in~\eqref{eqn:zn}. To compute the integral with respect to $z$, we once again incorporate Lemma~\ref{lem:2a} and set 
 		$$
 			a = 0, \enskip b = S^*(u), \enskip a_1 = \fr{1}{\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}, \enskip
 			b_1 = Z_n\left( \fr{x}{z}, t, u \right),
@@ -207,7 +207,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			$$
 				I_{2,a} = qx\int_t^T e^{(q+\lambda+\kappa\lambda)(u-t)} N'\left(-z_{1\lambda}\left( \fr{x}{S^*(u)}, t, u \right) \right) \, \d z \, \d u.
 			$$
-		with $z_{1\lambda}$ from~\eqref{eqn:z1lambda}. Similarly for $I_{2,b}$, we apply the same procedure as we did for $I_{1,b}$ except when using lemma~\ref{lem:1}, we choose
+		with $z_{1\lambda}$ from~\eqref{eqn:z1lambda}. Similarly for $I_{2,b}$, we apply the same procedure as we did for $I_{1,b}$ except when using Lemma~\ref{lem:1}, we choose
 			$$
         			a_1 = \fr{1}{\sqrt{n\sigma_Y^2}}, \enskip b_1 = \fr{n\mu_Y}{\sqrt{n\sigma_Y^2}}, \enskip
         			a_2 = \fr{1}{\sigma\sqrt{u-t}}, \enskip b_2 = z_{1\lambda}\left( \fr{x}{z}, t, u\right),
@@ -216,7 +216,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			\begin{align*}
 				I_{2,b} &= q  \int_t^T  \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}  e^{(r+\lambda)(u-t)} \int_0^{S^*(u)} N\left( Z_n \left( \fr{x}{z},t,u  \right) \right) \,\d z \, \d u.
 			\end{align*}
-	To compute the remaining integral with respect to $z$, we once again have the aid of the second result from lemma~\ref{lem:2a} and set
+	To compute the remaining integral with respect to $z$, we once again have the aid of the second result from Lemma~\ref{lem:2a} and set
 			$$
 				a = 0, \enskip b = S^*(u), \enskip a_1 = \fr{1}{\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}, \enskip
 			b_1 = Z_n\left( \fr{x}{z}, t, u \right).
@@ -274,7 +274,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			I_{3,a} &=  \fr{\lambda}{\sigma_Y}  \int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_1^\infty \fr{1}{p} \left( v_{\text{a}}^{\text{put}}(S^*(u)p,t) - (K-S^*(u)p) \right)  \\
 			&\quad {} \times \int_p^\infty \fr{1}{y}N'\left( \fr{\log y - \mu_Y}{\sigma_Y} \right)N'\left( z_{2\lambda}\left( \fr{xy}{S^*(u)p}, t, u \right)\right) \, \d y \, \d p \, \d u 
 		\end{align*}
-		The innermost integral can be evaluated using lemma~\ref{lem:2b} and the associated variables be set to
+		The innermost integral can be evaluated using Lemma~\ref{lem:2b} and the associated variables be set to
 		$$
 			a_1 = \fr{1}{\sigma_Y}, \enskip b_1 = \fr{-\mu_Y}{\sigma_Y}, \enskip a_2 = \fr{-1}{\sigma\sqrt{u-t}}, \enskip
 			b_2 = z_{2\lambda}\left( \fr{x}{S^*(u)p}, t, u \right), \enskip c = p,
@@ -297,7 +297,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			I_{3,b} &= \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2}}\fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_0^{S^*(u)} \fr{F(z,u)}{z}  \\
 			&\quad {} \times \int_0^\infty  \fr{1}{w}N'\left( \fr{\log w + n\mu_Y}{\sqrt{n\sigma_Y^2}} \right)N'\left( z_{2\lambda}\left( \fr{x}{zw},t,u \right) \right) \, \d w \, \d z \, \d u.
 		\end{align*}
-		The innermost integral with respect to $w$ is computed first with the help of lemma~\ref{lem:2a} by choosing
+		The innermost integral with respect to $w$ is computed first with the help of Lemma~\ref{lem:2a} by choosing
 		$$
 			a_1 = \fr{1}{\sqrt{n\sigma_Y^2}}, \enskip b_1 = \fr{n\mu_Y}{\sqrt{n\sigma_Y^2}}, \enskip a_2 = \fr{1}{\sigma\sqrt{u-t}}, \enskip b_2 = z_{2\lambda}(x/z,t,u).
 		$$
@@ -310,12 +310,12 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			I_{3,b} &= \lambda \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^ne^{(r+\lambda)(u-t)}}{n!\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}\int_0^{S^*(u)} \fr{1}{z}  N'\left( Z_n\left( \fr{x}{z},t, u \right) \right) \\
 			&\quad {} \times \int_{S^*(u)/z}^\infty \left( v_{\text{a}}^{\text{put}}(zy,t) - (K-zy) \right) f(y) \, \d y  \, \d z \, \d u.
 		\end{align*}
-		Similar to how we handled $I_{3,a}$, we interchange the order of integration between $y$ and $z$, declare a substitution of $p = (zy)/S^*(u)$, then reverse the integration between $p$ and $y$. The result of these steps is
+		Similar to how we dealt with $I_{3,a}$, we interchange the order of integration between $y$ and $z$, declare a substitution of $p = (zy)/S^*(u)$, then reverse the integration between $p$ and $y$. The result of these steps is
 		\begin{align*}
 			I_{3,b} &= \lambda \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^ne^{(r+\lambda)(u-t)}}{n!\sigma_Y\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}\int_1^\infty \fr{1}{p}\left( v_{\text{a}}^{\text{put}}(S^*(u)p,t) - (K-S^*(u)p) \right) \\
 			&\quad {} \times \int_p^\infty \fr{1}{y} N'\left( \fr{\log y - \mu_Y}{\sigma_Y} \right) N'\left( Z_n\left( \fr{xy}{S^*(u)p}, t, u \right) \right)\, \d y  \, \d p \, \d u,
 		\end{align*}
-		where we also replaced $f$ with the PDF for a lognormal distribution. The integral with respect to $y$ can be integrated by lemma~\ref{lem:2b} with
+		where we also replaced $f$ with the PDF for a lognormal distribution. The integral with respect to $y$ can be integrated by Lemma~\ref{lem:2b} with
 		$$
 			a_1 = \fr{1}{\sigma_Y}, \enskip b_1 = \fr{-\mu_Y}{\sigma_Y}, \enskip a_2 = \fr{-1}{\sigma\sqrt{u-t}}, \enskip
 			b_2 = Z_n\left( \fr{x}{S^*(u)p}, t, u \right), \enskip c = p.
@@ -371,7 +371,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
             &\mathscr{L'}v_{\text{a}}^{\text{call}}(x,t) = 0, \quad 0 \leq t < T \enskip \text{and} \enskip 0 \leq x < S^*(t),
         \end{split}
     \end{equation}
-    and at $x = S^*(t)$, the following smooth pasting conditions are satisfied:
+    and at $x = S^*(t)$, the following smooth pasting conditions are assumed to be satisfied:
     	\begin{equation}
     		\label{eqn:amercallPIDEsmc}
     		v_{\text{a}}^{\text{call}}(S^*(t),t) = S^*(t) - K, \quad \fr{\pr v_{\text{a}}^{\text{call}}}{\pr x}(S^*(t),t) = 1.
@@ -453,7 +453,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
         		$$
         			I_{1,a} = rK\int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}}\int_{S^*(u)}^\infty \fr{1}{z} N'\left( z_{2\lambda}\left( \fr{x}{z}, t, u \right) \right) \, \d z \, \d u.
         		$$
-		Making use of lemma~\ref{lem:2a} and checking the full form of $z_{2\lambda}$ in~\eqref{eqn:z2lambda} allows us to set
+		Making use of Lemma~\ref{lem:2a} and checking the full form of $z_{2\lambda}$ in~\eqref{eqn:z2lambda} allows us to set
 			$$
 				a = S^*(u), \enskip b = \infty, \enskip a_1 = \fr{1}{\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}, \enskip
 			b_1 = z_2\left( \fr{x}{z}, t, u \right),
@@ -464,7 +464,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
 			\end{align*}
 		We cannot proceed to simplify this as the integral with respect to $u$ cannot be computed without knowing $S^*$ for all of $u$ from $t$ to $T$.
 		
-        	The integral $I_{1,b}$ is treated in a similar manner. We once again swap the order of integration between $z$ and $w$. Then lemma~\ref{lem:1} will be used since $z_{2\lambda}$ is actually a logarithmic function. To utilize lemma~\ref{lem:1}, we need to set
+        	The integral $I_{1,b}$ is treated in a similar manner. We once again swap the order of integration between $z$ and $w$. Then Lemma~\ref{lem:1} will be used since $z_{2\lambda}$ is actually a logarithmic function. To utilize Lemma~\ref{lem:1}, we need to set
         		$$
         			a_1 = \fr{1}{\sqrt{n\sigma_Y^2}}, \enskip b_1 = \fr{n\mu_Y}{\sqrt{n\sigma_Y^2}}, \enskip
         			a_2 = \fr{1}{\sigma\sqrt{u-t}}, \enskip b_2 = z_{2\lambda}\left( \fr{x}{z}, t, u\right),
@@ -473,7 +473,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
 			\begin{align*}
 				I_{1,b} &= rK  \int_t^T  \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}  e^{(r+\lambda)(u-t)} \int_{S^*(u)}^\infty \fr{1}{z}  N\left(Z_n \left( \fr{x}{z},t,u  \right) \right) \,\d z \, \d u,
 			\end{align*}
-	with $Z_n$ defined in~\eqref{eqn:zn}. We once again incorporate lemma~\ref{lem:2a} to complete the integral in $z$ by setting 
+	with $Z_n$ defined in~\eqref{eqn:zn}. We once again incorporate Lemma~\ref{lem:2a} to complete the integral in $z$ by setting 
 		$$
 			a = S^*(u), \enskip b = \infty, \enskip a_1 = \fr{1}{\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}, \enskip
 			b_1 = Z_n\left( \fr{x}{z}, t, u \right),
@@ -496,7 +496,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
         		I_2 = qx  \ds\sum\limits_{n=0}^{\infty}\int_t^T   \fr{(\lambda(u-t))^n}{n!} e^{n\mu_Y + n\sigma_Y^2/2} e^{(q+\lambda + \kappa\lambda)(u-t)} N\left( D_n \left( \fr{x}{S^*(u)},t,u  \right) \right) \, \d u,
         	\end{equation}
 	with $D_n$ defined in~\eqref{eqn:Dn}. 
-	However, we will be providing the complete derivation and solution of $I_3$ as this term is mildly involved. As we will see, the result of $I_3$ will be a double integral which is more ideal to work with in comparison to a quadruple integral. 
+	However, we will be providing the complete derivation and solution of $I_3$ as this term is rather complicated. As we will see, the result of $I_3$ will be a double integral which is more ideal to work with in comparison to a quadruple integral. 
 	
 	To begin, we let
 		$$
@@ -537,7 +537,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
 			I_{3,a} &=  \fr{\lambda}{\sigma_Y}  \int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_0^1 \fr{1}{p} \left( v_{\text{a}}^{\text{call}}(S^*(u)p,t) - (S^*(u)p-K) \right)  \\
 			&\quad {} \times \int_0^p \fr{1}{y}N'\left( \fr{\log y - \mu_Y}{\sigma_Y} \right)N'\left( z_{2\lambda}\left( \fr{xy}{S^*(u)p}, t, u \right)\right) \, \d y \, \d p \, \d u 
 		\end{align*}
-		The innermost integral can be evaluated using lemma~\ref{lem:2bb} with
+		The innermost integral can be evaluated using Lemma~\ref{lem:2bb} with
 		$$
 			a_1 = \fr{1}{\sigma_Y}, \enskip b_1 = \fr{-\mu_Y}{\sigma_Y}, \enskip a_2 = \fr{-1}{\sigma\sqrt{u-t}}, \enskip
 			b_2 = z_{2\lambda}\left( \fr{x}{S^*(u)p}, t, u \right), \enskip c = p,
@@ -554,7 +554,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
 			I_{3,b} &= \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2}}\fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_{S^*(u)}^\infty \fr{F(z,u)}{z}  \\
 			&\quad {} \times \int_0^\infty  \fr{1}{w}N'\left( \fr{\log w + n\mu_Y}{\sqrt{n\sigma_Y^2}} \right)N'\left( z_{2\lambda}\left( \fr{x}{zw},t,u \right) \right) \, \d w \, \d z \, \d u.
 		\end{align*}
-		By using lemma~\ref{lem:2a}, we can evaluate the integral with respect to $w$ by choosing
+		By using Lemma~\ref{lem:2a}, we can evaluate the integral with respect to $w$ by choosing
 		$$
 			a_1 = \fr{1}{\sqrt{n\sigma_Y^2}}, \enskip b_1 = \fr{n\mu_Y}{\sqrt{n\sigma_Y^2}}, \enskip a_2 = \fr{1}{\sigma\sqrt{u-t}}, \enskip b_2 = z_{2\lambda}(x/z,t,u),
 		$$
@@ -572,7 +572,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
 			I_{3,b} &= \lambda \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^ne^{(r+\lambda)(u-t)}}{n!\sigma_Y\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}\int_0^1 \fr{1}{p}\left( v_{\text{a}}^{\text{call}}(S^*(u)p,t) - (S^*(u)p - K) \right) \\
 			&\quad {} \times \int_0^p \fr{1}{y} N'\left( \fr{\log y - \mu_Y}{\sigma_Y} \right) N'\left( Z_n\left( \fr{xy}{S^*(u)p}, t, u \right) \right)\, \d y  \, \d p \, \d u,
 		\end{align*}
-		where we also replaced $f$ with the lognormal PDF. The integral with respect to $y$ can be simplified via lemma~\ref{lem:2bb}. We choose
+		where we also replaced $f$ with the lognormal PDF. The integral with respect to $y$ can be simplified via Lemma~\ref{lem:2bb}. We choose
 		$$
 			a_1 = \fr{1}{\sigma_Y}, \enskip b_1 = \fr{-\mu_Y}{\sigma_Y}, \enskip a_2 = \fr{-1}{\sigma\sqrt{u-t}}, \enskip
 			b_2 = Z_n\left( \fr{x}{S^*(u)p}, t, u \right), \enskip c = p,
@@ -738,7 +738,7 @@ For comparison, $S^*(T)$ for an American call option with jumps that are lognorm
 	\end{equation}
         	
         	\section{Approximate integro-differential equation to the free boundary for American options in jump-diffusion dynamics}
-        	We could not solve the American option pricing problem along with its respective integral equations as demonstrated in the previous section due to the difficulty in determining $S^*$. Several numerical methods exist that have yielded quite favourable outcomes (e.g., see~\cite{Kallast2003} and~\cite{Chiarella2006}), but these often can be quite complex in implementation if minor details are omitted from the expositions. Thus in a similar manner to~\cite{Rodrigo2013} where an approximate ODE was found, we will derive an approximation for the free boundary $S^*$, except now we will be examining it in a jump-diffusion framework so the ODE will now be an integro-differential equation (IDE). The numerical results from~\cite{Rodrigo2013} for the standard diffusion dynamics in the asset price showed to be extremely credible when compared against renowned and widely accepted techniques for computing the American option value (e.g., the binomal method).
+        	We could not solve the American option pricing problem along with its respective integral equations as demonstrated in the previous section due to the difficulty in determining $S^*$. Several numerical methods exist that have yielded quite positive results (e.g., see~\cite{Kallast2003} and~\cite{Chiarella2006}), but these often can be quite complex in implementation if minor details are omitted from the expositions. Thus in a similar manner to~\cite{Rodrigo2013} where an approximate ODE was found, we will derive an approximation for the free boundary $S^*$, except now we will be examining it in a jump-diffusion framework so the ODE will now be an integro-differential equation (IDE). The numerical results from~\cite{Rodrigo2013} for the standard diffusion dynamics in the asset price showed to be accurate when compared against widely accepted techniques for computing the American option value (e.g., the binomal method).
         	
         	\subsection{Approximate IDE for an American put option}
         	
@@ -807,7 +807,7 @@ For comparison, $S^*(T)$ for an American call option with jumps that are lognorm
 				&= \int_0^1 \fr{f(y)}{y} \int_{yS^*(t)}^\infty \left[ v_{\text{a}}^{\text{put}}(z,t) -  v_{\text{e}}^{\text{put}}(z,t) \right] \, \d z\, \d y + \int_1^\infty\fr{f(y)}{y} \int_{yS^*(t)}^\infty \left[ v_{\text{a}}^{\text{put}}(z,t) -  v_{\text{e}}^{\text{put}}(z,t) \right] \, \d z\, \d y \\
 				&= I_1 + I_2
 			\end{align*}
-	where we split the integral in $y$ at $y=1$ because this is the value that would determine if the quantity $z = yS^*(t)$ would place $v_{\text{a}}^{\text{put}}(z,t)$ in the continuation or exercise region. We have also given them temporary names $I_1$ and $I_2$ for ease of reference. We can immediately eliminate $I_2$ since it will decay to 0. This is because in this region, $y \in (1,\infty)$, and then this implies that $yS^*(t) > S^*(t)$. So the $z$ domain of $z \in (yS^*(t),\infty)$ by default is a subset of $z \in (S^*(t),\infty)$, which is precisely the continuation region. Hence $I_2$ will be 0 because 
+	where we split the integral in $y$ at $y=1$ because this is the value that could determine if the quantity $z = yS^*(t)$ would place $v_{\text{a}}^{\text{put}}(z,t)$ in the continuation or exercise region. We have also given them temporary names $I_1$ and $I_2$ for ease of reference. We can immediately eliminate $I_2$ since it will decay to 0. This is because in this region, $y \in (1,\infty)$, and then this implies that $yS^*(t) > S^*(t)$. So the $z$ domain of $z \in (yS^*(t),\infty)$ by default is a subset of $z \in (S^*(t),\infty)$, which is precisely the continuation region. Hence $I_2$ will be 0 because 
 	$$
 		\int_{yS^*(t)}^\infty \left[v_{\text{a}}^{\text{put}}(z,t) -  v_{\text{e}}^{\text{put}}(z,t)\right] \, \d z \approx 0
 	$$
@@ -1007,7 +1007,7 @@ and this can be solved using a standard root-finding technique for nonlinear equ
 \section{A finite difference method for solving the PIDE}
 In order to check the accuracy in solving the IDE~\eqref{eqn:SApproxPut} and the respective option prices observed using this approximate profile for $S^*$ from the IDE, we will compare it to the solution obtained directly from solving the PIDE. It was mentioned in~\cite{Chiarella2014} that the PIDE system~\eqref{eqn:amerPIDE}--\eqref{eqn:g} must be solved with an integral equation for $S^*$ simultaneously. Furthermore, the implementation will most definitely be numerical. This provides the motivation for introducing a FDM to solve this problem. Although taking this stance is far from novel (e.g. see~\cite{Cont2004} and~\cite{Tavella2000}), we believe our approach is more intuitive to understand, easy to implement computationally and informative with the details.
 
-Traditional FDM used in options pricing instantiates a few change of variables in order to change the PDE (or PIDE) to best resemble the typical heat equation. Whilst this may be more elegant, we believe it is quite easy to lose track of the current variable space. Furthermore, it can be cumbersome to visualize these results because the original problem has been altered through these variable changes. Hence we will constrain our analysis to the original variables contained within the problem.
+One of the traditional FDMs used in options pricing uses a few change of variables in order to change the PDE (or PIDE) to resemble the typical heat equation. Whilst this may be more elegant, we believe it is quite easy to lose track of the current variable space. Furthermore, it can be cumbersome to visualize these results because the original problem has been altered through these variable changes. Hence we will constrain our analysis to the original variables contained within the problem.
 
 First, we denote $v_i^n$ to be the value of our option $v$ at $v(x_i,t_n)$ where
 	$$
@@ -1047,7 +1047,7 @@ where we replace the integral with a Riemann sum. Note that we could in theory r
 		\label{eqn:intDiscrete}
 		I \approx \fr{1}{i\Delta x}\sum\limits_{j=0}^J v_j^n f\left( \fr{j\Delta x}{i \Delta x} \right) \Delta x = \fr{1}{i}\sum\limits_{j=0}^J v_j^n f\left( \fr{j}{i} \right).
 	\end{equation}
-The justification for choosing $\Delta z = \Delta x$ is that for a put option (European and American), the value of the option becomes worthless as the asset price (denoted here by $x$) goes off to infinity. Asymptotically, this means that these extreme asset values will give us $v_j^n = v_i^n = 0$ for large $j$ and $i$, and thus extending our grid that far in the $x$ domain will not be of any computational detriment. 
+The justification for choosing $\Delta z = \Delta x$ is that for a put option (European and American), the value of the option becomes worthless as the asset price (denoted here by $x$) goes to infinity. Asymptotically, this means that these extreme asset values will give us $v_j^n = v_i^n = 0$ for large $j$ and $i$, and thus extending our grid that far in the $x$ domain will not be of any computational detriment. 
 
 Now combining all of this together for the PIDE and its terminal condition gives us the following expression
 	\begin{equation*}
@@ -1097,7 +1097,7 @@ For the FDM, we use 101 spatial nodes and 501 temporal gridpoints. Consequently,
 which correspond to the American put option at $S_0 \rightarrow 0$ and $S_0 \rightarrow \infty$ respectively for all time values in the domain. The option value curves are given in Figure~\ref{fig:amerputPlot} along with the absolute error between the two for the entire $S_0$ region. The MATLAB code for the FDM, the approximate IDE for $S^*$, and solving~\eqref{eqn:amerputjumpLNApprox} is available in the appendix with comments on how the code functions. Specifically, Appendix C.3 contains all that was used in this chapter.
 	\begin{figure}[!h]
 		\centering
-		\subfigure[American put prices under jump-diffusion dynamics solved using the FDM scheme~\eqref{eqn:FDMPIDE} compared against~\eqref{eqn:amerputjumpLNApprox} with~\eqref{eqn:SApproxPutLN},~\eqref{eqn:freePutTLN} for the free boundary $S^*$. The price domain for the underlying asset is $(10^{-3},4K)$. \label{fig:amerputComp}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApprox.eps}\hspace*{3pt}}
+		\subfigure[American put prices under jump-diffusion dynamics solved using the FDM scheme~\eqref{eqn:FDMPIDE} compared against~\eqref{eqn:amerputjumpLNApprox} with~\eqref{eqn:SApproxPutLN},~\eqref{eqn:freePutTLN} for the free boundary $S^*$. The price domain for the underlying asset is $(10^{-3},4K)$. The other financial parameters are $t=0$, $T=0.5$, $K = 5$, $r=0.05$, $q=0$, and $\sigma = 0.3$. \label{fig:amerputComp}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApprox.eps}\hspace*{3pt}}
 		\subfigure[The absolute error between the FDM and using~\eqref{eqn:SApproxPutLN} for the American put values in a jump-diffusion model. \label{fig:amerputError}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApproxError.eps}
 			}
 		\caption{American put value plots from the FDM and approximate IDE system using~\eqref{eqn:amerputjumpLNApprox},~\eqref{eqn:SApproxPutLN}, and~\eqref{eqn:freePutTLN}. The domain for the asset price is once again $(10^{-3},4K)$.}

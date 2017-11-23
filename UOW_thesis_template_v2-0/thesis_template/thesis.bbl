@@ -822,6 +822,39 @@
       \field{title}{{A survey of the integral representation of American option prices}}
       \field{year}{2004}
     \endentry
+    \entry{Chin2017}{book}{}
+      \name{author}{3}{}{%
+        {{hash=150287bd6a2b7594f054ad1fd155532e}{%
+           family={Chin},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=554d72ebdd5822c3caab5e9c5e516313}{%
+           family={Nel},
+           familyi={N\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=edb1cc944ed7dda605dabf221c2fc6e4}{%
+           family={\~{A}lafsson},
+           familyi={\~{A}\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{9018c9344f2b57b17a6795d5356aa953}
+      \strng{fullhash}{9018c9344f2b57b17a6795d5356aa953}
+      \strng{authornamehash}{9018c9344f2b57b17a6795d5356aa953}
+      \strng{authorfullhash}{9018c9344f2b57b17a6795d5356aa953}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{v. 2}
+      \field{title}{Problems and Solutions in Mathematical Finance: Equity Derivatives}
+      \field{year}{2017}
+    \endentry
     \entry{Choi2011}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=850b031d089d6facb9e1d5ead846c885}{%
@@ -2513,6 +2546,30 @@
       \field{year}{2013}
       \field{pages}{366\bibrangedash 373}
       \range{pages}{8}
+    \endentry
+    \entry{Ramezani1998}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e81b9856bc92352cf3028c5bc05531c2}{%
+           family={Ramezani},
+           familyi={R\bibinitperiod},
+           given={C.\bibnamedelimi A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ee7e33ca40fb80bcfddb296874018445}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{88347075b65ac6a3989b9bc5fb8ca101}
+      \strng{fullhash}{88347075b65ac6a3989b9bc5fb8ca101}
+      \strng{authornamehash}{88347075b65ac6a3989b9bc5fb8ca101}
+      \strng{authorfullhash}{88347075b65ac6a3989b9bc5fb8ca101}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Maximum likelihood estimation of asymmetric jump-diffusion processes: Application to security prices}
+      \field{year}{1998}
     \endentry
     \entry{Rebonato1999}{book}{}
       \name{author}{1}{}{%

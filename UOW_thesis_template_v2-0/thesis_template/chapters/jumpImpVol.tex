@@ -5,7 +5,11 @@
 In this section, we will derive a PIDE that is the analogue of Dupire's equation as seen in \cite{Gatheral2006}. The Dupire-like PIDE will serve as the platform for computing the implied volatility of options with jump-diffusion asset dynamics.
 
 \subsection{Homogeneity of the solution}
-First, we assume that the payoff function $\phi$ now depends on a parameter~$x' > 0$ (i.e., $\phi = \phi(x;x')$).  The motivation for this is that in the case of a European put or call, $x'$ represents the strike price. Furthermore, we assume that $\phi$ is homogeneous of degree one in~$x$ and $x'$. Note that standard put and call payoffs satisfy this assumption. We show that the option price function~$v$ is homogeneous of degree one in~$x$ and $x'$. That is, we want to show for $v = v(x,t; x')$ that
+First, we assume that the payoff function $\phi$ now depends on a parameter~$x' > 0$ (i.e., $\phi = \phi(x;x')$).  The motivation for this is that in the case of a European put or call, $x'$ represents the strike price. Furthermore, we assume that $\phi$ is homogeneous of degree one in~$x$ and $x'$. That is, we assume
+$$
+	\phi(\beta x; \beta x') = \beta \phi(x;x').
+$$ 
+Note that standard put and call payoffs satisfy this assumption. We show that the option price function~$v$ is homogeneous of degree one in~$x$ and $x'$. That is, we want to show for $v = v(x,t; x')$ that
 		\begin{equation}
 			\label{eqn:homogen}
 			v(\beta x, t; \beta x') = \beta v(x,t; x')

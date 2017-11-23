@@ -3,12 +3,13 @@
 
 \section{Alternative option pricing formula where the underlying asset is \\
 subjected to jump-diffusion dynamics}
-Analogous to \cite{Merton1976} and \cite{Frontczak2013}, we want to solve the problem (\ref{eqn:PIDE}), (\ref{eqn:PIDEcondition}). First, we assume that the function $v_\text{e} = v_\text{e}(x,t)$ denotes the European option with an underlying that is subjected to jump-diffusion dynamics, and that is a solution to~(\ref{eqn:PIDE}), (\ref{eqn:PIDEcondition}). Applying the Mellin transform of $v_\text{e}$ with respect to $x$ to (\ref{eqn:PIDE}), \eqref{eqn:PIDEcondition}, we get
+Analogous to \cite{Merton1976} and \cite{Frontczak2013}, we want to solve the problem (\ref{eqn:PIDE}), (\ref{eqn:PIDEcondition}). First, we assume that the function $v_\text{e} = v_\text{e}(x,t)$ denotes the European option with an underlying that is described by jump-diffusion dynamics, and that is a solution to~(\ref{eqn:PIDE}), (\ref{eqn:PIDEcondition}). Applying the Mellin transform of $v_\text{e}$ with respect to $x$ to (\ref{eqn:PIDE}), \eqref{eqn:PIDEcondition}, we get
 	\begin{align}
 		\label{eqn:PIDEMellin}
 		\begin{split}
 		&\fr{\pr \hat v_\text{e}}{\pr t}(\xi,t) - (r(t) - q(t) - \kappa\lambda)\xi \hat v_\text{e}(\xi,t) -r(t)\hat v_\text{e}(\xi,t) + \fr{1}			{2}\sigma(t)^2\xi(\xi+1)\hat v_\text{e}(\xi,t) \\
-		&\qquad + \lambda \int_0^\infty x^{\xi-1} \left( \int_0^\infty (v_\text{e}(xy,t) - v_\text{e}(x,t))f(y) \, \d y \right) \, \d x = 0, \quad \hat v_\text{e}(\xi,T) = \hat \phi(\xi).
+		&\qquad + \lambda \int_0^\infty x^{\xi-1} \left( \int_0^\infty (v_\text{e}(xy,t) - v_\text{e}(x,t))f(y) \, \d y \right) \, \d x = 0, \\
+		&\qquad \qquad \qquad \qquad \qquad \qquad \quad \hat v_\text{e}(\xi,T) = \hat \phi(\xi).
 		\end{split}
 	\end{align}
 For the integral term, reversing the order of integration and using $z = xy$, we obtain
@@ -76,7 +77,7 @@ Then we can write (\ref{eqn:mellinSoln2}) as $\hat{v}(\xi,t) = \hat{v}_\lambda(\
 		\end{split}
 	\end{align}
 \section{\textcolor{black}{The jump term $\J$}}
-To find $\J$, we can actually bypass the complex integral required for an inverse Mellin transform. From \eqref{eqn:JMellin}, we have
+As a short foreword, all derivations presented in this section are formal. To find $\J$, we can actually bypass the complex integral required for an inverse Mellin transform. From \eqref{eqn:JMellin}, we have
 	\begin{align*}
 		\hat \J(\xi,t) = \ds\sum\limits_{n=0}^{\infty} \fr{(\lambda(T-t)\E[Y^{-\xi}])^n}{n!},
 	\end{align*}
@@ -321,7 +322,7 @@ with $\1_I$ is the indicator function defined as
 			0, \quad x \notin I,
 		\end{cases}
 	$$
-where $I$ is an arbitrary interval with endpoints $a$ and $b$ with $a < b$. This specified interval can be open, half-closed or closed. For example, a call option has payoff $\phi(x) = \max(x-K,0)$ which can be formulated as
+where $I$ is an arbitrary interval with endpoints $a$ and $b > a$; the interval can be open, half-closed or closed. For example, a call option has payoff $\phi(x) = \max(x-K,0)$ which can be formulated as
 	$$
 		\max(x-K,0) = x\1_{[K,\infty)}(x) - K\1_{[K,\infty)}(x),
 	$$
@@ -434,7 +435,7 @@ Equation \eqref{eqn:optionJump} conveniently represents the standard European op
 Examples were given for the cases where the jumps have distributions that are lognormal, double exponential, and gamma. For lognormal jumps, both \cite{Merton1976} and \cite{Frontczak2013} also derived similar results; Merton's classical formula~\eqref{eqn:mertonSoln} exploited the properties of expectations whilst Frontczak's formula computed the Mellin inverse via algebraic manipulation and the Mellin convolution. Equation~\eqref{eqn:optionLN} was derived using convolution and direct inversion that bypasses the complex integral evaluation employed by Frontczak. One approach used \eqref{eqn:jumpGeneral} to compute the terms recursively whilst the other relied on the properties of the exponential function which simplified the algebra tremendously. It should be emphasized that in \eqref{eqn:optionLN}, having the jump term isolated from the remainder of the formula is convenient since it allows for the pricing process to be modular. That is, one can calculate the necessary jump term before determining the option price at the specified parameter values. Not only is the separation preferable for computation, it reiterates the notion of interchangeability: if the jump dynamics were to change, \eqref{eqn:optionJump} together with \eqref{eqn:jumpGeneral} would be able to accommodate this efficiently. %Albeit complex inversion would produce the exact answer without the potential for a recursive formulation, finding this might be difficult.
 Although \eqref{eqn:jumpGeneral} is recursive in the general case, one may obtain some insight into what $F_n$ is by carefully analysing the distribution of the jump. This could ultimately lead to easier calculations. Consequently, it is possible to derive pricing formulas for any types of jumps as shown with the double exponential distribution in \eqref{eqn:doubleExp} and the gamma distribution in \eqref{eqn:gammaJump}. The key is being able to calculate each term in the sequence $F_1, F_2, \ldots$. If the integrals associated with $F_n$ are too complicated to solve analytically, one may resort to numerics to yield approximate solutions to \eqref{eqn:jumpGeneral}. For the double exponential and gamma distributions, we kept the jump terms in a recursive form to demonstrate the capability of \eqref{eqn:jumpGeneral}. However, it is not clear how to obtain a non-recursive form for $F_n$ for double exponentially and gamma distributed jumps as we did for the lognormal jumps.
 
-There is also interest in finding an exact solution for Kou's double exponentially distributed jumps \cite{Kou2002, Kou2004} using \eqref{eqn:optionJump} and \eqref{eqn:jumpGeneral} since recent empirical studies suggest a better model for the asset process involves the jumps following a double exponential distribution. In particular, it may be of interest to see whether or not a Mellin transform route would generate a more elegant and simple solution in lieu of Kou's original solution, which involves the computation of quite complicated $Hh$ functions (see \cite[pp. 691]{Abramowitz1972}). There is also the possibility to extend \eqref{eqn:optionJump} to price American options in jump-diffusion models, which will be examined in chapter 5 of this thesis.
+There is also interest in finding an exact solution for Kou's double exponentially distributed jumps \cite{Kou2002, Kou2004} using \eqref{eqn:optionJump} and \eqref{eqn:jumpGeneral} since recent empirical studies (in particular, the tests performed in~\cite{Ramezani1998}) suggest a better model for the asset process involves the jumps following a double exponential distribution. In particular, it may be of interest to see whether or not a Mellin transform route would generate a more elegant and simple solution in lieu of Kou's original solution, which involves the computation of quite complicated $Hh$ functions (see \cite[pp. 691]{Abramowitz1972}). There is also the possibility to extend \eqref{eqn:optionJump} to price American options in jump-diffusion models, which will be examined in chapter 5 of this thesis.
 	
 In conclusion, we have devised and introduced a new scheme for option pricing when the asset follows jump-diffusion dynamics. In particular, we were able to formulate this new model to fit any type of jump. The consequent result can be computed recursively within an infinite sum. This was achieved by implementing the properties of the Mellin transform and the Black-Scholes kernel. We also highlighted how the recursion is handled when the jump is extracted from a lognormal distribution and also provided some insight into how the recursion can be computed when the jump is double exponentially and gamma distributed. 
 

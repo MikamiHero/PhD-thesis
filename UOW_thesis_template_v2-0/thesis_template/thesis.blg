@@ -1,19 +1,20 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[41] biber-darwin:303> INFO - === Wed Nov  8, 2017, 12:21:55
-[64] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[159] Biber.pm:835> INFO - Found 112 citekeys in bib section 0
-[173] Biber.pm:3670> INFO - Processing section 0
-[186] Biber.pm:3840> INFO - Looking for bibtex format file 'your_bibliography.bib' for section 0
-[198] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[213] bibtex.pm:1292> INFO - Found BibTeX data source 'your_bibliography.bib'
-[484] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[485] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[485] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[485] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[588] bbl.pm:608> INFO - Writing 'thesis.bbl' with encoding 'ascii'
-[598] Utils.pm:164> WARN - The entry 'Cruz2002' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[603] Utils.pm:164> WARN - The entry 'Jodar2005' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[606] Utils.pm:164> WARN - The entry 'Latane76' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[612] bbl.pm:712> INFO - Output to thesis.bbl
-[621] Biber.pm:109> INFO - WARNINGS: 3
+[45] biber-darwin:303> INFO - === Sun Nov 19, 2017, 15:55:55
+[68] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[169] Biber.pm:835> INFO - Found 114 citekeys in bib section 0
+[182] Biber.pm:3670> INFO - Processing section 0
+[196] Biber.pm:3840> INFO - Looking for bibtex format file 'your_bibliography.bib' for section 0
+[206] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[220] bibtex.pm:1292> INFO - Found BibTeX data source 'your_bibliography.bib'
+[466] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[467] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[467] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[467] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[567] bbl.pm:608> INFO - Writing 'thesis.bbl' with encoding 'ascii'
+[574] Utils.pm:164> WARN - The entry 'Chin2017' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[576] Utils.pm:164> WARN - The entry 'Cruz2002' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[581] Utils.pm:164> WARN - The entry 'Jodar2005' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[583] Utils.pm:164> WARN - The entry 'Latane76' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[589] bbl.pm:712> INFO - Output to thesis.bbl
+[595] Biber.pm:109> INFO - WARNINGS: 4
