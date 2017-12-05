@@ -18,188 +18,188 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.6}Outline of the thesis}{20}{section.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Preliminaries}{22}{chapter.2}
+\contentsline {chapter}{\numberline {2}Preliminaries}{23}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Black-Scholes framework}{22}{section.2.1}
+\contentsline {section}{\numberline {2.1}Black-Scholes framework}{23}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Jump-diffusion framework}{27}{section.2.2}
+\contentsline {section}{\numberline {2.2}Jump-diffusion framework}{28}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}The Black-Scholes kernel and its properties}{28}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}The Black-Scholes kernel and its properties}{29}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Mellin transform}{29}{section.2.3}
+\contentsline {section}{\numberline {2.3}Mellin transform}{30}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Useful properties of the CDF of a standard normal variable}{31}{section.2.4}
+\contentsline {section}{\numberline {2.4}Useful properties of the CDF of a standard normal variable}{32}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Lemmas and corollaries we will need}{31}{section.2.5}
+\contentsline {section}{\numberline {2.5}Lemmas and corollaries we will need}{32}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}General lemmas}{31}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}General lemmas}{32}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2}Lemmas and corollaries useful for the compound options framework}{33}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.2}Lemmas and corollaries useful for the compound options framework}{34}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Options pricing formula for European options in jump-diffusion dynamics}{37}{chapter.3}
+\contentsline {chapter}{\numberline {3}Options pricing formula for European options in jump-diffusion dynamics}{38}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Alternative option pricing formula where the underlying asset is \\ subjected to jump-diffusion dynamics}{37}{section.3.1}
+\contentsline {section}{\numberline {3.1}Alternative option pricing formula where the underlying asset is \\ subjected to jump-diffusion dynamics}{38}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}\leavevmode {\color {black}The jump term $\mathscr J$}}{39}{section.3.2}
+\contentsline {section}{\numberline {3.2}\leavevmode {\color {black}The jump term $\mathscr J$}}{40}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Example: lognormally distributed jumps}{42}{section.3.3}
+\contentsline {section}{\numberline {3.3}Example: lognormally distributed jumps}{43}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Result via the general recursion formula}{43}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Result via the general recursion formula}{44}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Result using Mellin identities}{44}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Result using Mellin identities}{45}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Verification of equality to Merton's solution}{44}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Verification of equality to Merton's solution}{45}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Comparison of the jump-diffusion and Black-Scholes models}{48}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Comparison of the jump-diffusion and Black-Scholes models}{49}{subsection.3.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Example: double exponentially distributed jumps}{49}{section.3.4}
+\contentsline {section}{\numberline {3.4}Example: double exponentially distributed jumps}{50}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Example: gamma distributed jumps}{50}{section.3.5}
+\contentsline {section}{\numberline {3.5}Example: gamma distributed jumps}{51}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Discussion and conclusion}{51}{section.3.6}
+\contentsline {section}{\numberline {3.6}Discussion and conclusion}{52}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implied volatility estimation for European options in jump-diffusion dynamics}{54}{chapter.4}
+\contentsline {chapter}{\numberline {4}Implied volatility estimation for European options in jump-diffusion dynamics}{55}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}A PIDE analogue of Dupire's equation}{54}{section.4.1}
+\contentsline {section}{\numberline {4.1}A PIDE analogue of Dupire's equation}{55}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Homogeneity of the solution}{54}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.1}Homogeneity of the solution}{55}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Derivation of a Dupire-like PIDE via Euler's theorem on homogeneous functions}{56}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Derivation of a Dupire-like PIDE via Euler's theorem on homogeneous functions}{57}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Implied volatility formula}{57}{section.4.2}
+\contentsline {section}{\numberline {4.2}Implied volatility formula}{58}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Numerical simulations}{58}{section.4.3}
+\contentsline {section}{\numberline {4.3}Numerical simulations}{59}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Theoretical data for option prices}{59}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Theoretical data for option prices}{60}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Pseudo-market data for option prices}{59}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Pseudo-market data for option prices}{60}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Algorithm}{62}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Algorithm}{63}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Results}{63}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.4}Results}{64}{subsection.4.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Theoretical data}{63}{section*.8}
+\contentsline {subsubsection}{Theoretical data}{64}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Pseudo-market data}{66}{section*.11}
+\contentsline {subsubsection}{Pseudo-market data}{67}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Comparison to other methods}{66}{section*.12}
+\contentsline {subsubsection}{Comparison to other methods}{67}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Discussion and conclusion}{68}{section.4.4}
+\contentsline {section}{\numberline {4.4}Discussion and conclusion}{69}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Options pricing formula for American options in jump-diffusion dynamics and an approximate solution to the free boundary}{70}{chapter.5}
+\contentsline {chapter}{\numberline {5}Options pricing formula for American options in jump-diffusion dynamics and an approximate solution to the free boundary}{71}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}The PIDE system for American options and its solution}{70}{section.5.1}
+\contentsline {section}{\numberline {5.1}The PIDE system for American options and its solution}{71}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}American put option in jump-diffusion dynamics}{71}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}American put option in jump-diffusion dynamics}{72}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Example: lognormally distributed jumps for an American put option}{75}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Example: lognormally distributed jumps for an American put option}{76}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}American call option in jump-diffusion dynamics}{85}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}American call option in jump-diffusion dynamics}{86}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}Example: lognormally distributed jumps for an American call option}{87}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.4}Example: lognormally distributed jumps for an American call option}{88}{subsection.5.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Integral equations for $S^*$ for both the American put and call options in a jump-diffusion model}{95}{section.5.2}
+\contentsline {section}{\numberline {5.2}Integral equations for $S^*$ for both the American put and call options in a jump-diffusion model}{96}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Asymptotic behaviour of $S^*$ at terminal time}{96}{section.5.3}
+\contentsline {section}{\numberline {5.3}Asymptotic behaviour of $S^*$ at terminal time}{97}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Example: $S^*(T)$ for lognormally distributed jumps}{99}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Example: $S^*(T)$ for lognormally distributed jumps}{100}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Approximate integro-differential equation to the free boundary for American options in jump-diffusion dynamics}{101}{section.5.4}
+\contentsline {section}{\numberline {5.4}Approximate integro-differential equation to the free boundary for American options in jump-diffusion dynamics}{102}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Approximate IDE for an American put option}{101}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.1}Approximate IDE for an American put option}{102}{subsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Example of an approximate IDE for an American put option and $S^*$: lognormally distributed jumps}{105}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Example of an approximate IDE for an American put option and $S^*$: lognormally distributed jumps}{106}{subsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Approximate IDE for an American call option}{106}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.3}Approximate IDE for an American call option}{107}{subsection.5.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.4}Example of an approximate IDE for an American call option and $S^*$: lognormally distributed jumps}{109}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.4}Example of an approximate IDE for an American call option and $S^*$: lognormally distributed jumps}{110}{subsection.5.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}An algorithm for numerically solving the approximate IDE for $S^*$ for an American put option}{110}{section.5.5}
+\contentsline {section}{\numberline {5.5}An algorithm for numerically solving the approximate IDE for $S^*$ for an American put option}{111}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}A finite difference method for solving the PIDE}{112}{section.5.6}
+\contentsline {section}{\numberline {5.6}A finite difference method for solving the PIDE}{113}{section.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.7}Numerical simulations}{115}{section.5.7}
+\contentsline {section}{\numberline {5.7}Numerical simulations}{116}{section.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7.1}The approximate free boundary for an American put option}{116}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.1}The approximate free boundary for an American put option}{117}{subsection.5.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7.2}Results}{116}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.2}Results}{117}{subsection.5.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7.3}Conclusion}{119}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.3}Conclusion}{120}{subsection.5.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Alternative method for computing European compound options}{120}{chapter.6}
+\contentsline {chapter}{\numberline {6}Alternative method for computing European compound options}{121}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Outline}{120}{section.6.1}
+\contentsline {section}{\numberline {6.1}Outline}{121}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Generalised compound option pricing formulas}{120}{section.6.2}
+\contentsline {section}{\numberline {6.2}Generalised compound option pricing formulas}{121}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Call-on-a-call compound option}{121}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.1}Call-on-a-call compound option}{122}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Put-on-a-put compound option}{123}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}Put-on-a-put compound option}{124}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Call-on-a-put compound option}{124}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.3}Call-on-a-put compound option}{125}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.4}Put-on-a-call compound option}{125}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.4}Put-on-a-call compound option}{126}{subsection.6.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Generalised example: straddle-on-a-call compound option}{127}{section.6.3}
+\contentsline {section}{\numberline {6.3}Generalised example: straddle-on-a-call compound option}{128}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Compound options with discrete dividends}{128}{section.6.4}
+\contentsline {section}{\numberline {6.4}Compound options with discrete dividends}{129}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Case 1: $0 < t_d < T_1 < T_2$}{130}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Case 1: $0 < t_d < T_1 < T_2$}{131}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Case 2: $0 < T_1 < t_d < T_2$}{131}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Case 2: $0 < T_1 < t_d < T_2$}{132}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Case 3: $0 < t_d = T_1 < T_2$}{132}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Case 3: $0 < t_d = T_1 < T_2$}{133}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.4}Example: Call-on-a-call for $0 < t_d < T_1 < T_2$}{133}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.4}Example: Call-on-a-call for $0 < t_d < T_1 < T_2$}{134}{subsection.6.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Conclusion}{135}{section.6.5}
+\contentsline {section}{\numberline {6.5}Conclusion}{136}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{137}{section*.20}
+\contentsline {chapter}{Bibliography}{138}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Derivation of useful lemmas from the preliminaries}{148}{appendix.A}
+\contentsline {chapter}{\numberline {A}Derivation of useful lemmas from the preliminaries}{149}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Proof of Lemma\nobreakspace {}\ref {lem:2}}{148}{section.A.1}
+\contentsline {section}{\numberline {A.1}Proof of Lemma\nobreakspace {}\ref {lem:2}}{149}{section.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Proof of Lemma\nobreakspace {}\ref {lem:1}}{149}{section.A.2}
+\contentsline {section}{\numberline {A.2}Proof of Lemma\nobreakspace {}\ref {lem:1}}{150}{section.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Proof of Lemma \ref {lem:2b}}{150}{section.A.3}
+\contentsline {section}{\numberline {A.3}Proof of Lemma \ref {lem:2b}}{151}{section.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Proof of Lemma \ref {lem:2bb}}{151}{section.A.4}
+\contentsline {section}{\numberline {A.4}Proof of Lemma \ref {lem:2bb}}{152}{section.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Proof of Lemma \ref {lem:2a}}{151}{section.A.5}
+\contentsline {section}{\numberline {A.5}Proof of Lemma \ref {lem:2a}}{152}{section.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Proof of the lemmas pertaining to compound options}{153}{appendix.B}
+\contentsline {chapter}{\numberline {B}Proof of the lemmas pertaining to compound options}{154}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Proof of Lemma\nobreakspace {}\ref {lem:B1}}{153}{section.B.1}
+\contentsline {section}{\numberline {B.1}Proof of Lemma\nobreakspace {}\ref {lem:B1}}{154}{section.B.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Proof of Lemma\nobreakspace {}\ref {lem:B2}}{154}{section.B.2}
+\contentsline {section}{\numberline {B.2}Proof of Lemma\nobreakspace {}\ref {lem:B2}}{155}{section.B.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Proof of Corollary\nobreakspace {}\ref {cor:1}}{155}{section.B.3}
+\contentsline {section}{\numberline {B.3}Proof of Corollary\nobreakspace {}\ref {cor:1}}{156}{section.B.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Proof of lemma\nobreakspace {}\ref {lem:kd}}{156}{section.B.4}
+\contentsline {section}{\numberline {B.4}Proof of lemma\nobreakspace {}\ref {lem:kd}}{157}{section.B.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.5}Proof of Lemma\nobreakspace {}\ref {lem:B5}}{157}{section.B.5}
+\contentsline {section}{\numberline {B.5}Proof of Lemma\nobreakspace {}\ref {lem:B5}}{158}{section.B.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.6}Proof of Corollary\nobreakspace {}\ref {cor:2}}{158}{section.B.6}
+\contentsline {section}{\numberline {B.6}Proof of Corollary\nobreakspace {}\ref {cor:2}}{159}{section.B.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}MATLAB code used throughout the thesis}{159}{appendix.C}
+\contentsline {chapter}{\numberline {C}MATLAB code used throughout the thesis}{160}{appendix.C}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Code to output Black-Scholes' standard diffusion and Merton's jump-diffusion option profiles}{159}{section.C.1}
+\contentsline {section}{\numberline {C.1}Code to output Black-Scholes' standard diffusion and Merton's jump-diffusion option profiles}{160}{section.C.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.2}Code to compute the implied volatility in a jump-diffusion model}{161}{section.C.2}
+\contentsline {section}{\numberline {C.2}Code to compute the implied volatility in a jump-diffusion model}{162}{section.C.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.1}Implied volatility using theoretical data}{161}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.1}Implied volatility using theoretical data}{162}{subsection.C.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.2}Implied volatility estimation using pseudo-market data}{163}{subsection.C.2.2}
+\contentsline {subsection}{\numberline {C.2.2}Implied volatility estimation using pseudo-market data}{164}{subsection.C.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.3}Newton's method}{166}{subsection.C.2.3}
+\contentsline {subsection}{\numberline {C.2.3}Newton's method}{167}{subsection.C.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.4}Brenner-Subrahmanyam}{168}{subsection.C.2.4}
+\contentsline {subsection}{\numberline {C.2.4}Brenner-Subrahmanyam}{169}{subsection.C.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2.5}Corrado-Miller}{168}{subsection.C.2.5}
+\contentsline {subsection}{\numberline {C.2.5}Corrado-Miller}{169}{subsection.C.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.3}Code to aid in pricing an American put option subjected to jump-diffusion dynamics}{169}{section.C.3}
+\contentsline {section}{\numberline {C.3}Code to aid in pricing an American put option subjected to jump-diffusion dynamics}{170}{section.C.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3.1}FDM to solve Merton's PIDE}{169}{subsection.C.3.1}
+\contentsline {subsection}{\numberline {C.3.1}FDM to solve Merton's PIDE}{170}{subsection.C.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3.2}Code to solve for the American put option in jump-diffusion dynamics using $S^*$ from Appendix C.3.2.}{171}{subsection.C.3.2}
+\contentsline {subsection}{\numberline {C.3.2}Code to solve for the American put option in jump-diffusion dynamics using $S^*$ from Appendix C.3.2.}{172}{subsection.C.3.2}

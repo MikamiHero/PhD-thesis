@@ -38,7 +38,7 @@ Tianyu Raymond Li
 \\
 \\
 \\
-\textbf{Responses to Prof Matt Davison\\ \\}
+\textcolor{blue}{\textbf{Responses to Prof Matt Davison\\ \\}}
 \begin{enumerate}
     \item \textbf{Page 1 first sentence of the last paragraph. I would say we are talking about the Black-Scholes equation here-- it is fairly common usage to reserve the phrase ``Black-Scholes formula'' for expressions like $C(S,t) = SN(d_1) - Ke^{-rt}N(d_2)$.
     \\
@@ -117,13 +117,63 @@ Tianyu Raymond Li
          \item \textbf{Page 100 2nd last line before section 5.4.1 ``renownedly'' $\rightarrow$ ``renowned''.
     \\
     \\}
-    This typo has been fixed.    
+    This typo has been fixed.\\\\\\
 
+\end{enumerate}
+
+\textcolor{blue}{\textbf{Responses to Dr Jeff Dewynne\\ \\}}
+\begin{enumerate}
+	\item \textbf{
+	Major points}
+	\begin{itemize}
+		\item \textbf{\underline{Section 1.4} -- Firstly, it is assumed that there is a \emph{unique} implied volatility in this section. That is true (assuming that certain no-arbitrage bounds hold) for European puts and calls, but in general it is not true; for example, it is easy to show that a European digital put does not necessarily have a unique implied volatility. Please make it clear you are talking about European puts and calls in this section (or, more generally, about options where the vega, $\partial V / \partial \sigma$, has only one sign).\\ \\}
+		This specificity has been appended to Section 1.4 on pg.~13 of the revised thesis (the end of the 1st paragraph).
+		
+		\item \textbf{\underline{Section 1.4} -- Secondly, nowadays most people would compute the (Black-Scholes) implied volatility for European puts and calls numerically. This section seems to discuss a large number of special approximations, with analytic formulae, that only work in various special cases. It does not seem to discuss how one might compute the implied volatility in a way that \emph{always} works.
+		\\ \\}
+		A general all-purpose method for computing implied volatility is mentioned on pg.~14 and pg.~18 of the revised thesis. Specifically, it references the Newton-Raphson scheme that is mentioned in~\cite{Manaster1982} (which was also a recommend reference by Dr Dewynne).
+		
+		\item \textbf{\underline{Section 1.5} -- If would be a very good idea to state what the Mellin transform is and, just as importantly, what the inverse transform is. It should be made very clear that in general $\xi$ is a \emph{complex} variable, i.e., $\xi \in \mathbb{C}$.
+		\\ \\}
+		The Mellin transform is explicitly stated in detail in Section 2.3 starting on pg.~30 and ending on pg.~31 of the revised thesis. We chose to not include it in the introduction as this is purely a descriptive section that consists of only a literature review. We purposefully withheld from including any mathematics until the preliminaries in Chapter 2. Additionally, we made the change $\xi \in \mathbb{C}$ as corrected on pg.~30.
+		
+		\item \textbf{ \underline{Section 2.1} -- Please either prove the smooth pasting conditions,
+			$$
+				v_\text{a}^\text{put}(S^*(t),t) = K - S^*(t), \quad \frac{\partial v_\text{a}^\text{put}}{\partial x}(S^*(t),t) = -1,
+			$$
+			or give a reference a proof.\\ \\}
+			A proof has been provided via a reference. This addition can be seen on pg.~26 of the revised thesis.
+			
+		\item \textbf{\underline{Section 3.4} -- In (3.14), how do you know that
+			$$
+				\int_0^\infty \frac{1}{z}F_1(z)F_{n-1}\left(\frac{x}{z}\right) \, \d z,
+			$$
+		for $n \geq 2$ exists? \\ \\}
+		
+		\item \textbf{\underline{Section 3.4} -- I tried (3.14) out for the log-Cauchy distribution $Y = e^X$ where $X$ is a Cauchy distributed variable with probability density function
+		$$
+			p(x) = \frac{1}{\pi}\frac{1}{1+x^2}.
+		$$
+		The probability density function for $Y > 0$ is
+		$$
+			f(y) = \frac{1}{\pi y}\frac{1}{1 + (\log(y))^2}
+		$$
+		and following (3.14) one eventually arrives at
+		$$
+			F_n(x) = \frac{n}{\pi} \frac{1}{n^2 + (\log(x))^2}
+		$$
+		for $n = 1,2,3, \ldots.$ This was about the worst example I could come up with, as the Cauchy distribution has no variance (and, according to some purists, it doesn't even have a mean). In view of this, I am fairly sure you \emph{must} be able to prove that (3.14) works for a fairly general class of pdfs.\\ \\}
+		
+		Any family of jumps will be compatible with our analysis in \S3 provided $\mathbb{E}[Y]$ (and consequently $\mathbb{E}[Y-1]$) is finite. If this were not true, (2.20), (2.21) -- the general PIDE system for a general European option with jump-diffusion dynamics -- cannot be posed in the first place as $\kappa = \mathbb{E}[Y-1]$ would not be defined. 
+	
+	Dr Dewynne points out that the aforementioned log-Cauchy distribution does give reasonable results. Since it does not have a defined mean, this type of distribution does not conform to the assumption that the $Y$ has a finite expectation. To make things clearer, we have added the assumptions that $E[Y]$ must be finite and $E[Y^{-\xi}]$ is convergent to the start of Section 3.2 on pg.~40 of the revised thesis.
+					\end{itemize}
 \end{enumerate}
 
 \begin{thebibliography}{100}
 \bibitem{Kou2002} Kou, S. (2002): ``A jump-diffusion model for option pricing'', \emph{Management Science}, Vol. 48, No. 8, pp.~1086--1101.
 	\bibitem{Kou2004} Kou, S. and H. Wang (2004): ``Option pricing under a double exponential jump-diffusion model'', \emph{Management Science}, Vol. 50, No. 9, pp. 1178--1192.
+	\bibitem{Manaster1982} Manaster, S. and G. Koehler (1982): ``The calculation of implied variances from the Black-Scholes model: A Note'', \emph{The Journal of Finance}, Vol. 37, No. 1, pp. 227--230
 
 \end{thebibliography}
 \end{document}

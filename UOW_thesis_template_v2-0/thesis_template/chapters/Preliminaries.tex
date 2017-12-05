@@ -193,7 +193,7 @@ The expressions~\eqref{eqn:K1} and~\eqref{eqn:K2} will prove to be useful for pr
 
 \section{Mellin transform}
 \label{subsec:mellin}
-We now present the Mellin transform, which is going to be the mathematical technique that is a basis for all the work in this thesis. Suppose that $f : [0,\infty) \rightarrow \R$ is such that \textcolor{black}{$f = f(x)$}. The {\em Mellin transform}~$\hat f$ of $f$ at $\xi \in \R$ is defined as
+We now present the Mellin transform, which is going to be the mathematical technique that is a basis for all the work in this thesis. Suppose that $f : [0,\infty) \rightarrow \R$ is such that \textcolor{black}{$f = f(x)$}. The {\em Mellin transform}~$\hat f$ of $f$ at $\xi \in \mathbb{C}$ is defined as
 \begin{equation*}
 \hat f(\xi) =  \textcolor{black}{\M\left\{ f \right\}(\xi)} = \int_0^\infty x^{\xi - 1} f(x) \, \d x,
 \end{equation*}
@@ -210,7 +210,11 @@ assuming that $f$ satisfies
 \begin{equation*}
 \left. x^\xi f(x) \right\vert_0^\infty = 0, \quad \left. x^{\xi + 1} f'(x) \right\vert_0^\infty = 0.
 \end{equation*}
-Furthermore, we have
+To complement the Mellin transform expression, the inverse Mellin transform~\cite{Titchmarsh1948} is given by
+\begin{equation*}
+	f(x) = \M^{-1}\{\hat f(\xi)\} = \fr{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} x^{-\xi}\hat f(\xi)  \, \d \xi,
+\end{equation*}
+where the contour used to get from $c - i\infty$ to $c + i\infty$ is the Bromwich contour since the Mellin transform is related to the two-sided Laplace transfrom through an exponential change of variables~\cite{Bracewell2000}. Furthermore, we have
 	\begin{equation*}
 		\M\{ (f \ast g)(x) \} = (\widehat{f \ast g})(\xi) = \hat f(\xi) \hat g(\xi),
 	\end{equation*}

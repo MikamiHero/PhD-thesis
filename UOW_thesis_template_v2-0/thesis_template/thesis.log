@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  19 NOV 2017 15:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  5 DEC 2017 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1670,58 +1670,58 @@ Overfull \hbox (0.88788pt too wide) in paragraph at lines 8--9
  []
 
 [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-[18] [19] [20]) [21]
+[18] [19] [20]) [21] [22]
 \openout2 = `chapters/Preliminaries.aux'.
 
  (./chapters/Preliminaries.tex
 Chapter 2.
-[22
+[23
 
 
 
-] [23] [24] [25] [26] [27] [28] [29] [30] [31]
-Overfull \hbox (4.05267pt too wide) in paragraph at lines 335--335
+] [24] [25] [26] [27] [28] [29] [30] [31] [32]
+Overfull \hbox (4.05267pt too wide) in paragraph at lines 339--339
 []\OT1/ptm/b/n/14.4 Lemmas and corol-lar-ies use-ful for the com-pound op-tions
  frame-
  []
 
-[32]pdfTeX warning (ext4): destination with the same identifier (name{equation.
+[33]pdfTeX warning (ext4): destination with the same identifier (name{equation.
 2.5.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 			\begin{equation}
+l.344 			\begin{equation}
                          pdfTeX warning (ext4): destination with the same ident
 ifier (name{equation.2.5.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 			\begin{equation}
+l.344 			\begin{equation}
                          pdfTeX warning (ext4): destination with the same ident
 ifier (name{equation.2.5.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 			\begin{equation}
+l.344 			\begin{equation}
                          pdfTeX warning (ext4): destination with the same ident
 ifier (name{equation.2.5.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.340 			\begin{equation}
+l.344 			\begin{equation}
                          
-Overfull \hbox (8.93156pt too wide) detected at line 354
+Overfull \hbox (8.93156pt too wide) detected at line 358
 [][]\U/rsfs/m/n/12 K [] []K [] \OT1/ztmcm/m/n/12 = [][] []
  []
 
 
-Overfull \hbox (10.55255pt too wide) detected at line 360
+Overfull \hbox (10.55255pt too wide) detected at line 364
 [][]\U/rsfs/m/n/12 K [] K [] \OT1/ztmcm/m/n/12 = [][] [] \OML/ztmcm/m/it/12 ;
  []
 
-[33]
-Overfull \hbox (0.80785pt too wide) detected at line 423
+[34]
+Overfull \hbox (0.80785pt too wide) detected at line 427
 []\OML/ztmcm/m/it/12 y[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x; t[]; t[]; t[];
  t[]\OT1/ztmcm/m/n/12 ) = []\OML/ztmcm/m/it/12 :
  []
 
-[34] [35]) [36]
+[35] [36]) [37]
 \openout2 = `chapters/jumpdiffEuro.aux'.
 
  (./chapters/jumpdiffEuro.tex
@@ -1730,11 +1730,11 @@ Chapter 3.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 5.
 
-[37
+[38
 
 
 
-] [38]
+] [39]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
 
@@ -1746,24 +1746,24 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 79.
 
-[39]
+[40]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
- [40] [41] [42] [43] [44] [45]
+ [41] [42] [43] [44] [45] [46]
 Overfull \hbox (0.59232pt too wide) in paragraph at lines 297--297
 \OML/ztmcm/m/it/12 t\OT1/ztmcm/m/n/12 ))[]$\OT1/ptm/m/n/12 . The in-te-gral can
  also be sim-pli-fied if we briefly re-call from Mer-ton's so-lu-tion []
  []
 
-[46]
+[47]
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 338.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-[47]
+[48]
 Package epstopdf Info: Source file: <figures/optionComp.eps>
 (epstopdf)                    date: 2015-08-05 11:44:16
 (epstopdf)                    size: 19962 bytes
@@ -1774,7 +1774,7 @@ Package epstopdf Info: Source file: <figures/optionComp.eps>
 verted-to.pdf figures/optionComp.eps>
 (epstopdf)             \includegraphics on input line 345.
 Package epstopdf Info: Output file is already uptodate.
- <figures/optionComp-eps-converted-to.pdf, id=1317, 562.1pt x 421.575pt>
+ <figures/optionComp-eps-converted-to.pdf, id=1326, 562.1pt x 421.575pt>
 File: figures/optionComp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/optionComp-eps-converted-to.pdf>
@@ -1792,7 +1792,7 @@ verted-to.pdf figures/optionDiff.eps>
 (epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/optionDiff-eps-converted-to.pdf, id=1322, 562.1pt x 421.575pt>
+<figures/optionDiff-eps-converted-to.pdf, id=1331, 562.1pt x 421.575pt>
 File: figures/optionDiff-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/optionDiff-eps-converted-to.pdf>
@@ -1807,17 +1807,17 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[48] [49 <./figures/optionComp-eps-converted-to.pdf> <./figures/optionDiff-eps-
-converted-to.pdf>] [50] [51] [52]) [53]
+[49] [50 <./figures/optionComp-eps-converted-to.pdf> <./figures/optionDiff-eps-
+converted-to.pdf>] [51] [52] [53]) [54]
 \openout2 = `chapters/jumpImpVol.aux'.
 
  (./chapters/jumpImpVol.tex
 Chapter 4.
-[54
+[55
 
 
 
-] [55] [56] [57] [58] [59] [60]
+] [56] [57] [58] [59] [60] [61]
 Package epstopdf Info: Source file: <figures/call-bs-prices.eps>
 (epstopdf)                    date: 2014-09-24 19:31:56
 (epstopdf)                    size: 14341 bytes
@@ -1830,7 +1830,7 @@ f>
 (epstopdf)             \includegraphics on input line 200.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/call-bs-prices-eps-converted-to.pdf, id=1489, 562.1pt x 421.575pt>
+<figures/call-bs-prices-eps-converted-to.pdf, id=1498, 562.1pt x 421.575pt>
 File: figures/call-bs-prices-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/call-bs-prices-eps-converted-to.pdf>
@@ -1849,7 +1849,7 @@ rices-eps-converted-to.pdf figures/call-extrapolate-prices.eps>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/call-extrapolate-prices-eps-converted-to.pdf, id=1492, 562.1pt x 421.5
+<figures/call-extrapolate-prices-eps-converted-to.pdf, id=1501, 562.1pt x 421.5
 75pt>
 File: figures/call-extrapolate-prices-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1861,7 +1861,7 @@ sed on input line 202.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61] [62 <./figures/call-bs-prices-eps-converted-to.pdf> <./figures/call-extrap
+[62] [63 <./figures/call-bs-prices-eps-converted-to.pdf> <./figures/call-extrap
 olate-prices-eps-converted-to.pdf>]
 Overfull \hbox (10.89865pt too wide) in paragraph at lines 216--217
 []\OT1/ptm/m/n/12 Evaluate $[]\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^X\OT1/ztm
@@ -1890,23 +1890,23 @@ Overfull \hbox (18.59805pt too wide) in paragraph at lines 355--355
  [][] 
  []
 
-[63] [64] [65] [66] [67] [68]) [69]
+[64] [65] [66] [67] [68] [69]) [70]
 \openout2 = `chapters/jumpdiffAmer.aux'.
 
  (./chapters/jumpdiffAmer.tex
 Chapter 5.
-[70
+[71
 
 
 
-] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
+] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84]
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 362.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [84] [85]
-[86] [87] [88] [89] [90] [91] [92] [93] [94]
+) [85] [86]
+[87] [88] [89] [90] [91] [92] [93] [94] [95]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 615.
@@ -1924,7 +1924,7 @@ Overfull \hbox (9.03516pt too wide) in paragraph at lines 626--626
 [] 
  []
 
-[95]
+[96]
 Overfull \hbox (9.3499pt too wide) in paragraph at lines 645--645
 [] 
  []
@@ -1941,14 +1941,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 654.
 
-[96]
+[97]
 Overfull \hbox (2.79167pt too wide) in paragraph at lines 664--666
 \OT1/ptm/m/n/12 where the Heav-i-side func-tion be-comes $\OT1/ztmcm/m/n/12 1$ 
 \OT1/ptm/m/n/12 due to its def-i-ni-tion []. Given that $\OML/ztmcm/m/it/12 v[]
 \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x; T\OT1/ztmcm/m/n/12 ) =
  []
 
-[97] [98]
+[98] [99]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 699.
@@ -1961,22 +1961,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 699.
 
-[99]
+[100]
 Overfull \hbox (0.98842pt too wide) in paragraph at lines 740--740
 \OT1/ptm/b/n/17.28 bound-ary for Amer-i-can op-tions in jump-diffusion dy-
  []
 
-[100] [101] [102]
+[101] [102] [103]
 Overfull \hbox (11.54642pt too wide) in paragraph at lines 809--809
 [] 
  []
 
-[103]
+[104]
 Overfull \hbox (11.09727pt too wide) in paragraph at lines 838--838
 [] 
  []
 
-[104]
+[105]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 841.
@@ -1989,12 +1989,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 841.
 
-[105] [106] [107]
+[106] [107] [108]
 Overfull \hbox (2.59836pt too wide) in paragraph at lines 941--941
 [] 
  []
 
-[108]
+[109]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 944.
@@ -2007,7 +2007,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 944.
 
-[109]
+[110]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 971.
@@ -2020,7 +2020,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 971.
 
-[110] [111] [112] [113] [114] [115]
+[111] [112] [113] [114] [115] [116]
 Package epstopdf Info: Source file: <figures/SfreePut.eps>
 (epstopdf)                    date: 2017-03-15 14:37:54
 (epstopdf)                    size: 30914 bytes
@@ -2032,7 +2032,7 @@ rted-to.pdf figures/SfreePut.eps>
 (epstopdf)             \includegraphics on input line 1085.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/SfreePut-eps-converted-to.pdf, id=2074, 421.575pt x 316.18124pt>
+<figures/SfreePut-eps-converted-to.pdf, id=2083, 421.575pt x 316.18124pt>
 File: figures/SfreePut-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/SfreePut-eps-converted-to.pdf>
@@ -2043,7 +2043,7 @@ ne 1085.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[116]
+[117]
 Package epstopdf Info: Source file: <figures/amerputFDMApprox.eps>
 (epstopdf)                    date: 2017-07-01 13:31:36
 (epstopdf)                    size: 39945 bytes
@@ -2056,7 +2056,7 @@ ps-converted-to.pdf figures/amerputFDMApprox.eps>
 (epstopdf)             \includegraphics on input line 1100.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/amerputFDMApprox-eps-converted-to.pdf, id=2090, 562.1pt x 421.575pt>
+<figures/amerputFDMApprox-eps-converted-to.pdf, id=2100, 562.1pt x 421.575pt>
 File: figures/amerputFDMApprox-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/amerputFDMApprox-eps-converted-to.pdf>
@@ -2075,7 +2075,7 @@ ror-eps-converted-to.pdf figures/amerputFDMApproxError.eps>
 (epstopdf)             \includegraphics on input line 1102.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/amerputFDMApproxError-eps-converted-to.pdf, id=2099, 421.575pt x 316.1
+<figures/amerputFDMApproxError-eps-converted-to.pdf, id=2109, 421.575pt x 316.1
 8124pt>
 File: figures/amerputFDMApproxError-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2087,14 +2087,14 @@ d on input line 1102.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[117 <./figures/SfreePut-eps-converted-to.pdf>]) [118 <./figures/amerputFDMAppr
+[118 <./figures/SfreePut-eps-converted-to.pdf>]) [119 <./figures/amerputFDMAppr
 ox-eps-converted-to.pdf> <./figures/amerputFDMApproxError-eps-converted-to.pdf>
-] [119]
+] [120]
 \openout2 = `chapters/euroComp.aux'.
 
  (./chapters/euroComp.tex
 Chapter 6.
-[120
+[121
 
 
 
@@ -2109,7 +2109,7 @@ Package epstopdf Info: Source file: <figures/option.eps>
 ed-to.pdf figures/option.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
- <figures/option-eps-converted-to.pdf, id=2164, 562.1pt x 421.575pt>
+ <figures/option-eps-converted-to.pdf, id=2173, 562.1pt x 421.575pt>
 File: figures/option-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/option-eps-converted-to.pdf>
@@ -2125,12 +2125,12 @@ Overfull \hbox (4.99345pt too wide) in paragraph at lines 46--46
 [] 
  []
 
-[121] [122 <./figures/option-eps-converted-to.pdf>] [123]
+[122] [123 <./figures/option-eps-converted-to.pdf>] [124]
 Overfull \hbox (11.32149pt too wide) in paragraph at lines 91--91
 [] 
  []
 
-[124] [125] [126] [127] [128] [129]
+[125] [126] [127] [128] [129] [130]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 227.
@@ -2150,50 +2150,50 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 227.
-
-[130]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 275.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 275.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 275.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 275.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 275.
 
 [131]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 319.
+(hyperref)                removing `math shift' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 319.
+(hyperref)                removing `subscript' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 319.
+(hyperref)                removing `subscript' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 319.
+(hyperref)                removing `subscript' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 319.
+(hyperref)                removing `math shift' on input line 275.
 
 [132]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 319.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 319.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 319.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 319.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 319.
+
+[133]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 351.
@@ -2219,7 +2219,7 @@ Overfull \hbox (7.66943pt too wide) in paragraph at lines 358--358
 [] 
  []
 
-[133] [134]) [135] [136] [137
+[134] [135]) [136] [137] [138
 
 
 
@@ -2229,7 +2229,7 @@ Overfull \hbox (2.3507pt too wide) in paragraph at lines 72--72
 f-fi-cient val-u-a-tion method
  []
 
-[138]
+[139]
 Overfull \hbox (7.44629pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 J. Chargoy-Corona and C. Ibarra-Valdez. ``A note on Black--Sc
 holes im-plied volatil-
@@ -2253,19 +2253,19 @@ Overfull \hbox (15.45842pt too wide) in paragraph at lines 72--72
 i-del-berg, 2010. \OT1/ptm/m/sc/12 isbn\OT1/ptm/m/n/12 : 9783642034794.
  []
 
-[139]
+[140]
 Overfull \hbox (5.10182pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 C. E. Cur-tis and G. L. Car-riker. \OT1/ptm/m/it/12 Es-ti-mat
 -ing im-plied volatil-ity di-rectly from ``nearest-
  []
 
-[140]
+[141]
 Overfull \hbox (4.88365pt too wide) in paragraph at lines 72--72
 \OT1/ptm/m/n/12 diffusion''. In: \OT1/ptm/m/it/12 Jour-nal of Eco-nomic Dy-nam-
 ics and Con-trol \OT1/ptm/m/n/12 28.10 (2003), pp. 2055{
  []
 
-[141] [142]
+[142] [143]
 Overfull \hbox (8.42488pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 R. Li, H. Meng, and Y. Dai. ``The val-u-a-tion of com-pound o
 p-tions on jump-diffusions
@@ -2277,42 +2277,42 @@ Overfull \hbox (1.16986pt too wide) in paragraph at lines 72--72
  vari-ances from the Black-
  []
 
-[143]
+[144]
 Overfull \hbox (16.12643pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 M. Musiela and M. Rutkowski. \OT1/ptm/m/it/12 Mar-tin-gale Me
 th-ods in Fi-nan-cial Mod-elling\OT1/ptm/m/n/12 . Springer
  []
 
-[144] [145]
+[145] [146]
 Overfull \hbox (3.83537pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 ``The Amer-i-can put op-tion val-ued an-a-lyt-i-cally''. In: 
 \OT1/ptm/m/it/12 Jour-nal of Fi-nance \OT1/ptm/m/n/12 39.5 (1984),
  []
 
-[146] [147]
+[147] [148]
 \openout2 = `appendices/appendix1.aux'.
 
  (./appendices/appendix1.tex
 Appendix A.
-[148
+[149
 
 
 
-] [149] [150] [151]) [152]
+] [150] [151] [152]) [153]
 \openout2 = `appendices/appendix2.aux'.
 
  (./appendices/appendix2.tex
 Appendix B.
-[153
+[154
 
 
 
-] [154] [155]
+] [155] [156]
 Overfull \hbox (4.35977pt too wide) in paragraph at lines 80--80
 [] 
  []
 
-[156]
+[157]
 Overfull \hbox (34.51349pt too wide) in paragraph at lines 112--112
 [] 
  []
@@ -2323,7 +2323,7 @@ Overfull \hbox (12.02907pt too wide) in paragraph at lines 112--114
 -ing the form of $\OML/ztmcm/m/it/12 z[]$ \OT1/ptm/m/n/12 from [],
  []
 
-[157]) [158]
+[158]) [159]
 \openout2 = `appendices/appendix3.aux'.
 
  (./appendices/appendix3.tex
@@ -2341,7 +2341,7 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 21.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [159
+) [160
 
 
 
@@ -2351,7 +2351,7 @@ Overfull \hbox (17.21317pt too wide) in paragraph at lines 38--39
 ][][][][] 
  []
 
-[160] [161] [162]
+[161] [162] [163]
 LaTeX Font Info:    Try loading font information for OMS+pcr on input line 139.
 
 
@@ -2366,13 +2366,13 @@ Overfull \hbox (35.21335pt too wide) in paragraph at lines 141--143
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[163] [164] [165]
+[164] [165] [166]
 Overfull \hbox (35.21335pt too wide) in paragraph at lines 246--248
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[166]
+[167]
 LaTeX Font Info:    Try loading font information for OML+pcr on input line 277.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlpcr.fd
@@ -2380,8 +2380,8 @@ File: omlpcr.fd
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 277.
- [167]
-[168]
+ [168]
+[169]
 Overfull \hbox (17.21317pt too wide) in paragraph at lines 356--357
 [][][][][][][][][][]
  []
@@ -2411,12 +2411,12 @@ Overfull \hbox (41.21341pt too wide) in paragraph at lines 363--364
 [][][][][][][][][][][][]
  []
 
-[169]
+[170]
 Overfull \hbox (35.21335pt too wide) in paragraph at lines 364--365
 [][][][][][][][][][][][]
  []
 
-[170]
+[171]
 Overfull \hbox (41.21341pt too wide) in paragraph at lines 402--403
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
@@ -2471,7 +2471,7 @@ Overfull \hbox (35.21335pt too wide) in paragraph at lines 425--427
 [][][][][][][][][][][][]
  []
 
-[171]
+[172]
 Overfull \hbox (17.21317pt too wide) in paragraph at lines 447--448
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][] 
@@ -2483,7 +2483,7 @@ Overfull \hbox (29.21329pt too wide) in paragraph at lines 449--450
 ][][][][][][][][][][][][][][][] 
  []
 
-[172]
+[173]
 Overfull \hbox (47.21347pt too wide) in paragraph at lines 469--470
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][] 
@@ -2500,7 +2500,7 @@ Overfull \hbox (11.2131pt too wide) in paragraph at lines 492--493
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[173]
+[174]
 Overfull \hbox (59.2136pt too wide) in paragraph at lines 501--502
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
@@ -2518,7 +2518,7 @@ Overfull \hbox (17.21317pt too wide) in paragraph at lines 514--515
 ][][][][][][][][][][] 
  []
 
-) [174]
+) [175]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
  (./thesis.aux (./frontmatter/abstract.aux)
@@ -2541,10 +2541,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44011 strings out of 493013
- 836514 string characters out of 6133344
- 1301472 words of memory out of 5000000
- 45673 multiletter control sequences out of 15000+600000
+ 44018 strings out of 493013
+ 836704 string characters out of 6133344
+ 1301561 words of memory out of 5000000
+ 45677 multiletter control sequences out of 15000+600000
  89492 words of font info for 208 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,22n,101p,10597b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2565,10 +2565,10 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (184 pages, 779239 bytes).
+Output written on thesis.pdf (185 pages, 784510 bytes).
 PDF statistics:
- 3351 PDF objects out of 3580 (max. 8388607)
- 3050 compressed objects within 31 object streams
- 1114 named destinations out of 1200 (max. 500000)
+ 3362 PDF objects out of 3580 (max. 8388607)
+ 3060 compressed objects within 31 object streams
+ 1117 named destinations out of 1200 (max. 500000)
  1002 words of extra memory for PDF output out of 10000 (max. 10000000)
 

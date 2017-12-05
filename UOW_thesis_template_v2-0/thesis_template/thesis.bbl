@@ -2830,6 +2830,28 @@
       \field{pages}{83\bibrangedash 104}
       \range{pages}{22}
     \endentry
+    \entry{Titchmarsh1948}{book}{}
+      \name{author}{1}{}{%
+        {{hash=37e59c272294a64748f8f96428adfba2}{%
+           family={Titchmarsh},
+           familyi={T\bibinitperiod},
+           given={E.\bibnamedelimi C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{37e59c272294a64748f8f96428adfba2}
+      \strng{fullhash}{37e59c272294a64748f8f96428adfba2}
+      \strng{authornamehash}{37e59c272294a64748f8f96428adfba2}
+      \strng{authorfullhash}{37e59c272294a64748f8f96428adfba2}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to the Theory of Fourier Integrals}
+      \field{year}{1948}
+    \endentry
     \entry{Titchmarsh1986}{book}{}
       \name{author}{2}{}{%
         {{hash=37e59c272294a64748f8f96428adfba2}{%
@@ -2908,6 +2930,28 @@
       \field{year}{2009}
       \field{pages}{517\bibrangedash 531}
       \range{pages}{15}
+    \endentry
+    \entry{Vine2011}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3d512764c6bf240e4033041f21082ac3}{%
+           family={Vine},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3d512764c6bf240e4033041f21082ac3}
+      \strng{fullhash}{3d512764c6bf240e4033041f21082ac3}
+      \strng{authornamehash}{3d512764c6bf240e4033041f21082ac3}
+      \strng{authorfullhash}{3d512764c6bf240e4033041f21082ac3}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Options: Trading Strategy and Risk Management}
+      \field{year}{2011}
     \endentry
     \entry{Whaley1982}{article}{}
       \name{author}{1}{}{%
