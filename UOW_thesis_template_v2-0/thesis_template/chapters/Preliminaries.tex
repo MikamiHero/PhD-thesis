@@ -1,21 +1,21 @@
 \chapter{Preliminaries}
 
 \section{Black-Scholes framework}
-We commence the preliminary knowledge by introducing the most fundamental framework used in the theory of options pricing, known as the Black-Scholes framework~\cite{Black1973}. To begin, we assume that the option price depends on the asset price under a risk-neutral probability measure given by the following SDE
+We commence the preliminary knowledge by introducing the most fundamental framework used in the theory of options pricing, known as the Black-Scholes framework~\cite{Black1973}. To begin, we assume that the option price depends on the asset price \textcolor{blue}{under the risk-neutral probability measure} given by the following SDE
 	\begin{equation}
 	\label{eqn:stock}
 		\d S_t = (r(t)-q(t))S_t \, \d t + \sigma(t)S_t  \, \d W_t,
 	\end{equation}
 where $S = \{ S_t \, : \, t \in [0,T] \}$ is the asset price process, $\{ W_t \, : \, t \in [0,T] \}$ is a Wiener process or Brownian motion with respect to the risk-neutral measure, $T > 0$ is the expiry, $r(t) > 0$ is the risk-free interest rate, $q(t) \geq 0$ is the dividend yield, and $\sigma(t) > 0$ is the volatility.
 Here we assume that the parameters $r$, $q$, and $\sigma$ are continuous functions of time. Eq.~\eqref{eqn:stock} indicates that the stochastic process $S_t$ follows a
-\emph{geometric Brownian motion}, implying that $S_t$ is lognormally distributed (i.e., $S_t$ has a lognormal probability density function). The term $r(t)-q(t)$ is known as the drift coefficient that represents the average growth rate of the asset which is a deterministic value. Thus, $(r(t)-q(t))dt$ will yield the average growth of the asset.
-The value $\sigma(t)$ is often called the diffusion coefficient and this is meant to replicate the uncertainty or erraticism in the asset price as it responds to external factors. The term $\sigma \d W_t$ then emulates the probabilistic component in the SDE.
+\emph{geometric Brownian motion}, implying that $S_t$ is lognormally distributed (i.e., $S_t$ \textcolor{blue}{has} a lognormal probability density function). The term $r(t)-q(t)$ is known as the drift coefficient that represents the average growth rate of the asset which is a deterministic value. Thus, $(r(t)-q(t))dt$ will yield the average growth of the asset.
+The value $\sigma(t)$ is often \textcolor{blue}{called} the diffusion coefficient and this is meant to replicate the uncertainty or erraticism in the asset price as it responds to external factors. \textcolor{blue}{The term $\sigma \d W_t$} then emulates the probabilistic component in the SDE.
 
 A financial interpretation of this SDE is for each infinitesimal time increment, $dt$, the associated return on the asset price is an expression defined by the \emph{relative} change in the asset price $\d S_t/S_t$.
 This relative change is comprised of a systematic term $(r(t)-q(t))dt$ which can be calculated deterministically, and a statistical component $\sigma \d W_t$ that introduces random noise into the model~\cite{Wilmott1995}. As geometric Brownian motion can be viewed as exponentiated Brownian motion~\cite{Glasserman2013}, it is a more favourable formulation for the asset price process
 because geometric Brownian motion is always positive (as opposed to standard Brownian motion which can take negative values).
 
-It is well known that the option value is given by $V_t = v(S_t,t)$, where $v = v(x,t)$ is a function that satisfies the following terminal value problem
+\textcolor{blue}{Assuming that the option depends only on the share price and time,} it is well known that the option value is given by $V_t = v(S_t,t)$, where $v = v(x,t)$ is a function that satisfies the following terminal value problem
 	\begin{equation}
 		\label{eqn:blackscholes}
 		\L v(x,t) := \fr{\pr v}{\pr t}(x,t) + \fr{1}{2}\sigma(t)^2x^2\fr{\pr^2 v}{\pr x^2}(x,t) + (r(t)-q(t))x\fr{\pr v}{\pr x}(x,t) - r(t)v(x,t) = 0,
@@ -24,9 +24,9 @@ It is well known that the option value is given by $V_t = v(S_t,t)$, where $v = 
 		\label{eqn:payoff}
 		v(x,T) = \phi(x).
 	\end{equation}
-Eq. (\ref{eqn:blackscholes}) is commonly known as the Black-Scholes PDE and Eq. (\ref{eqn:payoff}) is the payoff (i.e., loss or profit at expiry), where $\phi : [0,\infty) \rightarrow [0, \infty)$. For the European call and put options, $\phi(x) = \max(x-K,0)$ and $\phi(x) = \max(K-x,0)$, respectively, where $K$ is the strike price. Note that at expiry, $v(S_T,T) = \phi(S_T)$.
+Eq. (\ref{eqn:blackscholes}) is commonly known as the Black-Scholes PDE and Eq. (\ref{eqn:payoff}) is the payoff (i.e., loss or profit at expiry), where $\phi : [0,\infty) \rightarrow [0, \infty)$. For the European call and put options, $\phi(x) = \max(x-K,0)$ and $\phi(x) = \max(K-x,0)$, respectively, where \textcolor{blue}{$K > 0$} is the strike price. Note that at expiry, $v(S_T,T) = \phi(S_T)$.
 
-To solve the system~\eqref{eqn:blackscholes},~\eqref{eqn:payoff}, one of the most common approach is to implement a change of variables that transforms~\eqref{eqn:blackscholes} into the standard one-dimensional heat equation and shifts~\eqref{eqn:payoff} from a final value problem to an initial value problem (see~\cite{cannon1984one} for the form of the heat equation).
+To solve the system~\eqref{eqn:blackscholes},~\eqref{eqn:payoff}, \textcolor{blue}{one of the most common approaches is} to implement a change of variables that transforms~\eqref{eqn:blackscholes} into the standard one-dimensional heat equation and shifts~\eqref{eqn:payoff} from a final value problem to an initial value problem (see~\cite{cannon1984one} for the form of the heat equation).
 The details of solving this transformed system are given in~\cite{Wilmott1995}. Thus the value of the European call option is given by
 	\begin{equation}
 		\label{eqn:EUcall}
@@ -42,7 +42,7 @@ where we have defined the auxiliary functions $z_1$ and $z_2$ to be
 		z_1(x,t,u) & = \frac{\log x + \int_t^u (r(\tau) - q(\tau) + \sigma(\tau)^2/2) \, \d\tau}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}}, \label{eqn:z1}\\
 		z_2(x,t,u) & = \frac{\log x + \int_t^u (r(\tau) - q(\tau) - \sigma(\tau)^2/2) \, \d\tau}{\left(\int_t^u \sigma(\tau)^2 \, \d\tau\right)^{1/2}} \label{eqn:z2},
 	\end{align}
-and $N$ is the CDF of a standard normal random variable (see Section~\ref{subsec:cdfproperties}). Another important result is one that relates the European call to the European put option and is known as the \emph{put-call parity}:
+and $N$ is the CDF of a standard normal random variable (\textcolor{blue}{see Section~\ref{subsec:cdfproperties}}). Another important result is one that relates the European call to the European put option and is known as the \emph{put-call parity}:
 	\begin{equation}
 		\label{eqn:pcp}
 		v_\text{e}^{\text{put}}(x,t) = v_\text{e}^{\text{call}}(x,t) + Ke^{-\int_t^T r(\tau) \, \d\tau} - xe^{-\int_t^T q(\tau) \, \d\tau}.
@@ -50,7 +50,7 @@ and $N$ is the CDF of a standard normal random variable (see Section~\ref{subsec
 The proof of the put-call parity relation can be found in~\cite{Kwok2008}.
 
 We will now construct the foundation needed to tackle the American option pricing problems in this thesis.
-As mentioned in the introduction, there are a multitude of ways to formulate the American option pricing problem. The formulation we will present provides a clear framework for all the possible scenarios that can occur with American options.
+As mentioned in the introduction, there are a multitude of ways to formulate the American option pricing problem. \textcolor{blue}{The formulation we will present provides a clear framework for all the possible scenarios that can occur with American options.}
 
 Due to the liberty of being able to exercise the option early, the American option valuation problem involves two unknown functions: the option value itself $V_t$ and
 the function $S^*$ which is commonly denoted as the \emph{optimal exercise boundary}~\cite{Kwok2008}. For an American put option, the goal is to ascertain
@@ -69,7 +69,7 @@ $v_\text{a}^{\text{put}} =v_\text{a}^{\text{put}}(x,t)$ and $S^* = S^*(t)$ such 
 	$$
 is not a by-product of $v_\text{a}^{\text{put}}(S^*(t),t) = K - S^*(t)$. The smooth pasting conditions together are imposed on an American option to ensure the absence of arbitrage opportunities~\cite{Chiarella2014}. The proof for the these smooth pasting conditions for both an American put and call can be found in~\cite{Chin2017}. Although the delta condition is seldom used in deriving the pricing formulae for American options, it is a necessity when solving the above option pricing PDE numerically (e.g., using the method of lines)~\cite{Chiarella2010}. The value of the asset will dictate what choice the holders should make due to the additional unknown $S^*(t)$ as seen above in the problem formulation. For an American put, the interval $0 \leq x < S^*(t)$ is known as the \emph{exercise region} as it is the most optimal time to exercise the option irrespective of time to expiry since the value of the American put is equal to its payoff. In contrast, $x > S^*(t)$ represents the \emph{continuation region} where the American put is worth more than its payoff and thus is more valuable to continue to hold the option. As we have mentioned in the introduction, the position of $S^*(t)$ (which divides the $x$ domain into the exercise and continuation regions) is unknown \emph{a priori} which adds another layer of difficulty to the option pricing problem.
 	
-	An American call option is constructed in the following manner. Similar to the American put, we seek for functions $v_\text{a}^{\text{call}} = v_\text{a}^{\text{call}}(x,t)$ and $S^* = S^*(t)$ such that
+	An American call option is constructed in the following manner. \textcolor{blue}{We start off by assuming that $q(t) > 0$ (otherwise, the American call will be equal to the European call).} Similar to the American put, we seek for functions $v_\text{a}^{\text{call}} = v_\text{a}^{\text{call}}(x,t)$ and $S^* = S^*(t)$ such that
 	\begin{enumerate}
 			\item $\mathscr{L}v_\text{a}^{\text{call}}(x,t) = 0, \quad 0 \leq x < S^*(t)$,
 			\item $v_\text{a}^{\text{call}}(x,t) = x - K, \quad x > S^*(t)$,
@@ -129,7 +129,7 @@ In contrast to the archetypal Black-Scholes framework, we now introduce the rele
 		\label{eqn:assetPriceDynamics}
 		\fr{\d S_t}{S_t} = (r(t) - q(t) - \kappa\lambda)\d t + \sigma(t) \, \d W_t + (Y - 1) \, \d N_t,
 	\end{equation}
-where $\{W_t \, : \, t \in [0,T]\}$ is the standard Wiener process as in~\eqref{eqn:stock}, $Y$ is a nonnegative random variable with $Y-1$ denoting the impulse change in the asset price from $S_t$ to $YS_t$ as a consequence of the jump, $\kappa = \E[Y-1]$ with $\E[\cdot]$ as the expectation operator, $\{N_t \, : \, t \in [0,T]\}$ is the aforementioned Poisson process with intensity $\lambda$, and
+where $\{W_t \, : \, t \in [0,T]\}$ is the standard Wiener process as in~\eqref{eqn:stock}, $Y$ is a nonnegative random variable with $Y-1$ denoting the impulse change in the asset price from $S_t$ to $YS_t$ as a consequence of the jump, $\kappa = \E[Y-1]$ with $\E[\cdot]$ as the expectation operator \textcolor{blue}{with respect to $Y$}, $\{N_t \, : \, t \in [0,T]\}$ is the aforementioned Poisson process with intensity $\lambda$, and
 	\begin{equation}
 		\label{eqn:dNProb}
 		\d N_t = \begin{cases}
@@ -137,7 +137,7 @@ where $\{W_t \, : \, t \in [0,T]\}$ is the standard Wiener process as in~\eqref{
 			0 &\mbox{with probability } (1 - \lambda \, \d t).
 		\end{cases}
 	\end{equation}
-Additionally, $W_t$, $N_t$, and samples $\{Y_1,Y_2,\hdots\}$ from $Y$ are assumed to be independent. Furthermore, $Y$ is also assumed to have a probability density function. Merton then extended (\ref{eqn:blackscholes}) to ensure the behaviour of the jumps is properly encapsulated. The extension to include jumps allowed for the diffusion risk to be perfectly hedged but ignored the market price of the jump risk. Thus, the result is a PIDE system:
+Additionally, $W_t$, $N_t$, and samples $\{Y_1,Y_2,\hdots\}$ from $Y$ are assumed to be independent. Furthermore, $Y$ is also assumed to have a probability density function. Merton then extended (\ref{eqn:blackscholes}) to ensure the behaviour of the jumps is properly encapsulated. \textcolor{blue}{The extension to include jumps allowed for the diffusion risk to be perfectly hedged but ignored the market price of the jump risk.} Thus, the result is a PIDE system:
 	\begin{align}
 		\label{eqn:PIDE}
 		\begin{split}
@@ -193,7 +193,7 @@ The expressions~\eqref{eqn:K1} and~\eqref{eqn:K2} will prove to be useful for pr
 
 \section{Mellin transform}
 \label{subsec:mellin}
-We now present the Mellin transform, which is going to be the mathematical technique that is a basis for all the work in this thesis. Suppose that $f : [0,\infty) \rightarrow \R$ is such that \textcolor{black}{$f = f(x)$}. The {\em Mellin transform}~$\hat f$ of $f$ at $\xi \in \mathbb{C}$ is defined as
+We now present the Mellin transform, which is going to be the mathematical technique that is a basis for all the work in this thesis. Suppose that $f : [0,\infty) \rightarrow \R$ is such that \textcolor{black}{$f = f(x)$}. The {\em Mellin transform}~$\hat f$ of $f$ at \textcolor{blue}{$\xi \in \mathbb{C}$} is defined as
 \begin{equation*}
 \hat f(\xi) =  \textcolor{black}{\M\left\{ f \right\}(\xi)} = \int_0^\infty x^{\xi - 1} f(x) \, \d x,
 \end{equation*}
@@ -210,11 +210,11 @@ assuming that $f$ satisfies
 \begin{equation*}
 \left. x^\xi f(x) \right\vert_0^\infty = 0, \quad \left. x^{\xi + 1} f'(x) \right\vert_0^\infty = 0.
 \end{equation*}
-To complement the Mellin transform expression, the inverse Mellin transform~\cite{Titchmarsh1948} is given by
+\textcolor{blue}{To complement the Mellin transform expression, the inverse Mellin transform~\cite{Titchmarsh1948} is given by
 \begin{equation*}
 	f(x) = \M^{-1}\{\hat f(\xi)\} = \fr{1}{2\pi i} \int_{c-i\infty}^{c+i\infty} x^{-\xi}\hat f(\xi)  \, \d \xi,
 \end{equation*}
-where the contour used to get from $c - i\infty$ to $c + i\infty$ is the Bromwich contour since the Mellin transform is related to the two-sided Laplace transfrom through an exponential change of variables~\cite{Bracewell2000}. Furthermore, we have
+where the contour used to get from $c - i\infty$ to $c + i\infty$ is the Bromwich contour since the Mellin transform is related to the two-sided Laplace transfrom through an exponential change of variables~\cite{Bracewell2000}}. Furthermore, we have
 	\begin{equation*}
 		\M\{ (f \ast g)(x) \} = (\widehat{f \ast g})(\xi) = \hat f(\xi) \hat g(\xi),
 	\end{equation*}

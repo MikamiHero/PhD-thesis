@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  5 DEC 2017 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  8 DEC 2017 16:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2260,24 +2260,30 @@ Overfull \hbox (5.10182pt too wide) in paragraph at lines 72--72
  []
 
 [141]
+Overfull \hbox (2.1641pt too wide) in paragraph at lines 72--72
+[]\OT1/ptm/m/n/12 R. Frontczak. ``Pric-ing op-tions in jump-diffusion mod-els u
+s-ing Mellin trans-forms''.
+ []
+
+[142]
 Overfull \hbox (4.88365pt too wide) in paragraph at lines 72--72
 \OT1/ptm/m/n/12 diffusion''. In: \OT1/ptm/m/it/12 Jour-nal of Eco-nomic Dy-nam-
 ics and Con-trol \OT1/ptm/m/n/12 28.10 (2003), pp. 2055{
  []
 
-[142] [143]
+[143]
 Overfull \hbox (8.42488pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 R. Li, H. Meng, and Y. Dai. ``The val-u-a-tion of com-pound o
 p-tions on jump-diffusions
  []
 
-
+[144]
 Overfull \hbox (1.16986pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 S. Man-aster and G. Koehler. ``The cal-cu-la-tion of im-plied
  vari-ances from the Black-
  []
 
-[144]
+
 Overfull \hbox (16.12643pt too wide) in paragraph at lines 72--72
 []\OT1/ptm/m/n/12 M. Musiela and M. Rutkowski. \OT1/ptm/m/it/12 Mar-tin-gale Me
 th-ods in Fi-nan-cial Mod-elling\OT1/ptm/m/n/12 . Springer
@@ -2565,7 +2571,7 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (185 pages, 784510 bytes).
+Output written on thesis.pdf (185 pages, 781922 bytes).
 PDF statistics:
  3362 PDF objects out of 3580 (max. 8388607)
  3060 compressed objects within 31 object streams

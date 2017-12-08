@@ -167,13 +167,158 @@ Tianyu Raymond Li
 		Any family of jumps will be compatible with our analysis in \S3 provided $\mathbb{E}[Y]$ (and consequently $\mathbb{E}[Y-1]$) is finite. If this were not true, (2.20), (2.21) -- the general PIDE system for a general European option with jump-diffusion dynamics -- cannot be posed in the first place as $\kappa = \mathbb{E}[Y-1]$ would not be defined. 
 	
 	Dr Dewynne points out that the aforementioned log-Cauchy distribution does give reasonable results. Since it does not have a defined mean, this type of distribution does not conform to the assumption that the $Y$ has a finite expectation. To make things clearer, we have added the assumptions that $E[Y]$ must be finite and $E[Y^{-\xi}]$ is convergent to the start of Section 3.2 on pg.~40 of the revised thesis.
+	
+	\item\textbf{\underline{Section 3.4 and 3.5} -- As it currently stands, I don't really see the point of these. You haven't proved that all the integrals in (3.14) exist and so how I do I know that if I can find all of the $F_n$ using iteration. \\ \\ }
+	
+	The examples of double exponentially distributed jumps and gamma distributed jumps are just being presented here for comparison to the results in~\cite{Kou2002, Kou2004} and ~\cite{Frontczak2013}. Please also see the point above where we have explained which family of distributions $F_n$ is valid for (with a proof as well).
+	
+	\item\textbf{\underline{Section 4.2} -- You start with the assumption that the (Black-Scholes) volatility is a constant regardless of the call's strike. This is in direct conflict with all the empirical studies: implied volatility always depends non-trivially on the strike, hence the expressions ``volatility smile'' and ``volatility smirk'', for example. Therefore, I fail to see why this section is entitled `Implied volatility formula'.
+	\\\\ }
+	We have removed the erroneous statement that included $\sigma$ to be constant along with the parameters $r$ and $q$.
+	
+	\item{\textbf{\underline{Section 4.2} -- What this section is really about is the ability to interpolate and extrapolate solutions (with the same constant value of the volatility) in such a way that you can take their Mellin transform and then recover the constant volatility that you used to generate the prices in the first place from the Mellin transforms. All this shows is that you have good schemes for interpolation and extrapolation and your numerical means of computing the Mellin transform works. \\ \\ }}
+	This is indeed true and we agree with Dr Dewynne's statements here. This assertion can be seen in Section 4.3 where we describe the extrapolation process to recover the original value of $\sigma$ used to compute the options prices profile with which we took the Mellin transform of.
+	
+	\item{\textbf{\underline{Section 4.2} -- You  only use \emph{pseudo}-market data (without jumps, so far as I can see) in this and the following sections. In spite of the (unjustified) claim in \S4.3.3, Point 1, you could \emph{not} do this with \emph{real} market data because the (Black-Scholes implied) volatility of European call pries (on the same underlying asset and with the same expiry date) \emph{does} change as you change the strike, breaking one of your underlying assumptions. This section has nothing to do with implied volatility in the usually understood sense of the term. \\ \\}}
+	
+	 The implied volatility model we have derived in Section 4.2 and in particular, Eq.~(4.8) \emph{does} contain jumps (as symbolised by the $\lambda$ and $\mathbb{E}[Y^{\xi+1}-1]$). We provided two sets of simulations: theoretical data (Tables 4.1 and 4.2) and pseudo-market data (Tables 4.3 and 4.4). In \S4.3.4, we computed Eq.~(4.8) assuming the jumps were drawn from a lognormal distribution. The associated parameters are also provided here. The pseudo-market simulations were completed assuming no jumps to demonstrate the concept of the extrapolating functions (which we also highlighted can be adapted for jumps in \S4.3.2). Thus, we have in fact incorporated jump-diffusion terms in Eq.~(4.8); we simply chose to demonstrate both scenarios of jumps and no jumps.
+	 
+	 For this comment, it appears that Dr Dewynne's primary concern is the underlying assumption that volatility $\sigma$ is independent of the strike price $K$ which is in direct conflict with the usual assumptions/evidence towards implied volatility being dependent on $K$. However, if assumed $\sigma = \sigma(K)$ (which is a known fact for market data), we would not have been able to take the Mellin transform in the first place if this were the case, so we had to make this assumption. We acknowledge that this is a limitation of our method; we are only able to obtain one implied volatility value as opposed to obtaining a volatility surface. Although other common numerical schemes may prove fruitful in computing a volatility surface like a Newton-Raphson solver, it is not entirely clear how $\sigma$ can change if you change parameters (e.g, $r$ and $q$) other than $K$ and $T$. However, in Eq.~(4.8), we have constructed the model in a way that makes it very easy to see how $\sigma$ would vary if you were to change the aforementioned parameters. 
+	 
+	 \item{\textbf{\underline{Section 5.1.1} -- Why does (5.3) hold in a jump-diffusion model? I suggest you simply, and explicity, say that you are \emph{assuming} that (5.3) and (5.6) hold for American puts and that (5.19) and (5.22) hold for American calls.\\ \\}}
+	 This assumption of the smooth pasting conditions to be satisfied for both American calls and American puts in a jump-diffusion model has been added to pg.~72 and pg.~86 of the revised thesis.
+	 
+	 \item{\textbf{\underline{Section 5.2 and 5.3} -- Have you looked at perpetual American put and call (assuming constant $r$, $q$, $\sigma$) with jump diffusion? Any analytical formula that arose from perpetual option cases could shed some light on formulae (5.35) and (5.36). I find these formulae slightly disturbing because they seem to imply that a jump occurs right at expiry (otherwise, if no jump occurs at expiry, why should the formulae be any different to the pure diffusion based ones?).\\\\}}
+	 
+	 Perpetual American puts and calls were not investigated as this was not included in our scope of research. Eq.~(5.35) was simply derived using the technique found in~\cite{Chiarella2006} but adapted for American puts. Eq.~(5.36) is found in~\cite{Chiarella2006}.
 					\end{itemize}
+					
+	\item{\textbf{Minor points}}
+		\begin{itemize}
+			\item{\textbf{Page 2, final paragraph: ``Financially, American options contracts are more ideal to trade...". I would just say that you can exercise an American option at any time up until and including the expiry date.
+			\\\\}
+			The rewording has been done on pg.~2 of the revised thesis.}
+			
+			\item{\textbf{Page 5, penultimate paragraph: ``This is because when a firm decides to default, ...". It is not clear to me that a firm \emph{decides} to default -- either it can meet its obligations or it can't.
+			\\\\}
+			This has been changed to ``This is because when a firm defaults'' on pg.~5 of the revised thesis.}
+			
+			\item{\textbf{Page 7, first paragraph in \S1.3: ``...asserted that the asset price is best resembled by a stochastic process..." would read better as ``... asserted that the asset price is best \emph{modelled} by a stochastic process...".
+			\\\\}
+			This change has been made on pg.~7 of the revised thesis.}
+			
+			\item{\textbf{Page 8, bottom of the first paragraph: ``and how the jumps in the asset price bear some psychological parallel to the potential tentative demeanour of the market participants [33]''. I have no idea what that phrase means nor what it is you're trying to convey by writing it.
+			\\\\}
+			This has been fixed to read ``and how the jumps in the asset price reflect the "jump fear" in market participants'' on pg.~8 of the revised thesis.}
+			
+			\item{\textbf{Page 9, final paragraph: ``These acclaimed results account for the underlying asset paying...''. I would eliminate the word \emph{acclaimed}.
+			\\\\}}
+			This has been removed.
+			
+			\item{\textbf{Page 13, start of \S1.4: It is not the case that \emph{all} of the associated parameters are observable. The \emph{volatility} is an associated parameter and it is \emph{not} directly observable; that is the one of the points of using \emph{implied volatility}. (Also, what is the difference between a \emph{variable} and an \emph{intrinsic variable}?)
+			\\\\}}
+			The word ``intrinsic'' has been removed and the phrase now says ``most of the associated parameters (e.g., the option price, interest rate) are observable'' on pg.~13 of the revised thesis.
+			
+			\item{\textbf{Page 20, last sentence in the first paragraph of \S1.6: The sentence would read better if \emph{rudiment} were changed to \emph{basis}.
+			\\\\}}
+			The word \emph{rudiment} has been changed to \emph{basis} on pg.~20 of the revised thesis.
+			
+			\item{\textbf{Page 21, final paragraph: Why is the technique called a ``\emph{pseudo}-put-call parity technique''? The word \emph{pseudo} implied that it isn't a genuine technique and as far as I can see, it is a perfectly genuine technique. The word \emph{general} or similar, seems to be a better choice than \emph{pseudo}.\\\\}}
+			The word \emph{pseudo} was selected to distinguish it between the standard put-call parity technique. It isn't meant to discredit the technique but rather say that for compound options, you can obtain put-call parity-like results but are not commonly defined as such (to the best of our knowledge). Thus, we've chosen to use \emph{pseudo} and will keep it like this for the thesis. 
+			
+			\item{\textbf{Page 21, replace \emph{Albeit} with \emph{Although}\\\\}}
+			The word \emph{albeit} is now \emph{although}.
+			
+			\item{\textbf{Page 21, Finally, what you are actually end up doing in Chapter 6, \S6.4, is applying a discrete dividend yield, i.e., you assume that
+			$$
+				D(S_t,t) = q_dS_t\delta(t-t_d).
+			$$
+			Why not just called it a discrete dividend yield? \\\\}}
+			
+			We simply used the terminology that was given as the title in~\cite{Wilmott1993}, which has in \S6.2.3 the title of \emph{discrete dividend payments}. The value  $q_d$ itself is referred to as the \emph{yield}. 
+			
+			\item{\textbf{Page 23 \S2.1: Why is it ``under \emph{any} risk-neutral probability measure''? Surely in this case there is only one risk-neutral measure?\\\\}}
+			This has been change to read ``under the risk-neutral probability measure'' on pg.~23 of the revised thesis.
+			
+			\item{\textbf{Page 22, \S2.1: Do you really need $r(t) > 0$ and $q(t) \geq 0$ in this part of the thesis, where you're just formulating the Black-Scholes equation?\\\\}}
+			These are assumptions that we will be using throughout the rest of the thesis, so it makes sense for us to establish them here.
+			
+			\item{\textbf{Page 22, \S2.1: Why do $r(t)$, $q(t)$ and $\sigma(t)$ need to be continuous functions, rather than piecewise continuous (for example) or even just bounded and integrable?\\\\}}
+			They can be piecewise continuous.
+			
+			\item{\textbf{Page 22, \S2.1: The phrase ``(i.e., $S_t$ \emph{ascribes} to a lognormal...'' would read better as ``(i.e., $S_t$ \emph{has} a lognormal...". Similarly, the phrase ``The value $\sigma(t)$ is often \emph{coined} the diffusion..." would ready better as ``The value $\sigma(t)$ is often \emph{called} the diffusion...''. Finally, the sentence which starts ``$\sigma dW_t$ ... " would read better if it started ``The term $\sigma dW_t$...".\\\\}}
+			All the changes suggested above have been amended in the revised thesis on pg.~22 (highlighted in blue).
+			
+			\item{\textbf{Page 23, As it stands, you seem to be implying that an option can \emph{only} depend on the share price and time. You should make it clear that you are only really talking about European puts and calls at this stage.\\\\}}
+			This is has been address on pg.~24 of the revised thesis with the phrase ``Assuming that the option depends only on the share price and time,...''.
+			
+			\item{\textbf{Page 23: The statement that $\phi \ : \ [0,\infty) \rightarrow [0,\infty)$ implies that an option can only have a non-negative payoff. I would argue that a modified European call, where you pay for the call at expiry but only if $S_T > K$, is an option even though it has a payoff which can be negative for some values of $S_T$.\\\\}}
+			If we accept that the payoff function $\phi$ can be negative for some values of $S_T$, then all we would have to do is change $\phi$ to be $\phi \ : \ [0,\infty) \rightarrow \mathbb{R}$ and the analysis would remain identical.
+			
+			\item{\textbf{Page 23: It would also be a good idea to point out that $K > 0$ (otherwise you should include separate formulae for $K > 0$ and $K \leq 0 $ cases).\\\\}}
+			We have added the assumption $K > 0$ on pg.~24 of the revised thesis.
+			
+			\item{\textbf{Page 23, final paragraph: I disagree with the assertion that ``To solve the system (2.2), (2.3), the most common approach is to implement a change of variables that transforms (2.2) into the standard one-dimensional heat equation...''. These days at least as many people would use the Feynman-Kac theorem and the solution of the underlying risk-neutral price SDE to find the solution of the problem.\\\\}}
+			This statement has been altered to read ``one of the most common approaches is...'' on pg.~24 of the revised thesis.
+			
+			\item{\textbf{Page 24, after (2.6) and (2.7): This is the first time you have used $N$ and you should give the definition here.\\\\}}
+			We have added ``(see Section 2.4)'' in parenthesis after the definition of (2.6) and (2.7) on pg.~25 of the revise thesis should the reader want a quick reference.
+			
+			\item{\textbf{Page 24: Please either give a referene to a proof of put-call parity or prove it yourself\\\\}}
+			A proof has been referenced on right after (2.8) on pg.~25 of the revised thesis.
+			
+			\item{\textbf{Page 24: I don't understand what the sentence ``The structure we will present provides a clear interpretation of all the possible scenarios that can occur with American options.'' means or what it is you are trying to convey with it.\\\\}}
+			This sentence has been reworded to ``The formulation we will present provides a clear framework for all the possible scenarios that can occur with American options'' on pg.~25 of the revised thesis.
+			
+			\item{\textbf{Page 24: In the second paragraph, you are talking about an American put, not a general American option. In this case you definitely need $r(t) > 0$ if you want $S^*(t)$ to exist (to the best of my knowledge, this is the first time you need this condition). You still need any conditions on the sign of $q(t)$, however.\\\\}}
+			We have already stated in the preliminaries earlier that $r(t) > 0$ and $q(t)$ is nonnegative.
+			
+			\item{\textbf{Page 25, second paragraph: Change ``On the other hand, an American..." to ``An American...", as you have mentioned hands before.
+			\\\\}}
+			The phrase ``On the other hand'' has been removed.
+			\item{\textbf{Page 25: At this point you are talking about an American call, so if you are going to insist that $r(t) > 0$, then you also need to explicitly state that $q(t) > 0$, otherwise $S^*(t)$ will not exist.
+			\\\\}}
+			We have added the statement ``We start off by assuming that $q(t) > 0$ (otherwise, the American call will be equal to the European call).'' as we commence the American call option analysis on pg.~26 of the revised thesis.
+			
+			\item{\textbf{Page 26, after (2.13)--(2.15): Jump diffusion is not introduced until after (2.17), so I don't see the point in saying ``... by Jamshidian [60] \emph{for a pure diffusion case.}''; we are still talking about diffusion only cases at this point.
+			\\\\}}
+			The sentence fragment ``for a pure diffusion case'' has been removed.
+			
+			\item{\textbf{Page 27, after (2.18) and (2.19): What is the $\mathbb{E}$ operator taking expectations with respect to ($W_t$, $N_t$ or $Y$)?\\\\}}
+			This expectation operator is taking expectations with respect to $Y$. This has been added to pg.~28 of the revised thesis.
+			\item{\textbf{Page 27, after (2.19): You might want to point out that Merton also perfectly hedged the diffusion risk but \emph{ignored} the market price of the jump risk in order to get (2.20).
+			\\\\}}
+			This suggestion has been added to pg.~29 of the revised thesis right before (2.20) as ``The extension to include jumps allowed for the diffusion risk to be perfectly hedged but ignored the market price of the jump risk.''.
+			
+			\item{\textbf{Page 28, \S2.2.1: Many people might refer to the functions defined by (2.24) and (2.25) as the discounted, risk-neutral, probability-density functions for the SDE (2.1).
+			\\\\}}
+			The terminology \emph{Black-Scholes kernel} was used because we were explicitly using results from~\cite{Rodrigo2006, Rodrigo2013}, where the authors use this term to denote (2.24) and (2.25).
+			\item{\textbf{Page 29, \S2.3: If you do not define the Mellin transform and its inverse in \S1.5, you really \emph{must} define both the Mellin transform and \emph{its inverse} here. You should also correct the (incorrect) statement here that $\xi \in \mathbb{R}$ here so that it reads $\xi \in \mathbb{C}$.
+			\\\\}}
+			The Mellin transform and its inverse are now both defined in \S2.3 in the revised thesis. We have also changed $\xi$ to belong in $\mathbb{C}$ instead of $\mathbb{R}$.
+			\item{\textbf{Page 29, second displayed equation: I think the second equation should read
+				$$
+					(x^2f'')(x) = x^2f''(x),
+				$$
+				the superscript that should be on the $x^2$ term on the left-hand side seems to have gone missing. There is an inherent problem with kind of notation; how do you define $(x^2f'')(y)$? Is it
+				$$
+					(x^2f'')(y) = x^2f''(y) \quad \text{or} \quad (x^2f'')(y) = y^2f''(y)?		
+				$$
+				Judging by (2.29) you would choose the latter.
+			\\\\}}
+			
+		\end{itemize}
 \end{enumerate}
 
 \begin{thebibliography}{100}
+\bibitem{Chiarella2006} Chiarella, C. and Ziogas, A. (2006): ``A Fourier transform analysis of the American call op- tion on assets driven by jump-diffusion processes'', \emph{Quantitative Finance Research Centre, University of Technology Sydney, Research Paper No. 174 (2006)}.
+\bibitem{Frontczak2013} Frontczak, R. (2013): ``Pricing options in jump-diffusion models using Mellin transforms'', \emph{Journal of Mathematical Finance}, Vol. 3, No. 3, pp.~336--373.
 \bibitem{Kou2002} Kou, S. (2002): ``A jump-diffusion model for option pricing'', \emph{Management Science}, Vol. 48, No. 8, pp.~1086--1101.
 	\bibitem{Kou2004} Kou, S. and H. Wang (2004): ``Option pricing under a double exponential jump-diffusion model'', \emph{Management Science}, Vol. 50, No. 9, pp. 1178--1192.
-	\bibitem{Manaster1982} Manaster, S. and G. Koehler (1982): ``The calculation of implied variances from the Black-Scholes model: A Note'', \emph{The Journal of Finance}, Vol. 37, No. 1, pp. 227--230
+	\bibitem{Manaster1982} Manaster, S. and G. Koehler (1982): ``The calculation of implied variances from the Black-Scholes model: A Note'', \emph{The Journal of Finance}, Vol. 37, No. 1, pp. 227--230.
+	\bibitem{Rodrigo2006} Rodrigo, M. R. and R. S. Mamon (2007): ``An application of Mellin transform techniques to a Black-Scholes equation problem'', \emph{Analysis and Applications}, Vol. 5, No. 1, pp. 51--66.
+	\bibitem{Rodrigo2013} Rodrigo, M. R. (2014): ``Approximate ordinary differential equations for the optimal exercise boundaries of American put and call options'', \emph{European Journal of Applied Mathematics}, Vol. 25, No. 1, pp. 27--43.
+	\bibitem{Wilmott1993} Wilmott, P. and Dewynne, J. and Howison, S. (1995): ``The Mathematics of Financial Derivatives: A Student's Introduction'', \emph{Cambridge University Press}.
 
 \end{thebibliography}
 \end{document}

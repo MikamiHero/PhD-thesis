@@ -1392,6 +1392,30 @@
       \field{title}{Multiple Dirichlet Series, Automorphic Forms, and Analytic Number Theory: Proceedings of the Bretton Woods Workshop on Multiple Dirichlet Series, Bretton Woods, New Hampshire, July 11-14, 2005}
       \field{year}{2006}
     \endentry
+    \entry{Frontczak2013}{article}{}
+      \name{author}{1}{}{%
+        {{hash=97f8a8329bb5d3615cfc394cc8511cfe}{%
+           family={Frontczak},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{97f8a8329bb5d3615cfc394cc8511cfe}
+      \strng{fullhash}{97f8a8329bb5d3615cfc394cc8511cfe}
+      \strng{authornamehash}{97f8a8329bb5d3615cfc394cc8511cfe}
+      \strng{authorfullhash}{97f8a8329bb5d3615cfc394cc8511cfe}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Mathematical Finance}
+      \field{number}{3}
+      \field{title}{Pricing options in jump-diffusion models using Mellin transforms}
+      \field{volume}{3}
+      \field{year}{2013}
+      \field{pages}{366\bibrangedash 373}
+      \range{pages}{8}
+    \endentry
     \entry{Gatheral2006}{book}{}
       \name{author}{2}{}{%
         {{hash=6315b1730da3f38a574eb9a2d1a2eaf5}{%
@@ -1442,6 +1466,30 @@
       \field{year}{2004}
       \field{pages}{251\bibrangedash 260}
       \range{pages}{10}
+    \endentry
+    \entry{Geske1977}{article}{}
+      \name{author}{1}{}{%
+        {{hash=593bf2fbcbd698c827762f881018e10f}{%
+           family={Geske},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{593bf2fbcbd698c827762f881018e10f}
+      \strng{fullhash}{593bf2fbcbd698c827762f881018e10f}
+      \strng{authornamehash}{593bf2fbcbd698c827762f881018e10f}
+      \strng{authorfullhash}{593bf2fbcbd698c827762f881018e10f}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Financial and Quantitative Analysis}
+      \field{number}{4}
+      \field{title}{The valuation of corporate liabilities as compound options}
+      \field{volume}{12}
+      \field{year}{1977}
+      \field{pages}{541\bibrangedash 552}
+      \range{pages}{12}
     \endentry
     \entry{Geske1979b}{article}{}
       \name{author}{1}{}{%
@@ -2535,18 +2583,6 @@
       \field{title}{Numerical Recipes in C: The Art of Scientific Computing}
       \field{year}{1992}
     \endentry
-    \entry{Frontczak2013}{article}{}
-      \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Mathematical Finance}
-      \field{number}{3}
-      \field{title}{Pricing options in jump-diffusion models using Mellin transforms}
-      \field{volume}{3}
-      \field{year}{2013}
-      \field{pages}{366\bibrangedash 373}
-      \range{pages}{8}
-    \endentry
     \entry{Ramezani1998}{article}{}
       \name{author}{2}{}{%
         {{hash=e81b9856bc92352cf3028c5bc05531c2}{%
@@ -2793,18 +2829,6 @@
       \field{year}{1979}
       \field{pages}{63\bibrangedash 81}
       \range{pages}{19}
-    \endentry
-    \entry{Geske1977}{article}{}
-      \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Financial and Quantitative Analysis}
-      \field{number}{4}
-      \field{title}{The valuation of corporate liabilities as compound options}
-      \field{volume}{12}
-      \field{year}{1977}
-      \field{pages}{541\bibrangedash 552}
-      \range{pages}{12}
     \endentry
     \entry{Tilley1993}{article}{}
       \name{author}{1}{}{%
