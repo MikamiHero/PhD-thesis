@@ -28,7 +28,7 @@ Dear A/Prof Adam Rennie,
 I would like to thank you once again for taking the time to handle the administrative processes involved with submitting my thesis for external examination and together with my supervisors (Dr Marianito Rodrigo and A/Prof Joanna Goard), sifting through the examination reports and constructing a report for me. 
 \\
 \\
-I have attached below a point-by-point response to each of the external examiner's comments and suggestions. The two examiners were Prof Matt Davison of Western University (Canada) and Dr Jeff Dewynne of University of Oxford (UK). I wish to highlight a two points from Matt Davison have not been directly addressed as they were simply statements rather than changes to be made. Those have been omitted.
+I have attached below a point-by-point response to each of the external examiner's comments and suggestions. The two examiners were Prof Matt Davison of Western University (Canada) and Dr Jeff Dewynne of University of Oxford (UK). Any changes made to the revised thesis are now in \textcolor{blue}{blue}. I wish to highlight two points from Matt Davison have not been addressed as they were simply statements rather than changes to be made. Those have been omitted.
 \\
 \\
 Kindest regards,
@@ -306,7 +306,82 @@ Tianyu Raymond Li
 				$$
 				Judging by (2.29) you would choose the latter.
 			\\\\}}
+			To clear the ambiguity, we have refined the functions at the bottom of pg.~30 of the revised the thesis by setting function $\text{id} = \text{id}(x)$. Thus $(\text{id}\cdot f')$ and $(\text{id}^2 \cdot f'')$ can be defined such that
+			$$
+				(\text{id}\cdot f')(x) = x f'(x), \quad (\text{id}^2\cdot f'')(x) = x^2 f''(x),
+			$$
+			which should eliminate any notation disputes.
 			
+			\item{\textbf{Page 30, \S 2.4:} Please insert the word \emph{standard} so that the first sentence reads ``Several properties of the \emph{standard} cumulative normal distribution $N$ ... ''.
+			\\\\}
+			The word \emph{standard} has been inserted.
+			
+						
+			\item{\textbf{Page 31 et seq: } Here you are definitely assuming that $\mathscr{M}^{-1}$ exists and that $\mathscr{M}^{-1}(f)$ is unique. This is why you need to explicitly write down a formula for $\mathscr{M}^{-1}$ and state that its action (on some class of functions) produces a unique result.
+			\\\\}
+			The absence of the definition for the inverse Mellin transform has been addressed in previous comments.
+			
+			\item{\textbf{Page 36, \S3.1: } The line break for the title is not good. Please fix this if this is possible.
+			\\\\}
+			The line break has been fixed.
+			
+			\item{\textbf{Page 31, \S3.1: } I would change ``... the European option with an underlying \emph{subjected} to jump-diffusion dynamics.'' to ``... the European option with an underlying that is \emph{described by} jump-diffusion dynamics.''
+			\\\\}
+			The sentence now reads ``... the European option with an underlying that is \emph{described by} jump-diffusion dynamics.''
+			\item{\textbf{Page 31, \S3.1: } Equation (3.1) would look better if the terminal condition appeared on a line by itself. \\\\}
+			The terminal condition has been moved to a line by itself.
+			
+			\item{textbf{Page 37, first displayed equation} How do you know that $\mathbb{E}[Y^{-\xi}]$ exists?
+			\\\\}
+			This has been addressed in a previous comment whereby we added the assumption that $\mathbb{E}[Y^{-\xi}]$ is convergent.
+			
+			\item{\textbf{Page 38, \S3.2: } I would suggest that you state that all of the derivations in the section are formal (otherwise someone might ask you to prove them).
+			\\\\}
+			This has been appended to the beginning of \S3.2 of the revised thesis (pg.~40).
+			
+			\item{\textbf{Page 40, list of points: } In the first point the formula can only be applied if the distribution has a probability density function (otherwise (3.14) as it currently stands makes no sense).
+			\\\\}
+			It has been previously mentioned that $f$ is the PDF of some random variable $Y$, thus we have already satisfied the condition that the distribution must have a valid PDF (see pg.~29 of the revised thesis under \S2.2).
+			
+			\item{\textbf{Page 46, after the last displayed equation: } I would have written ``where $I$ is an interval with endpoints $a$ and $b > a$; the interval can be open, half-closed or closed''.
+			\\\\}
+			This has been reworded to Dr Dewynne's suggestion on pg.~48 of the revised thesis.
+			
+			\item{\textbf{Page 46, after the last displayed equation: } The statement that $I$ is the interval $[K,\infty)$, after the first displayed equation on Page 47, seems redundant.
+			\\\\}
+			This statement that $I$ is the interval $[K,\infty)$ has been removed.
+			
+			\item{\textbf{Page 50, \S3.6:} I'm not sure what it is you're trying to say in the statement ``However, the integrals (3.11) are all real since the Mellin transform inversion has been performed in a different manner to [90] where the inversion was completed via a complex integral''. Is this a simple statement or fact? Are you claiming that real integrals are easier to compute than complex ones (if so, why didn't you compute the integrals in (3.14) for the double exponential and gamma pdfs)? What you didn't do, however, is show that the $F_n$ term always exists.
+			\\\\}
+			For the statement in question, we wish to clarify that real integrals are in general easier to compute than complex integrals, but may not be necessarily easy to compute themselves. This is one of the key reasons why we decided to keep all our results in terms of real integrals versus complex integrals. The reason why we did not compute the integrals in (3.14) for the double exponential and gamma PDFs is because we merely wanted to demonstrate how our results would apply to these PDFs (which have results already found in literature). The purpose is more for comparison than anything else. The existence of $F_n$ has also been addressed in an earlier point of contention.
+			
+			\item{\textbf{Page 51:  Please give a reference to the ``recent empirical studies'' which suggest ``a better model for the asset process involves jumps following a double exponential distribution''.}
+			\\\\}
+			A reference has been provided and this sentence in question can now be found on pg.~52 of the revised thesis.
+			
+			\item{\textbf{Page 53, \S4.1.1: } Please give a definition of what it means for a function $\phi(x;x')$ to be homogeneous of degree one here (rather than half way down Page 54).
+			\\\\}
+			This is now in \S4.1.1 on pg.~55 of the revised thesis.
+			
+			\item{\textbf{Page 56, top of page: } I assume you mean $u(x',t;x) = v(x,t;x')$, otherwise what is the point of defining $u$?
+			\\\\}
+			This has been fixed on top of pg.~58 of the revised thesis.
+			
+			\item{\textbf{Page 73, (5.9): } It might be a good idea to use a different symbol to $\mathscr{J}$, which has already been used earlier.
+			\\\\}
+			We prefer to leave $\mathscr{J}$ in Eq.~(5.9) as it is for consistency of notation. In any case, we do not use the previous result Eq.~(3.13) here (i.e., different definitions).
+			
+			\item{\textbf{Page 74, \S5.1.2: } The ``lemma $n$'', ``Lemma $m$'' problem is particularly bad in this section (there is also an ``eq (3.18)'' on Page 75, whereas you usually write ``Eq.~(m.n)'').
+			\\\\}
+			The mixture of lowercase and uppercase for the word \emph{lemma} has now been fixed to be consistent along with fixing the outlier ``eq'' to be ``Eq''.
+			
+			\item{\textbf{Page 81, 2nd line from the bottom: } I would change ``Similar to how we handled $I_{3,a}$'' to ``Similarly to how we dealt with $I_{3,a}$''.
+			\\\\}
+			This has been changed on the bottom of pg.~83 of the revised thesis.
+			
+			\item{\textbf{Page 84, \S5.1.3:} I think this section could be shortened. It is not really that different to \S5.1.2 and it sort of gives the impression of ``cut and paste''.
+			\\\\}
+			\S5.1.3 was provided in full to complement \S5.1.2. This is because the formulas grew increasingly complicated that for the benefit of the reader, the details were provided in full so it would not be too overwhelming.
 		\end{itemize}
 \end{enumerate}
 

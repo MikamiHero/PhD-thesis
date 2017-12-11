@@ -197,9 +197,9 @@ We now present the Mellin transform, which is going to be the mathematical techn
 \begin{equation*}
 \hat f(\xi) =  \textcolor{black}{\M\left\{ f \right\}(\xi)} = \int_0^\infty x^{\xi - 1} f(x) \, \d x,
 \end{equation*}
-provided the integral converges at $\xi$. \textcolor{black}{Now for each $x \in [0,\infty)$, we will define the functions~$x f'$ and $x^2f''$ by
+provided the integral converges at $\xi$. \textcolor{blue}{Now we denote the function id by $\text{id}(x) = x$. Then for each $x \in [0,\infty)$, define the functions~$(\text{id}\cdot f')$ and $(\text{id}^2 \cdot f'')$ by
 \begin{equation*}
-(xf')(x) = x f'(x), \quad (x^2 f'')(x) = x^2 f''(x),
+(\text{id}\cdot f')(x) = x f'(x), \quad (\text{id}^2\cdot f'')(x) = x^2 f''(x),
 \end{equation*}
 respectively.} It can be shown that \cite[pp. 362--363]{Myint1987}
 \begin{equation}
@@ -242,7 +242,7 @@ with
 
 \section{Useful properties of the CDF of a standard normal variable}
 \label{subsec:cdfproperties}
-Several properties of the standard cumulative normal distribution $N$ and its derivative $N'$ will also be required~\cite[pp. 235--239]{Jeff1995}, namely
+Several properties of the \textcolor{blue}{standard} cumulative normal distribution $N$ and its derivative $N'$ will also be required~\cite[pp. 235--239]{Jeff1995}, namely
 	\begin{equation}
 		\begin{split}
 		N(x) = \fr{1}{\sqrt{2\pi}}\int_{-\infty}^x e^{-y^2/2} & \, \d y, \quad %= \fr{1}{2} + \fr{1}{2}\text{erf}\left(\fr{x}{\sqrt{2}}\right) \\

@@ -310,7 +310,7 @@ To proceed with solving this system, we take the Mellin transform of \eqref{eqn:
 			I_{3,b} &= \lambda \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^ne^{(r+\lambda)(u-t)}}{n!\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}\int_0^{S^*(u)} \fr{1}{z}  N'\left( Z_n\left( \fr{x}{z},t, u \right) \right) \\
 			&\quad {} \times \int_{S^*(u)/z}^\infty \left( v_{\text{a}}^{\text{put}}(zy,t) - (K-zy) \right) f(y) \, \d y  \, \d z \, \d u.
 		\end{align*}
-		Similar to how we dealt with $I_{3,a}$, we interchange the order of integration between $y$ and $z$, declare a substitution of $p = (zy)/S^*(u)$, then reverse the integration between $p$ and $y$. The result of these steps is
+		\textcolor{blue}{Similarly to how we dealt with $I_{3,a}$}, we interchange the order of integration between $y$ and $z$, declare a substitution of $p = (zy)/S^*(u)$, then reverse the integration between $p$ and $y$. The result of these steps is
 		\begin{align*}
 			I_{3,b} &= \lambda \int_t^T \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^ne^{(r+\lambda)(u-t)}}{n!\sigma_Y\sqrt{n\sigma_Y^2 + \sigma^2(u-t)}}\int_1^\infty \fr{1}{p}\left( v_{\text{a}}^{\text{put}}(S^*(u)p,t) - (K-S^*(u)p) \right) \\
 			&\quad {} \times \int_p^\infty \fr{1}{y} N'\left( \fr{\log y - \mu_Y}{\sigma_Y} \right) N'\left( Z_n\left( \fr{xy}{S^*(u)p}, t, u \right) \right)\, \d y  \, \d p \, \d u,
@@ -442,7 +442,7 @@ Taking the Mellin transform of \eqref{eqn:amerPIDEcall} with respect to $x$ and 
         		&{} \quad \quad \times  \lambda \int_{0}^{S^*(u)/z} \left( v_{\text{a}}^{\text{call}}(zy,t) - (zy-K) \right)f(y) \, \d y \, \d z \, \d w \, \d u \\
         		& = I_1 + I_2 + I_3,
         	\end{align*}
-        	where the order of integration between $z$ and $w$ had to be swapped in order to simplify the Heaviside function in $g_c$. We first look at $I_1$ and incorporate eq.~\eqref{eqn:jump11} for $\J$ and the first identity for $\K_\lambda$ in~\eqref{eqn:shiftKernel} to arrive at
+        	where the order of integration between $z$ and $w$ had to be swapped in order to simplify the Heaviside function in $g_c$. We first look at $I_1$ and incorporate Eq.~\eqref{eqn:jump11} for $\J$ and the first identity for $\K_\lambda$ in~\eqref{eqn:shiftKernel} to arrive at
         	        		\begin{align*}
         			I_1 &= rK\int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \int_0^\infty\int_{S^*(u)}^\infty \fr{1}{w} \delta(w-1) \fr{1}{z} N'\left( z_{2\lambda}\left( \fr{x}{zw}, t, u \right) \right) \, \d z \, \d w \, \d u \\
         			& {}\quad rK\int_t^T \fr{e^{(r+\lambda)(u-t)}}{\sigma\sqrt{u-t}} \ds\sum\limits_{n=1}^{\infty} \fr{(\lambda(u-t))^n}{n!\sqrt{n\sigma_Y^2}}\int_0^\infty \int_{S^*(u)}^\infty \fr{1}{zw}N'\left( \fr{\log w + n\mu_Y}{\sqrt{n\sigma_Y^2}} \right) \\
