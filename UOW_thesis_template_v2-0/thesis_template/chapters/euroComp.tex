@@ -24,7 +24,7 @@ A call-on-a-call option, denoted by $v_{\text{cc}}$, is composed of two European
 	\begin{equation*}
 		v_{\text{cc}}(x,t) = \int_0^\infty \fr{1}{y} \K\left( \fr{x}{y}, t, T_1 \right)\max(v_\text{c}(y,T_1; K_2, T_2) - K_1, 0)\, \d y.
 	\end{equation*}
-To proceed, we assume that $v_{\text{c}}(y,T_1; K_2, T_2) > K_1$ is \emph{greater} for all $y$ greater than some critical value $y_\mathrm{c}^*$~\cite{Kwok2008}. Due to the monotonicity of a European call with respect to the asset value, this critical value $y_\mathrm{c}^*$ will always be unique (see Figure~\ref{fig:1}). This simplifies the integral to
+To proceed, we assume that $v_{\text{c}}(y,T_1; K_2, T_2) > K_1$ for all $y$ greater than some critical value $y_\mathrm{c}^*$~\cite{Kwok2008}. Due to the monotonicity of a European call with respect to the asset value, this critical value $y_\mathrm{c}^*$ will always be unique (see Figure~\ref{fig:1}). This simplifies the integral to
 	\begin{align*}
 		v_{\text{cc}}(x,t) &= \int_{y_\mathrm{c}^*}^\infty \fr{1}{y}\K\left( \fr{x}{y}, t, T_1 \right)[v_\text{c}(y,T_1; K_2, T_2) - K_1] \, \d y \\
 		&= \int_{y_\mathrm{c}^*}^\infty \fr{1}{y} \K\left( \fr{x}{y}, t, T_1 \right)v_\text{c}(y,T_1; K_2, T_2) \, \d y - K_1\int_{y_\mathrm{c}^*}^\infty \fr{1}{y}\K\left( \fr{x}{y}, t, T_1 \right) \, \d y.
@@ -159,7 +159,7 @@ where $\1_I$ is the indicator function defined as
 			0, \quad x \notin I,
 		\end{cases}
 	\end{equation*}
-and where $I$ is an arbitrary interval with endpoints $a$ and $b$ with $a < b$. The interval can be open, half-closed, or closed. The two auxiliary functions in~\eqref{eqn:funcs} are the building blocks for many possible financial payoffs in options pricing. For example, a call option has a payoff $\max(x-K,0)$ which can be written as
+and where $I$ is an arbitrary interval with endpoints $a$ and $b$ with $a < b$. The interval can be open, half-closed, or closed. \textcolor{blue}{The two auxiliary functions in~\eqref{eqn:funcs} are the building blocks for many financial payoffs in options pricing.} For example, a call option has a payoff $\max(x-K,0)$ which can be written as
 	\begin{equation*}
 		\max(x-K,0) = x\1_{[K,\infty)}(x) - K\1_{[K,\infty)}(x),
 	\end{equation*}
@@ -187,7 +187,7 @@ Upon splitting up the terms, we notice we have the two integrals that formulate 
 \section{Compound options with discrete dividends}
 Up until now, the model we have presented for pricing compound options assumes a continuous dividend yield for the lifetime of the options. That is, $q$ is a time-continuous function. Here we introduce a technique to formulate compound options when the underlying asset pays one dividend yield at a fixed time. What we will show is that it is only one slight variation needed to the methodology used to derive all the previous formulas.
 
-In general, the underlying asset with a potential dividend yield (whether discrete or continuous) is governed by~\cite{Wilmott1995}
+The underlying asset with a potential dividend yield (whether discrete or continuous) is governed by~\cite{Wilmott1995}
 	\begin{equation*}
 		%\label{eqn:SDE2}
 		\d S_t = [r(t)S_t - D(S_t,t)] \, \d t + \sigma(t) S_t  \, \d W_t,

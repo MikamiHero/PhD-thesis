@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  11 DEC 2017 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  12 DEC 2017 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -858,20 +858,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--385
  []
 
 [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 399.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 399.
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--408
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--412
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--420
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--439
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--446
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--450
+
+ []
+
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 464.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 464.
  (./Response To Referees.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 399.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 399.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 464.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 464.
 Package rerunfilecheck Info: File `"Response To Referees".out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 399.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 464.
  ) 
 Here is how much of TeX's memory you used:
- 6269 strings out of 493013
- 90704 string characters out of 6133344
+ 6271 strings out of 493013
+ 90718 string characters out of 6133344
  186905 words of memory out of 5000000
  9712 multiletter control sequences out of 15000+600000
  8326 words of font info for 33 fonts, out of 8000000 for 9000
@@ -892,10 +967,10 @@ l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on "Response To Referees.pdf" (11 pages, 204979 bytes).
+Output written on "Response To Referees.pdf" (13 pages, 213069 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
