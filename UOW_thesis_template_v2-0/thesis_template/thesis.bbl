@@ -2546,6 +2546,29 @@
       \field{title}{Numerical Solution of Stochastic Differential Equations with Jumps in Finance}
       \field{year}{2010}
     \endentry
+    \entry{Poularikas2000}{book}{}
+      \name{author}{1}{}{%
+        {{hash=74913267c808ca4ea7ed2b3903cec530}{%
+           family={Poularikas},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC-Press}%
+      }
+      \strng{namehash}{74913267c808ca4ea7ed2b3903cec530}
+      \strng{fullhash}{74913267c808ca4ea7ed2b3903cec530}
+      \strng{authornamehash}{74913267c808ca4ea7ed2b3903cec530}
+      \strng{authorfullhash}{74913267c808ca4ea7ed2b3903cec530}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Electrical Engineering Handbook}
+      \field{title}{The Transforms and Applications Handbook}
+      \field{year}{2000}
+    \endentry
     \entry{Press1992}{book}{}
       \name{author}{4}{}{%
         {{hash=5a2381d83ef2265be4822a458e00e501}{%

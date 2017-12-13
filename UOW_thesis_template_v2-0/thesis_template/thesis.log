@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  12 DEC 2017 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.5)  13 DEC 2017 13:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1774,7 +1774,7 @@ Package epstopdf Info: Source file: <figures/optionComp.eps>
 verted-to.pdf figures/optionComp.eps>
 (epstopdf)             \includegraphics on input line 345.
 Package epstopdf Info: Output file is already uptodate.
- <figures/optionComp-eps-converted-to.pdf, id=1326, 562.1pt x 421.575pt>
+ <figures/optionComp-eps-converted-to.pdf, id=1329, 562.1pt x 421.575pt>
 File: figures/optionComp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/optionComp-eps-converted-to.pdf>
@@ -1792,7 +1792,7 @@ verted-to.pdf figures/optionDiff.eps>
 (epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/optionDiff-eps-converted-to.pdf, id=1331, 562.1pt x 421.575pt>
+<figures/optionDiff-eps-converted-to.pdf, id=1334, 562.1pt x 421.575pt>
 File: figures/optionDiff-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/optionDiff-eps-converted-to.pdf>
@@ -1830,7 +1830,7 @@ f>
 (epstopdf)             \includegraphics on input line 200.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/call-bs-prices-eps-converted-to.pdf, id=1498, 562.1pt x 421.575pt>
+<figures/call-bs-prices-eps-converted-to.pdf, id=1501, 562.1pt x 421.575pt>
 File: figures/call-bs-prices-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/call-bs-prices-eps-converted-to.pdf>
@@ -1849,7 +1849,7 @@ rices-eps-converted-to.pdf figures/call-extrapolate-prices.eps>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/call-extrapolate-prices-eps-converted-to.pdf, id=1501, 562.1pt x 421.5
+<figures/call-extrapolate-prices-eps-converted-to.pdf, id=1504, 562.1pt x 421.5
 75pt>
 File: figures/call-extrapolate-prices-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2021,47 +2021,51 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 971.
 
 [111] [112] [113] [114] [115] [116]
-Package epstopdf Info: Source file: <figures/SfreePut.eps>
-(epstopdf)                    date: 2017-03-15 14:37:54
-(epstopdf)                    size: 30914 bytes
-(epstopdf)             Output file: <figures/SfreePut-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-01 11:37:44
-(epstopdf)                    size: 13854 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/SfreePut-eps-conve
-rted-to.pdf figures/SfreePut.eps>
+Package epstopdf Info: Source file: <figures/SfreePut2.eps>
+(epstopdf)                    date: 2017-12-13 12:28:26
+(epstopdf)                    size: 36631 bytes
+(epstopdf)             Output file: <figures/SfreePut2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-13 12:29:05
+(epstopdf)                    size: 17796 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/SfreePut2-eps-conv
+erted-to.pdf figures/SfreePut2.eps>
 (epstopdf)             \includegraphics on input line 1085.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/SfreePut-eps-converted-to.pdf, id=2083, 421.575pt x 316.18124pt>
-File: figures/SfreePut-eps-converted-to.pdf Graphic file (type pdf)
+<figures/SfreePut2-eps-converted-to.pdf, id=2086, 562.1pt x 421.575pt>
+File: figures/SfreePut2-eps-converted-to.pdf Graphic file (type pdf)
 
-<use figures/SfreePut-eps-converted-to.pdf>
-Package pdftex.def Info: figures/SfreePut-eps-converted-to.pdf used on input li
-ne 1085.
-(pdftex.def)             Requested size: 337.26045pt x 252.94533pt.
+<use figures/SfreePut2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/SfreePut2-eps-converted-to.pdf used on input l
+ine 1085.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [117]
-Package epstopdf Info: Source file: <figures/amerputFDMApprox.eps>
-(epstopdf)                    date: 2017-07-01 13:31:36
-(epstopdf)                    size: 39945 bytes
-(epstopdf)             Output file: <figures/amerputFDMApprox-eps-converted-to.
-pdf>
-(epstopdf)                    date: 2017-07-01 13:32:00
-(epstopdf)                    size: 15341 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/amerputFDMApprox-e
-ps-converted-to.pdf figures/amerputFDMApprox.eps>
+Package epstopdf Info: Source file: <figures/amerputFDMApprox2.eps>
+(epstopdf)                    date: 2017-12-13 13:47:12
+(epstopdf)                    size: 42075 bytes
+(epstopdf)             Output file: <figures/amerputFDMApprox2-eps-converted-to
+.pdf>
+(epstopdf)             Command: <repstopdf --outfile=figures/amerputFDMApprox2-
+eps-converted-to.pdf figures/amerputFDMApprox2.eps>
 (epstopdf)             \includegraphics on input line 1100.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=figures/amerputFDMApprox2-eps-converted-to.pdf fi
+gures/amerputFDMApprox2.eps)...executed safely (allowed).
 
-<figures/amerputFDMApprox-eps-converted-to.pdf, id=2100, 562.1pt x 421.575pt>
-File: figures/amerputFDMApprox-eps-converted-to.pdf Graphic file (type pdf)
+Package epstopdf Info: Result file: <figures/amerputFDMApprox2-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-12-13 13:47:32
+(epstopdf)                    size: 15607 bytes.
 
-<use figures/amerputFDMApprox-eps-converted-to.pdf>
-Package pdftex.def Info: figures/amerputFDMApprox-eps-converted-to.pdf used on 
-input line 1100.
+<figures/amerputFDMApprox2-eps-converted-to.pdf, id=2103, 562.1pt x 421.575pt>
+File: figures/amerputFDMApprox2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/amerputFDMApprox2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/amerputFDMApprox2-eps-converted-to.pdf used on
+ input line 1100.
 (pdftex.def)             Requested size: 298.75264pt x 224.06409pt.
 Package epstopdf Info: Source file: <figures/amerputFDMApproxError.eps>
 (epstopdf)                    date: 2017-03-15 15:36:44
@@ -2075,7 +2079,7 @@ ror-eps-converted-to.pdf figures/amerputFDMApproxError.eps>
 (epstopdf)             \includegraphics on input line 1102.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/amerputFDMApproxError-eps-converted-to.pdf, id=2109, 421.575pt x 316.1
+<figures/amerputFDMApproxError-eps-converted-to.pdf, id=2112, 421.575pt x 316.1
 8124pt>
 File: figures/amerputFDMApproxError-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -2087,9 +2091,9 @@ d on input line 1102.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[118 <./figures/SfreePut-eps-converted-to.pdf>]) [119 <./figures/amerputFDMAppr
-ox-eps-converted-to.pdf> <./figures/amerputFDMApproxError-eps-converted-to.pdf>
-] [120]
+[118 <./figures/SfreePut2-eps-converted-to.pdf>]) [119 <./figures/amerputFDMApp
+rox2-eps-converted-to.pdf> <./figures/amerputFDMApproxError-eps-converted-to.pd
+f>] [120]
 \openout2 = `chapters/euroComp.aux'.
 
  (./chapters/euroComp.tex
@@ -2109,7 +2113,7 @@ Package epstopdf Info: Source file: <figures/option.eps>
 ed-to.pdf figures/option.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
- <figures/option-eps-converted-to.pdf, id=2173, 562.1pt x 421.575pt>
+ <figures/option-eps-converted-to.pdf, id=2176, 562.1pt x 421.575pt>
 File: figures/option-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/option-eps-converted-to.pdf>
@@ -2547,10 +2551,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44018 strings out of 493013
- 836704 string characters out of 6133344
- 1301561 words of memory out of 5000000
- 45677 multiletter control sequences out of 15000+600000
+ 44021 strings out of 493013
+ 836814 string characters out of 6133344
+ 1301619 words of memory out of 5000000
+ 45679 multiletter control sequences out of 15000+600000
  89492 words of font info for 208 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,22n,101p,10597b,1746s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2571,10 +2575,10 @@ pe1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
 r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (185 pages, 793062 bytes).
+Output written on thesis.pdf (185 pages, 786852 bytes).
 PDF statistics:
- 3362 PDF objects out of 3580 (max. 8388607)
- 3060 compressed objects within 31 object streams
- 1117 named destinations out of 1200 (max. 500000)
+ 3365 PDF objects out of 3580 (max. 8388607)
+ 3063 compressed objects within 31 object streams
+ 1118 named destinations out of 1200 (max. 500000)
  1002 words of extra memory for PDF output out of 10000 (max. 10000000)
 

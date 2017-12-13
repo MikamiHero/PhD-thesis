@@ -1082,7 +1082,7 @@ For this section, several numerical results will be presented for the approximat
 Although we have derived an explicit approximation for $v_{\text{a}}^{\text{put}}(x,t)$ in~\eqref{eqn:amerputjumpLNApprox}, one obstacle remains: the second unknown $S^*$, the optimal exercise boundary. However, with the algorithm to solve~\eqref{eqn:SApproxPutLN}, we are able to obtain a complete profile of $S^*$ for the entire time domain that is specified. Ascertaining all the values of $S^*$ enables us to then solve~\eqref{eqn:amerputjumpLNApprox} as all the quantities will be known. A representation of $S^*$ from solving the approximate IDE~\eqref{eqn:SApproxPutLN} is given in Figure~\ref{fig:amerputFreeBoundary}. The plot for $S^*$ exhibits a similar behaviour as $S^*$ (i.e., in the standard diffusion model) in terms of monotonicity as was highlighted in~\cite{Rodrigo2013}.
 	\begin{figure}[!h]
 		\centering
-		\includegraphics[scale=0.8]{figures/SfreePut.eps}
+		\includegraphics[scale=0.6]{figures/SfreePut2.eps}
 		\caption{The profile for $S^*$ from solving the approximate IDE~\eqref{eqn:SApproxPutLN} using $t=0$, $T=0.5$, $K = 5$, $r=0.05$, $q=0$, and $\sigma = 0.3$. The associated lognormal parameters are $\mu_Y = 0.9$, $\sigma_Y = 0.45$, and $\lambda = 0.1$.}
 		\label{fig:amerputFreeBoundary}
 	\end{figure}
@@ -1097,7 +1097,7 @@ For the FDM, we use 101 spatial nodes and 501 temporal gridpoints. Consequently,
 which correspond to the American put option at $S_0 \rightarrow 0$ and $S_0 \rightarrow \infty$ respectively for all time values in the domain. The option value curves are given in Figure~\ref{fig:amerputPlot} along with the absolute error between the two for the entire $S_0$ region. The MATLAB code for the FDM, the approximate IDE for $S^*$, and solving~\eqref{eqn:amerputjumpLNApprox} is available in the appendix with comments on how the code functions. Specifically, Appendix C.3 contains all that was used in this chapter.
 	\begin{figure}[!h]
 		\centering
-		\subfigure[American put prices under jump-diffusion dynamics solved using the FDM scheme~\eqref{eqn:FDMPIDE} compared against~\eqref{eqn:amerputjumpLNApprox} with~\eqref{eqn:SApproxPutLN},~\eqref{eqn:freePutTLN} for the free boundary $S^*$. The price domain for the underlying asset is $(10^{-3},4K)$. The other financial parameters are $t=0$, $T=0.5$, $K = 5$, $r=0.05$, $q=0$, and $\sigma = 0.3$. \label{fig:amerputComp}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApprox.eps}\hspace*{3pt}}
+		\subfigure[American put prices under jump-diffusion dynamics solved using the FDM scheme~\eqref{eqn:FDMPIDE} compared against~\eqref{eqn:amerputjumpLNApprox} with~\eqref{eqn:SApproxPutLN},~\eqref{eqn:freePutTLN} for the free boundary $S^*$. The price domain for the underlying asset is $(10^{-3},4K)$. The other financial parameters are $t=0$, $T=0.5$, $K = 5$, $r=0.05$, $q=0$, and $\sigma = 0.3$. \label{fig:amerputComp}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApprox2.eps}\hspace*{3pt}}
 		\subfigure[The absolute error between the FDM and using~\eqref{eqn:SApproxPutLN} for the American put values in a jump-diffusion model. \label{fig:amerputError}]{\includegraphics[width=0.7\linewidth]{figures/amerputFDMApproxError.eps}
 			}
 		\caption{American put value plots from the FDM and approximate IDE system using~\eqref{eqn:amerputjumpLNApprox},~\eqref{eqn:SApproxPutLN}, and~\eqref{eqn:freePutTLN}. The domain for the asset price is once again $(10^{-3},4K)$.}
