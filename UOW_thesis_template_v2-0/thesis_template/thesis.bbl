@@ -1964,6 +1964,30 @@
       \field{title}{Stochastic Processes with Applications to Finance}
       \field{year}{2002}
     \endentry
+    \entry{kilicman2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2b237ebff01f1b811e0f33314e643ab}{%
+           family={Kili\c{c}man},
+           familyi={K\bibinitperiod},
+           given={Adem},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2b237ebff01f1b811e0f33314e643ab}
+      \strng{fullhash}{a2b237ebff01f1b811e0f33314e643ab}
+      \strng{authornamehash}{a2b237ebff01f1b811e0f33314e643ab}
+      \strng{authorfullhash}{a2b237ebff01f1b811e0f33314e643ab}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical and Computational Applications}
+      \field{number}{1}
+      \field{title}{A note on Mellin transform and distributions}
+      \field{volume}{9}
+      \field{year}{2004}
+      \field{pages}{65\bibrangedash 72}
+      \range{pages}{8}
+    \endentry
     \entry{Kim1990}{article}{}
       \name{author}{1}{}{%
         {{hash=772a3d767689a6e08dd349e1893a8da4}{%

@@ -219,9 +219,10 @@ where the contour used to get from $c - i\infty$ to $c + i\infty$ is the Bromwic
 		\M\{ (f \ast g)(x) \} = (\widehat{f \ast g})(\xi) = \hat f(\xi) \hat g(\xi),
 	\end{equation*}
 where $f \ast g$ is the convolution of $f$ and $g$ defined to be
-	\begin{equation*}
+	\begin{equation}
+		\label{eqn:mellinConvolution}
 		(f \ast g)(x) = \int_0^\infty \fr{1}{y}f\left(\fr{x}{y}\right)g(y) \, \d y \quad \text{for all } x \geq 0.
-	\end{equation*}
+	\end{equation}
 \textcolor{blue}{The only conditions we require for $f$ and $g$ (see~\cite[chapter~2]{Titchmarsh1948} and \cite[chapter~11]{Poularikas2000}) is that they are both defined on the positive real axis $x \in (0,\infty)$.} In addition to the Mellin transform and its properties, it was shown in~\cite{Rodrigo2006} that the Mellin transform of \eqref{eqn:optionKernelSoln} is
 \begin{align}
 		\label{eqn:mellinVkernel}

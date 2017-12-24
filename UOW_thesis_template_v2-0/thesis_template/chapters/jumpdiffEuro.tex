@@ -135,6 +135,7 @@ The key attributes of \eqref{eqn:optionJump} are
 		\item The option price can be expressed as the convolution of a standard European option with shifted parameters and a separate function that encapsulates the behaviour of the jump.
 		\item No complex integrals are required to be computed (cf.~\cite{Frontczak2013})\footnote{\textcolor{black}{In~\cite{Frontczak2013}, the option price was given as the Mellin inverse of an integrand that depends on the payoff. Consequently, this inversion process has to be done every time the payoff is changed. On the other hand, in our approach, since we are using the Mellin convolution theorem, it is only necessary to invert the Black-Scholes kernel once, which we have done (refer to~\eqref{eqn:optionJump2} below). Thus, our expression for the option price only involves real integrals.}}.
 	\end{enumerate}
+\textcolor{blue}{Additionally, it is also possible to show that $F_n$ exists for all $n \geq 2$ provided use the aforementioned assumption that $\E{Y^{-\xi}}$ is finite and convergent. The details can be found in Appendix D.}
 \textcolor{black}{
 Now we give an alternative expression for~\eqref{eqn:optionJump}. We have
 	$$

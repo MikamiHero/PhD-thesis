@@ -1,0 +1,61 @@
+\chapter{Proof that $F_n$ in \eqref{eqn:Fn} exists for all $n \geq 2$}
+\chaptermark{Existence of the jump recursion formula}
+
+\section{Setting up the proof}
+\textcolor{blue}{
+First, let us recall the definition of $F_n$ from~\eqref{eqn:Fn}
+	\begin{equation*}
+		F_n(x) =
+			\begin{cases}
+				\ds\delta(x-1) & n = 0, \\ \vspace{0.2cm}
+				\ds\fr{1}{x}f\left(\fr{1}{x}\right) & n = 1, \\
+				\ds\int_0^\infty \fr{1}{z}F_1(z)F_{n-1}\left(\fr{x}{z}\right) \, \d z & n \geq 2.
+			\end{cases}
+	\end{equation*}
+To show $F_n$ exists for all $n \geq 2$, we must first make a few assumptions. First, we assume that $\E[Y^{-\xi}]$ is finite and convergent for a nonnegative continuous random variable $Y$ with $f$ as its PDF. Next, we define $A_{\xi}$ to be the following space~\cite{kilicman2004}:
+	\begin{equation*}
+		A_\xi = \left\{ f \ | \ f \ : \ \mathbb{R}_{+} \rightarrow \mathbb{C} \ ; \ \norm {f(x)x^{\xi-1}} \in L^1(\mathbb{R_{+}}) \right\},
+	\end{equation*}
+for some $\xi \in \mathbb{C}$ and its associated norm given as
+	\begin{equation*}
+		\norm{ f }_{A_\xi} = \norm{f(x)x^{\xi-1}}_{L^1(\mathbb{R}_{+})} = \int_0^\infty \left| f(x) \right|x^{\xi-1} \, \d x < \infty.
+	\end{equation*}
+It should be noted that the norm of $A_\xi$ is nearly identical to the definition of the Mellin transform except with the addition of an absolute value. Furthermore if we use the definition of the Mellin convolution from~\eqref{eqn:mellinConvolution}, for $n \geq 2$ we can define $F_n$ to be 
+	\begin{equation}
+		\label{eqn:FnConv}
+		F_n(x) = (F_1 \ast F_{n-1})(x) \quad \text{for all $x \geq 0$}.
+	\end{equation}
+We also need to make use of the following lemma~\cite{kilicman2004}:
+\begin{lemma}
+\label{lem:convLemma}
+Suppose $f, g \in A_\xi$. Then the convolution $f\ast g$ exists almost everywhere on $\mathbb{R_{+}}$ and belongs in $A_\xi$. 
+\end{lemma}
+Thus to prove that $F_n$ exists for all $n \geq 2$, we need to show that $F_1$ and $F_{n-1}$ both belong in $A_\xi$. This can be achieved via an induction argument.
+}
+\section{Base case: $n = 2$ and showing both $F_1, F_2 \in A_\xi$}
+\textcolor{blue}{
+First we generate a base case by setting $n=2$ in~\eqref{eqn:Fn}. This gives
+	\begin{equation*}
+		F_2(x) = \int_0^\infty \fr{1}{z} F_1(z)F_1\left( \fr{x}{z}\right) \, \d z = (F_1 \ast F_1)(x).
+	\end{equation*}
+To prove that $F_2$ exists, we need to establish that $F_1 \in A_\xi$. To do this, we just have to show that the norm of $F_1$ in $A_\xi$ is finite. That is,
+	$$
+		\norm{ F_1 }_{A_\xi} = \norm{F_1(x)x^{\xi-1}}_{L^1(\mathbb{R}_{+})} = \int_0^\infty \left| F_1(x) \right|x^{\xi-1} \, \d x < \infty.
+	$$
+Using the definition of $F_1$ from~\eqref{eqn:Fn} and substituting it into the integral yields the expression
+	\begin{align*}
+		\norm{F_1}_{A_\xi} &= \int_0^\infty \left| \fr{1}{x}f\left( \fr{1}{x}\right) \right|x^{\xi-1} \, \d x =  \int_0^\infty \fr{1}{x}f\left(\fr{1}{x}\right)x^{\xi-1} \, \d x,
+	\end{align*}
+where the absolute value disappears since $f$ is the PDF of a nonnegative continuous random variable $Y$. Next we set $y = 1/x$ to simplify the integral to be
+	\begin{align*}
+		\norm{F_1}_{A_\xi} &= \int_0^\infty y^{-\xi}f(y) \, \d y = \E\left[ Y^{-\xi}\right] < \infty,
+	\end{align*}
+where we use one of the assumptions earlier on that $\E\left[ Y^{-\xi} \right]$ is finite and convergent. Hence we have shown that $F_1 \in A_\xi$ and since $F_2$ is the convolution of two $F_1$ terms, by Lemma~\ref{lem:convLemma} we automatically have $F_2$ existing almost everywhere on $\mathbb{R_{+}}$ and belonging in $A_\xi$.
+}
+\section{Induction hypothesis: assume true for $n = k-1$}
+\textcolor{blue}{
+To proceed, we now assume our statement is true for $n=k-1$. That is for $n=k-1$, we assume that $F_{k-1}$ exists almost everywhere on $\mathbb{R_{+}}$ and belongs in $A_\xi$. Now we let $n=k$ and from~\eqref{eqn:Fn}, we get
+	$$
+		F_k(x) = \int_0^\infty \fr{1}{z}F_1(z)F_{k-1}\left(\fr{x}{z}\right) \, \d z = \left( F_1 \ast F_{k-1} \right)(x).
+	$$
+Recall from showing the existence of $F_2$ that we proved that $F_1 \in A_\xi$. We also asserted by our induction hypothesis that $F_{k-1}$ exists almost everywhere on $\mathbb{R_{+}}$ and belongs in $A_\xi$. Therefore, since $F_k$ is the convolution of $F_1$ and $F_{k-1}$, we must have $F_k \in A_\xi$ and existing nearly everywhere on $\mathbb{R_{+}}$ by Lemma~\ref{lem:convLemma}. Thus proving the existence of $F_n$ in~\eqref{eqn:Fn} for all $n \geq 2$.}
