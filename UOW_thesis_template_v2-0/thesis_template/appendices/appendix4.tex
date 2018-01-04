@@ -2,7 +2,7 @@
 \chaptermark{Existence of the jump recursion formula}
 
 \section{Setting up the proof}
-\textcolor{blue}{
+\textcolor{black}{
 First, let us recall the definition of $F_n$ from~\eqref{eqn:Fn}
 	\begin{equation*}
 		F_n(x) =
@@ -33,7 +33,7 @@ Suppose $f, g \in A_\xi$. Then the convolution $f\ast g$ exists almost everywher
 Thus to prove that $F_n$ exists for all $n \geq 2$, we need to show that $F_1$ and $F_{n-1}$ both belong in $A_\xi$. This can be achieved via an induction argument.
 }
 \section{Base case: $n = 2$ and showing both $F_1, F_2 \in A_\xi$}
-\textcolor{blue}{
+\textcolor{black}{
 First we generate a base case by setting $n=2$ in~\eqref{eqn:Fn}. This gives
 	\begin{equation*}
 		F_2(x) = \int_0^\infty \fr{1}{z} F_1(z)F_1\left( \fr{x}{z}\right) \, \d z = (F_1 \ast F_1)(x).
@@ -53,7 +53,7 @@ where the absolute value disappears since $f$ is the PDF of a nonnegative contin
 where we use one of the assumptions earlier on that $\E\left[ Y^{-\xi} \right]$ is finite and convergent. Hence we have shown that $F_1 \in A_\xi$ and since $F_2$ is the convolution of two $F_1$ terms, by Lemma~\ref{lem:convLemma} we automatically have $F_2$ existing almost everywhere on $\mathbb{R_{+}}$ and belonging in $A_\xi$.
 }
 \section{Induction hypothesis: assume true for $n = k-1$}
-\textcolor{blue}{
+\textcolor{black}{
 To proceed, we now assume our statement is true for $n=k-1$. That is for $n=k-1$, we assume that $F_{k-1}$ exists almost everywhere on $\mathbb{R_{+}}$ and belongs in $A_\xi$. Now we let $n=k$ and from~\eqref{eqn:Fn}, we get
 	$$
 		F_k(x) = \int_0^\infty \fr{1}{z}F_1(z)F_{k-1}\left(\fr{x}{z}\right) \, \d z = \left( F_1 \ast F_{k-1} \right)(x).

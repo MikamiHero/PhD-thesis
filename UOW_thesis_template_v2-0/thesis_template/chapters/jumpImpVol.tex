@@ -5,7 +5,7 @@
 In this section, we will derive a PIDE that is the analogue of Dupire's equation as seen in \cite{Gatheral2006}. The Dupire-like PIDE will serve as the platform for computing the implied volatility of options with jump-diffusion asset dynamics.
 
 \subsection{Homogeneity of the solution}
-First, we assume that the payoff function $\phi$ now depends on a parameter~$x' > 0$ (i.e., $\phi = \phi(x;x')$).  The motivation for this is that in the case of a European put or call, $x'$ represents the strike price. Furthermore, we assume that $\phi$ is homogeneous of degree one in~$x$ and $x'$. \textcolor{blue}{That is, we assume
+First, we assume that the payoff function $\phi$ now depends on a parameter~$x' > 0$ (i.e., $\phi = \phi(x;x')$).  The motivation for this is that in the case of a European put or call, $x'$ represents the strike price. Furthermore, we assume that $\phi$ is homogeneous of degree one in~$x$ and $x'$. \textcolor{black}{That is, we assume
 $$
 	\phi(\beta x; \beta x') = \beta \phi(x;x').
 $$}
@@ -48,7 +48,7 @@ Hence $v_2$ also satisfies the final value problem \eqref{eqn:subPIDE}. By uniqu
 thus proving the homogeneity property for $v$ and any general payoff $\phi$ that is homogeneous of degree one in~$x$ and $x'$.
 
 \subsection{Derivation of a Dupire-like PIDE via Euler's theorem on homogeneous functions}
-The partial derivatives of the Dupire equation~\cite{Gatheral2006} \textcolor{blue}{are with respect to the strike price $K$.} Thus to derive a Dupire-like PIDE, we will require partial derivatives in terms of $x'$ (the analogous variable for $K$). This can be done by invoking Euler's theorem for homogeneous functions~\cite[pp. 317]{Kishan2007} to $v$ and we get
+The partial derivatives of the Dupire equation~\cite{Gatheral2006} \textcolor{black}{are with respect to the strike price $K$.} Thus to derive a Dupire-like PIDE, we will require partial derivatives in terms of $x'$ (the analogous variable for $K$). This can be done by invoking Euler's theorem for homogeneous functions~\cite[pp. 317]{Kishan2007} to $v$ and we get
 	\begin{equation*}
 		x\fr{\pr v}{\pr x} + x'\fr{\pr v}{\pr x'} = v,
 	\end{equation*}
