@@ -1,0 +1,15 @@
+tlmgr install doublestroke
+tlmgr install subfigure
+tlmgr install biblatex
+tlmgr install logreq
+tlmgr install xstring
+tlmgr install tcolorbox
+tlmgr install environ
+tlmgr install trimspaces
+tlmgr install inconsolata
+tlmgr install biber
+tlmgr install times
+tlmgr install rsfs
+tlmgr install zapfding
+tlmgr install symbol
+tlmgr install courier
